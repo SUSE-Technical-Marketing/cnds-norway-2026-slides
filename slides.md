@@ -15,18 +15,18 @@ fonts:
 
 <!--
 SOURCE OF TRUTH: outline.md (kept in ../../SUSE/CNDS-Norway-2026/outline.md)
-describes Jeroen's original v1, 19-slide order. This file has diverged from
-that numbering after a 2026-09-17 storytelling pass (added a "the fix,
-formalized" slide, cut a redundant "sovereignty as culture" slide, briefly
-merged "the other lens" + "from the fjord to the stack" then split them
-back apart, added a presenter-intro slide, added a "the money behind it"
-slide) and is at 21 slides — treat outline.md as content/timing reference
-only, never as a slide-number map for this file. This file replaces
-deck.html as the editable source; palette/type conventions from HANDOFF.md
-are in style.css. Speaker split not yet confirmed with Jeroen (options
-a/b/c in brief.md). S8-S12 currently carry Andrés's drafted notes for
-split option (a); adjust the handoff lines in S7/S8/S12 notes if the
-split changes.
+describes Jeroen's original v1, 19-slide order. This file has diverged
+heavily from that numbering after a 2026-09-17 storytelling pass (new
+slides, a cut, a merge-then-split, a swap, and the lock-in anti-patterns
+table turned into a 6-slide click-through quiz) and is at 26 slides —
+treat outline.md as content/timing reference only, never as a slide-number
+map for this file. This file replaces deck.html as the editable source;
+palette/type conventions from HANDOFF.md are in style.css. Speaker split
+not yet confirmed with Jeroen (options a/b/c in brief.md). S8-S12 currently
+carry Andrés's drafted notes for split option (a); adjust the handoff
+lines in S7/S8/S12 notes if the split changes. Slide count has grown a lot
+today (19 -> 26); flag to Jeroen that the ~24min content budget in
+outline.md needs re-checking against a run-through, not assumed.
 -->
 
 <div class="kicker">Cloud Native Days Norway · 26–27 Oct 2026</div>
@@ -310,7 +310,7 @@ think-piece.
 Swapped 2026-09-17 per Andrés with "the frameworks that matter": money now
 leads (S9), frameworks follows (S10). This slide used to close on "keep an
 exit-plan doc, an SBOM..." and a CADA panel; both were cut earlier (the
-action line now closes the whole talk on S21, CADA now lives on S10
+action line now closes the whole talk on S26, CADA now lives on S10
 instead), so this swap is purely about slide order, no content changed
 here beyond the kicker number.
 
@@ -553,53 +553,134 @@ layout: default
 
 <div class="kicker">S14 · lock-in anti-patterns</div>
 
-# Each one seals the ramp: the one-line fix
+# Quiz: trap, or fine to use?
 
-<div class="mt-6 grid gap-3 text-sm" style="grid-template-columns: 1fr auto 1fr">
-<div class="panel">Serverless as a black hole: business logic in proprietary functions</div>
-<div class="steel text-xl flex items-center justify-center">→</div>
-<div class="panel">Extract to containers/K8s, keep vendor functions as thin glue</div>
+<div class="mt-8 text-xl max-w-2xl mx-auto text-center">Five real architecture choices.</div>
+<div class="mt-4 text-lg muted max-w-2xl mx-auto text-center">One at a time. Guess before the click: lock-in trap, or safe to keep?</div>
 
-<div class="panel">Proprietary SDK-only features on hot paths</div>
-<div class="steel text-xl flex items-center justify-center">→</div>
-<div class="panel">Wrap behind an interface, keep the abstraction at the seam</div>
+<!--
+Turned into a live quiz 2026-09-17 per Andrés, spread across 6 slides
+(this intro + one per item) instead of cramming into one dense slide,
+per Andrés's own follow-up ("usa mas de una slide si lo necesitas").
+Each item slide (S15-S19) shows the statement alone first; a click
+reveals the verdict and the one-line fix via Slidev's v-click. Same 5
+anti-patterns as before, content unchanged, framing rewritten to be
+neutral/plausible instead of tipping the answer in the statement itself
+(the old table literally called item 1 "a black hole" and quoted item 5
+sarcastically, both giveaways).
 
-<div class="panel">Vendor-specific SQL, stored procedures, managed-DB magic</div>
-<div class="steel text-xl flex items-center justify-center">→</div>
-<div class="panel">Stay on a portable, open-source database, not vendor-specific magic</div>
+This pushes the deck from 21 to 26 slides and adds real stage time (a
+guess-then-reveal beat per item, ~15-20s each if kept snappy = ~90-100s
+total, versus the old single dense slide's ~30-45s). Worth confirming
+with Jeroen given the overall timing budget once he reviews.
 
-<div class="panel">Telemetry/DNS/identity glued to one vendor</div>
-<div class="steel text-xl flex items-center justify-center">→</div>
-<div class="panel">Self-hosted alternatives: OpenTelemetry, your own DNS/identity</div>
+ANDRÉS: land this as a genuine pause, not a rhetorical question. "I'm
+going to show you five real choices, one at a time. Before each one, make
+a call: trap, or something you'd actually ship? Click to see if you're
+right." Keep it light, this is the fun beat of the talk, not a test.
+-->
 
-<div class="panel">"We'll figure out the exit when we need it"</div>
-<div class="steel text-xl flex items-center justify-center">→</div>
-<div class="panel">The default that makes SEAL-2 impossible</div>
+---
+layout: default
+class: text-center
+---
+
+<div class="kicker">S15 · trap 1 of 5</div>
+
+<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">Your checkout flow's business logic lives entirely inside serverless functions.</div>
+
+<div v-click class="mt-12">
+<div class="gold font-mono">LOCK-IN TRAP</div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">Extract to containers/K8s, keep vendor functions as thin glue.</div>
 </div>
 
 <!--
-Made visual 2026-09-17 per Andrés: was a plain markdown table (2 columns,
-5 rows), content unchanged in substance, kept as a CSS grid of anti-
-pattern/fix panel pairs with an arrow between, matching the visual
-language already used elsewhere in the deck (S3's "own ships ->
-transparency/control" mapping, S9's SUSE panel). Three columns
-(1fr auto 1fr) keep every row's arrow aligned regardless of text length.
+ANDRÉS: read the statement, pause 3-4s, let the room silently guess, then
+click. This one's a fairly easy "trap" if the audience already knows
+"serverless as a black hole" as a pattern name, don't give that name away
+before the click, that's the giveaway the old table had.
+-->
 
-Also per Andrés: the DB fix line no longer names Postgres specifically.
-Was "Stay on portable Postgres surface" (echoed Postgres as THE example
-throughout the deck, e.g. S15's fintech ladder "RDS -> vanilla Postgres").
-The point is open-source and vendor-portable, not Postgres by name, so
-now: "Stay on a portable, open-source database, not vendor-specific
-magic." Postgres can still come up verbally as one example among several
-(MySQL, MariaDB, etc.) if useful on stage, just isn't hardcoded on the
-slide as the only answer.
+---
+layout: default
+class: text-center
+---
+
+<div class="kicker">S16 · trap 2 of 5</div>
+
+<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">You reach for a proprietary SDK feature on your hottest code path because it ships faster.</div>
+
+<div v-click class="mt-12">
+<div class="gold font-mono">LOCK-IN TRAP</div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">Wrap it behind an interface, keep the abstraction at the seam.</div>
+</div>
+
+<!--
+ANDRÉS: this is the one most likely to split the room, "it ships faster"
+is a genuinely normal, defensible reason, so the pause matters more here
+than on trap 1. Don't rush the click.
+-->
+
+---
+layout: default
+class: text-center
+---
+
+<div class="kicker">S17 · trap 3 of 5</div>
+
+<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">Your database leans on the provider's managed extensions and stored procedures.</div>
+
+<div v-click class="mt-12">
+<div class="gold font-mono">LOCK-IN TRAP</div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">Stay on a portable, open-source database, not vendor-specific magic.</div>
+</div>
+
+<!--
+ANDRÉS: if you want to name examples verbally without putting them on the
+slide, MySQL/MariaDB/Postgres are all fine as "a portable open-source
+database" (per Andrés: don't hardcode Postgres specifically as THE
+answer).
+-->
+
+---
+layout: default
+class: text-center
+---
+
+<div class="kicker">S18 · trap 4 of 5</div>
+
+<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">Telemetry, DNS, and identity are all wired through one vendor's native services.</div>
+
+<div v-click class="mt-12">
+<div class="gold font-mono">LOCK-IN TRAP</div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">Self-hosted alternatives: OpenTelemetry, your own DNS/identity.</div>
+</div>
+
+---
+layout: default
+class: text-center
+---
+
+<div class="kicker">S19 · trap 5 of 5</div>
+
+<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">"We don't have a tested exit plan yet. We'll write one if we ever need it."</div>
+
+<div v-click class="mt-12">
+<div class="gold font-mono">LOCK-IN TRAP</div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">The default that makes SEAL-2 impossible.</div>
+</div>
+
+<!--
+ANDRÉS: last one, land it a little heavier than the others, this is the
+attitude behind all four previous traps, not just a technical choice.
+Beat before moving to S20 (the fintech ladder, "walk one workload up").
 -->
 
 ---
 layout: default
 ---
 
-<div class="kicker">S15 · walk one workload up the ladder</div>
+<div class="kicker">S20 · walk one workload up the ladder</div>
 
 # Fintech, 4 years, one workload
 
@@ -651,7 +732,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S16 · measure yourself: be honest</div>
+<div class="kicker">S21 · measure yourself: be honest</div>
 
 # Four questions
 
@@ -707,7 +788,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S17 · bring-home</div>
+<div class="kicker">S22 · bring-home</div>
 
 # Three things you can do Monday morning
 
@@ -740,8 +821,8 @@ Reused existing motifs instead of inventing new ones: the big serif
 .stat-num numerals from S4, the panel style used everywhere else, and the
 → arrow glyph from S4's "own ships → transparency/control" mapping, to
 keep this consistent with the rest of the deck rather than a one-off
-design. Each panel's description previews the next 3 slides (S18, S19,
-S20) so this doubles as a visual table of contents for the closing block,
+design. Each panel's description previews the next 3 slides (S23, S24,
+S25) so this doubles as a visual table of contents for the closing block,
 not just 3 disconnected words. No icon-topper cards, no gradients, per
 HANDOFF.md's established "do not revert" design rules.
 -->
@@ -750,7 +831,7 @@ HANDOFF.md's established "do not revert" design rules.
 layout: default
 ---
 
-<div class="kicker">S18 · action 1</div>
+<div class="kicker">S23 · action 1</div>
 
 # Ship one off-ramp
 
@@ -769,7 +850,7 @@ layout: default
 layout: default
 ---
 
-<div class="kicker">S19 · action 2</div>
+<div class="kicker">S24 · action 2</div>
 
 # Run an off-ramp test
 
@@ -789,7 +870,7 @@ Verify: does export work in standard formats? Do keys follow? Does the app start
 layout: default
 ---
 
-<div class="kicker">S20 · action 3</div>
+<div class="kicker">S25 · action 3</div>
 
 # A portability gate in your review habit
 
@@ -810,7 +891,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S21 · close</div>
+<div class="kicker">S26 · close</div>
 
 <svg class="longship-motif w-32 mx-auto mb-6" viewBox="0 0 200 90" fill="none" stroke="#E2A63D" stroke-width="1.6">
   <path d="M10 70 Q100 95 190 70 L175 75 Q100 88 25 75 Z" />
