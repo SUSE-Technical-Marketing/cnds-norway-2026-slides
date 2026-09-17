@@ -540,11 +540,38 @@ class: text-center
 
 <div class="muted mt-2">No executive sign-off required.</div>
 
-<div class="grid-4 mt-10 text-2xl">
-<div class="gold">BUILD it</div>
-<div class="gold">TEST it</div>
-<div class="gold">make it a HABIT</div>
+<div class="flex items-stretch justify-center gap-4 mt-10 text-left" style="max-width:1400px; margin-left:auto; margin-right:auto">
+<div class="panel" style="flex:1">
+<div class="stat-num">01</div>
+<div class="gold text-xl mt-2">BUILD it</div>
+<div class="muted mt-2 text-sm">One PR, ~1 day. Ship one off-ramp.</div>
 </div>
+<div class="steel flex items-center text-2xl">→</div>
+<div class="panel" style="flex:1">
+<div class="stat-num">02</div>
+<div class="gold text-xl mt-2">TEST it</div>
+<div class="muted mt-2 text-sm">Quarterly. Run it like a DR drill.</div>
+</div>
+<div class="steel flex items-center text-2xl">→</div>
+<div class="panel" style="flex:1">
+<div class="stat-num">03</div>
+<div class="gold text-xl mt-2">make it a HABIT</div>
+<div class="muted mt-2 text-sm">Three lines in every PR or ADR.</div>
+</div>
+</div>
+
+<!--
+Made more visual 2026-09-17 per Andrés: was 3 gold words floating in a
+4-column grid (asymmetric for 3 items) with a lot of dead space below.
+Reused existing motifs instead of inventing new ones: the big serif
+.stat-num numerals from S3, the panel style used everywhere else, and the
+→ arrow glyph from S3's "own ships → transparency/control" mapping, to
+keep this consistent with the rest of the deck rather than a one-off
+design. Each panel's description previews the next 3 slides (S16, S17,
+S18) so this doubles as a visual table of contents for the closing block,
+not just 3 disconnected words. No icon-topper cards, no gradients, per
+HANDOFF.md's established "do not revert" design rules.
+-->
 
 ---
 layout: default
