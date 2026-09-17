@@ -555,17 +555,45 @@ layout: default
 
 # Each one seals the ramp: the one-line fix
 
-<div class="mt-4 text-sm">
+<div class="mt-6 grid gap-3 text-sm" style="grid-template-columns: 1fr auto 1fr">
+<div class="panel">Serverless as a black hole: business logic in proprietary functions</div>
+<div class="steel text-xl flex items-center justify-center">→</div>
+<div class="panel">Extract to containers/K8s, keep vendor functions as thin glue</div>
 
-| Anti-pattern | Fix |
-|---|---|
-| Serverless as a black hole: business logic in proprietary functions | Extract to containers/K8s, keep vendor functions as thin glue |
-| Proprietary SDK-only features on hot paths | Wrap behind an interface; keep the abstraction at the seam |
-| Vendor-specific SQL / stored procedures / managed-DB magic | Stay on portable Postgres surface |
-| Telemetry/DNS/identity glued to one vendor | Self-hosted alternatives (OpenTelemetry, own DNS/identity) |
-| "We'll figure out the exit when we need it" | The default that makes SEAL-2 impossible |
+<div class="panel">Proprietary SDK-only features on hot paths</div>
+<div class="steel text-xl flex items-center justify-center">→</div>
+<div class="panel">Wrap behind an interface, keep the abstraction at the seam</div>
 
+<div class="panel">Vendor-specific SQL, stored procedures, managed-DB magic</div>
+<div class="steel text-xl flex items-center justify-center">→</div>
+<div class="panel">Stay on a portable, open-source database, not vendor-specific magic</div>
+
+<div class="panel">Telemetry/DNS/identity glued to one vendor</div>
+<div class="steel text-xl flex items-center justify-center">→</div>
+<div class="panel">Self-hosted alternatives: OpenTelemetry, your own DNS/identity</div>
+
+<div class="panel">"We'll figure out the exit when we need it"</div>
+<div class="steel text-xl flex items-center justify-center">→</div>
+<div class="panel">The default that makes SEAL-2 impossible</div>
 </div>
+
+<!--
+Made visual 2026-09-17 per Andrés: was a plain markdown table (2 columns,
+5 rows), content unchanged in substance, kept as a CSS grid of anti-
+pattern/fix panel pairs with an arrow between, matching the visual
+language already used elsewhere in the deck (S3's "own ships ->
+transparency/control" mapping, S9's SUSE panel). Three columns
+(1fr auto 1fr) keep every row's arrow aligned regardless of text length.
+
+Also per Andrés: the DB fix line no longer names Postgres specifically.
+Was "Stay on portable Postgres surface" (echoed Postgres as THE example
+throughout the deck, e.g. S15's fintech ladder "RDS -> vanilla Postgres").
+The point is open-source and vendor-portable, not Postgres by name, so
+now: "Stay on a portable, open-source database, not vendor-specific
+magic." Postgres can still come up verbally as one example among several
+(MySQL, MariaDB, etc.) if useful on stage, just isn't hardcoded on the
+slide as the only answer.
+-->
 
 ---
 layout: default
