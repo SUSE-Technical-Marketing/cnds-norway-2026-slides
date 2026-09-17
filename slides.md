@@ -362,44 +362,35 @@ layout: default
 
 <div class="mt-3 muted text-sm text-center">Gartner: worldwide sovereign cloud IaaS spend. A budget line, not a marketing trend.</div>
 
-<div class="mt-6 panel">
-<div class="steel font-mono text-sm">CADA · TECHNOLOGICAL SOVEREIGNTY PACKAGE, 3 JUN 2026</div>
-<div class="mt-2">A second sovereignty scale, separate from SEAL, for public-sector and critical workloads. Its top tiers legally require an EUCS certificate that doesn't exist yet, worth knowing before someone asks you for "a CADA score."</div>
-</div>
-
-<div class="mt-6 text-lg max-w-3xl">What it means for engineering and ops teams: procurement starts asking for a score, not a promise. Keep an exit-plan doc, an SBOM, and an answer to "who holds the keys" ready before the RFP does.</div>
+<div class="mt-8 text-lg max-w-3xl">Sovereignty is growing as a topic. The investment behind it is growing just as fast. This is becoming real, with real traction, not a think-piece.</div>
 
 <!--
 Added 2026-09-17 per Andrés, NOT yet reviewed by Jeroen. New slide, S9 left
-untouched on purpose. Does three things: (1) gives the Gartner number its
-own slide with the full 3-point trajectory (2025/2026/2027) instead of the
-compressed 2-point version in S9's footline, (2) puts CADA on screen for
-the first time, it was previously only an "[OPTIONAL, verbal only]" aside
-in S9's speaker notes, easy to cut under time pressure and never seen by
-anyone reading the deck without audio, (3) translates both into one
-concrete, simple action for engineering/ops instead of leaving "why should
-I care" implicit.
+untouched on purpose. Gives the Gartner number its own slide with the full
+3-point trajectory (2025/2026/2027) instead of the compressed 2-point
+version in S9's footline, then names the trend directly: topic and
+investment both growing, this is traction, not a think-piece.
+
+Edited 2026-09-17 per Andrés: cut the CADA panel (it was here, moved
+nowhere, just removed) and the old closing line ("What it means for
+engineering and ops teams: keep an exit-plan doc, an SBOM..."). That line
+now closes the whole talk instead, see S21's comment. CADA is still
+mentioned as an "[OPTIONAL, verbal only]" aside in S9's notes; it no
+longer has an on-screen home anywhere in the deck, flag to Jeroen if he
+wants it back somewhere else, or leave it verbal-only as originally
+designed.
 
 Source for the fuller Gartner trajectory: press release 9 Feb 2026
 (gartner.com/en/newsroom/press-releases/2026-02-09-gartner-says-worldwide-
 sovereign-cloud-iaas-spending-will-total-us-dollars-80-billion-in-2026),
 corroborated by ITPro and Computerworld coverage, cross-checked in this
-project's deck-review-notes.md (2026-09-11 session). CADA facts sourced
-the same place as the CADA aside already in S9's notes.
+project's deck-review-notes.md (2026-09-11 session).
 
-ANDRÉS: ~30-40s, keep it tight, this is a bridge slide not a deep dive.
+ANDRÉS: ~20-30s, keep it tight, this is a bridge slide not a deep dive.
 Say, roughly: "One numbers slide, then we'll move fast." Walk the three
-numbers as one beat, don't over-explain the trajectory. On CADA: "One
-thing worth knowing so you're never caught flat-footed: there's a second
-sovereignty scale, not the one we're about to cover, with a certificate
-requirement that literally doesn't exist yet." Land the closing line as
-the "so what" and move straight into S11's SEAL vocabulary.
-
-Housekeeping: S9's speaker notes still carry the original "[OPTIONAL,
-verbal only, not on slide] CADA aside" — that's now redundant since CADA
-is on-screen here. Left it alone per instruction not to touch S9 yet;
-worth trimming from S9's notes in a follow-up pass so the same fact isn't
-duplicated in two places with different framing.
+numbers as one beat, don't over-explain the trajectory. Land the closing
+line plainly, this is the "so what": the topic and the money are both
+accelerating together. Move straight into S11's SEAL vocabulary.
 -->
 
 ---
@@ -763,4 +754,15 @@ from now off-ramp-ready will be the boring default; today it's a team habit
 you can install on Monday.
 </div>
 
+<div class="mt-8 max-w-2xl mx-auto text-lg gold">Keep an exit-plan doc, an SBOM, and an answer to "who holds the keys" ready, before the RFP does.</div>
+
 <div class="mt-8 kicker">hierynomus.com/talks/cloud-native-days-norway-2026</div>
+
+<!--
+CTA line added 2026-09-17 per Andrés: moved here from S10, which used to
+close on "what it means for engineering and ops teams: keep an exit-plan
+doc, an SBOM..." Andrés wanted the deck's last concrete, actionable line to
+land at the very end of the talk instead of buried mid-deck, right before
+the closing line and the slides/recording link. S10 itself now closes on a
+growth/traction line instead (see S10's own comment).
+-->
