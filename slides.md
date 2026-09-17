@@ -18,8 +18,10 @@ SOURCE OF TRUTH: outline.md (19-slide structure, timing, sources) — kept in
 ../../SUSE/CNDS-Norway-2026/outline.md. This file replaces deck.html as the
 editable source; palette/type conventions from HANDOFF.md are in style.css.
 Speaker split not yet confirmed with Jeroen (options a/b/c in brief.md) —
-S7-S9 currently carry Andrés's drafted notes for split option (a); adjust
-the handoff lines in S6/S7/S9 notes if the split changes.
+S7-S10 currently carry Andrés's drafted notes for split option (a); adjust
+the handoff lines in S6/S8/S10 notes if the split changes. S7 (frameworks
+intro) is new — added 2026-09-17, not yet reviewed by Jeroen; renumbers the
+rest of the original 19-slide outline by +1 (old S7-S19 → new S8-S20).
 -->
 
 <div class="kicker">Cloud Native Days Norway · 26–27 Oct 2026</div>
@@ -165,7 +167,7 @@ The fix is not "don't use the cloud." It's: <span class="gold">control the keys,
 Fixed quote (was invented/longer in deck.html v1 — see deck-review-notes.md #3).
 Real event: French Senate inquiry hearing, 10 Jun 2025. Real speaker: Anton
 Carniaux (named individual, not "Microsoft's French subsidiary").
-Handoff bridge into S7 (Andrés, if split option a/b holds):
+Handoff bridge into S7 — new frameworks-intro slide (Andrés, if split option a/b holds):
 "So that's the threat model. Now — why is this suddenly a line item in a
 procurement budget, and not just a compliance footnote?"
 -->
@@ -174,7 +176,58 @@ procurement budget, and not just a compliance footnote?"
 layout: default
 ---
 
-<div class="kicker">S7 · why now — three dates that matter to engineers</div>
+<div class="kicker">S7 · two working definitions of sovereignty</div>
+
+# Two frameworks, same question
+
+<div class="grid-2 mt-6">
+<div class="panel">
+<div class="gold font-mono text-sm">EU · CLOUD SOVEREIGNTY FRAMEWORK</div>
+<div class="mt-2"><b>What it is:</b> the European Commission's official framework (published Oct 2025) — 8 Sovereignty Objectives, scored on the SEAL 0–4 assurance scale.</div>
+<div class="mt-2"><b>Why it matters:</b> turns "sovereignty" from a marketing word into a graded, auditable procurement criterion — a €180M tender already used it.</div>
+<div class="mt-2"><b>What it gives you:</b> a common vocabulary for RFPs and compliance. That's next (S8–S10).</div>
+</div>
+<div class="panel">
+<div class="steel font-mono text-sm">SUSE · OPERATIONAL DEFINITION</div>
+<div class="mt-2"><b>What it is:</b> an industry framework (Jun 2026) built on two axes — <span class="gold">exit velocity</span> (how fast/costly it is to leave a provider) and <span class="gold">pivotability</span> (can you adapt when conditions change) — anchored in open architecture, not contract terms.</div>
+<div class="mt-2"><b>Why it matters:</b> gives engineers something to build against, not just legal language to sign.</div>
+<div class="mt-2"><b>What it gives you:</b> the architecture section of this talk (S11–S15) is this axis in practice.</div>
+</div>
+</div>
+
+<div class="mt-8 muted">Different vocabularies, same underlying question: if you had to leave, could you? Both frameworks land on the same answer — open architecture is what makes it "yes."</div>
+
+<!--
+ANDRÉS — new slide, added 2026-09-17, NOT yet reviewed by Jeroen. Bridges
+S6 (CLOUD Act threat model) into the EU timeline block (S8-S10, Andrés's
+drafted content). Sources: SUSE "What Is Digital Sovereignty? An
+Operational Framework for IT Leaders" (suse.com/c/an-operational-definition-
+for-digital-sovereignty, 16 Jun 2026, Andreas Prins) — exit velocity +
+pivotability, explicitly ties SEAL-3/4 to open architecture as the only
+levels giving "genuine operational choice." An older SUSE piece ("The
+Foundations of Digital Sovereignty") gives an alternate 3-pillar framing
+(Technical/Data/Operational Sovereignty) — swap in if that fits the talk's
+voice better; flagging so it's a deliberate choice, not a default.
+
+Naming SUSE here is a deliberate exception to the "no vendor pitching" rule
+for CNCF-adjacent talks — this cites SUSE's own public research/vocabulary
+(like citing Gartner), not a product. No product names appear. Kept
+strictly factual/neutral, not marketing language — worth Jeroen's explicit
+sign-off given the house rule, since he owns final content decisions on
+the deck.
+
+Say, roughly: "Before we dive into the EU's version, it's worth knowing
+there isn't just one definition of sovereignty on the table right now —
+there are at least two, and they're not in conflict, they're two lenses on
+the same problem." Then walk both panels — don't read them, paraphrase.
+Close on the shared bottom line before handing into S8's timeline.
+-->
+
+---
+layout: default
+---
+
+<div class="kicker">S8 · why now — three dates that matter to engineers</div>
 
 # Nine months, four dates
 
@@ -200,8 +253,8 @@ Technological Sovereignty Package / CADA generalizes it + unblocks EUCS certific
 <div class="mt-6 muted">Gartner: sovereign IaaS spend $6.9B ('25) → $23.1B ('27). Structural shift, not a fad.</div>
 
 <!--
-ANDRÉS — ~90s. Target block S7-S9, drafted for split option (a) (not yet
-confirmed with Jeroen — see brief.md).
+ANDRÉS — ~90s. Target block S7-S10 (was S7-S9 pre-renumber), drafted for
+split option (a) (not yet confirmed with Jeroen — see brief.md).
 
 Frame before the dates: "Four things happened in about nine months that
 turned this from a policy conversation into a budget line."
@@ -237,7 +290,7 @@ your plan?"
 layout: default
 ---
 
-<div class="kicker">S8 · SEAL — the cloud sovereignty maturity model</div>
+<div class="kicker">S9 · SEAL — the cloud sovereignty maturity model</div>
 
 # Borrow the vocabulary
 
@@ -279,11 +332,11 @@ line that stops someone asking procurement for "a SEAL-3 vendor."
 layout: default
 ---
 
-<div class="kicker">S9 · the 8 objectives, in engineer-speak</div>
+<div class="kicker">S10 · the 8 objectives, in engineer-speak</div>
 
 # What the Commission actually scores
 
-<table class="mt-4 text-sm">
+<table class="table-tight mt-3">
 <thead>
 <tr><th>Objective</th><th>Weight</th><th>Engineer-speak</th></tr>
 </thead>
@@ -299,7 +352,7 @@ layout: default
 </tbody>
 </table>
 
-<div class="mt-6 muted">The Commission's own words: "hardest to fake" = supply chain. Translation: what's actually in your stack?</div>
+<div class="mt-4 muted">The Commission's own words: "hardest to fake" = supply chain. Translation: what's actually in your stack?</div>
 
 <!--
 ANDRÉS — ~60s. This is the droppable block if behind schedule (Jeroen's
@@ -326,7 +379,7 @@ going to show you what actually building toward it looks like."
 layout: default
 ---
 
-<div class="kicker">S10 · what "off-ramp ready" looks like</div>
+<div class="kicker">S11 · what "off-ramp ready" looks like</div>
 
 # The architecture slide
 
@@ -341,7 +394,7 @@ layout: default
 layout: default
 ---
 
-<div class="kicker">S11 · lock-in anti-patterns</div>
+<div class="kicker">S12 · lock-in anti-patterns</div>
 
 # Each one seals the ramp — the one-line fix
 
@@ -361,27 +414,59 @@ layout: default
 layout: default
 ---
 
-<div class="kicker">S12 · walk one workload up the ladder</div>
+<div class="kicker">S13 · walk one workload up the ladder</div>
 
 # Fintech, 4 years, one workload
 
-<div class="grid-4 mt-6 text-sm">
-<div class="panel"><div class="gold">SEAL-0</div>us-east-1<br/><span class="muted">the starting point</span></div>
-<div class="panel"><div class="gold">SEAL-1</div>EU region<br/><span class="muted">"almost nothing changed"</span></div>
-<div class="panel"><div class="gold">SEAL-2</div>BYOK in EU HSM<br/><span class="muted">audit rights, 60-day exit clause</span></div>
-<div class="panel"><div class="gold">SEAL-3</div>EU provider<br/><span class="muted">self-managed Postgres, EU legal entity</span></div>
+<div class="grid-4 mt-4 text-sm">
+<div class="panel" style="padding:0.8rem 1rem">
+<div class="gold">SEAL-0</div>us-east-1 · <span class="muted">the starting point</span>
+<div class="mt-2 steel font-mono" style="font-size:0.7rem">DEVELOPER</div>
+<div class="muted">Lambda + RDS, AWS SDK hardcoded in handlers. No exit in mind.</div>
+</div>
+<div class="panel" style="padding:0.8rem 1rem">
+<div class="gold">SEAL-1</div>EU region · <span class="muted">"almost nothing changed"</span>
+<div class="mt-2 steel font-mono" style="font-size:0.7rem">DEVELOPER</div>
+<div class="muted">One Terraform variable: region. Zero app code touched.</div>
+</div>
+<div class="panel" style="padding:0.8rem 1rem">
+<div class="gold">SEAL-2</div>BYOK in EU HSM · <span class="muted">audit rights, 60-day exit</span>
+<div class="mt-2 steel font-mono" style="font-size:0.7rem">DEVELOPER</div>
+<div class="muted">KMS wrapped behind an interface, envelope encryption. Key rotation now owned.</div>
+</div>
+<div class="panel" style="padding:0.8rem 1rem">
+<div class="gold">SEAL-3</div>EU provider · <span class="muted">self-managed Postgres, EU entity</span>
+<div class="mt-2 steel font-mono" style="font-size:0.7rem">DEVELOPER</div>
+<div class="muted">The big refactor: Lambda → containers on K8s. RDS → vanilla Postgres.</div>
+</div>
 </div>
 
-<div class="mt-8 muted">Each step is specific engineering work: contracts + crypto, then migration + refactor (Lambda→K8s, RDS→Postgres).</div>
-<div class="mt-4 text-xl gold">≈ €500K over 4 years ≈ 6 basis points of annual volume at maturity.</div>
-<div class="mt-2 muted">Affordable — if you start now. Under a regulator's deadline, it's a project, not an option.</div>
+<div class="mt-6 text-lg gold">≈ €500K over 4 years ≈ 6 basis points of annual volume at maturity.</div>
+<div class="mt-1 muted">Affordable if you start now — under a regulator's deadline, it's a project, not an option.</div>
+
+<!--
+Added 2026-09-17 per Andrés: developer-adaptation row under each SEAL stage,
+so the ladder isn't just a procurement/legal view — shows what actually
+changes in the codebase at each step. Mirrors the S11 anti-pattern fixes
+and the S7 "exit velocity" framing (SEAL-1 costs nothing in code; SEAL-2/3
+is where engineering time actually goes). Say the DEVELOPER line per panel
+instead of reading the top line — the top line is the procurement/legal
+view.
+
+Layout note: content was overflowing the 1080px canvas after adding the
+DEVELOPER rows (checked via `npx slidev export --format png --range 13`,
+see the fix commit) — panel copy trimmed, padding tightened, and the old
+separate "each step is specific engineering work" line dropped since the
+DEVELOPER rows now say that directly. Re-check with the same export command
+after any further edits to this slide.
+-->
 
 ---
 layout: default
 class: text-center
 ---
 
-<div class="kicker">S13 · measure yourself — be honest</div>
+<div class="kicker">S14 · measure yourself — be honest</div>
 
 # Four questions
 
@@ -403,7 +488,7 @@ moving on. Do not rush this slide.
 layout: default
 ---
 
-<div class="kicker">S14 · sovereignty as culture, not bolt-on</div>
+<div class="kicker">S15 · sovereignty as culture, not bolt-on</div>
 
 # Name the trade-offs explicitly
 
@@ -418,7 +503,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S15 · bring-home</div>
+<div class="kicker">S16 · bring-home</div>
 
 # Three things you can do Monday morning
 
@@ -434,7 +519,7 @@ class: text-center
 layout: default
 ---
 
-<div class="kicker">S16 · action 1</div>
+<div class="kicker">S17 · action 1</div>
 
 # Ship one off-ramp
 
@@ -453,7 +538,7 @@ layout: default
 layout: default
 ---
 
-<div class="kicker">S17 · action 2</div>
+<div class="kicker">S18 · action 2</div>
 
 # Run an off-ramp test
 
@@ -473,7 +558,7 @@ Verify: does export work in standard formats? Do keys follow? Does the app start
 layout: default
 ---
 
-<div class="kicker">S18 · action 3</div>
+<div class="kicker">S19 · action 3</div>
 
 # A portability gate in your review habit
 
@@ -494,7 +579,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S19 · close</div>
+<div class="kicker">S20 · close</div>
 
 <svg class="longship-motif w-32 mx-auto mb-6" viewBox="0 0 200 90" fill="none" stroke="#E2A63D" stroke-width="1.6">
   <path d="M10 70 Q100 95 190 70 L175 75 Q100 88 25 75 Z" />

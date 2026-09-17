@@ -137,6 +137,15 @@ th, td {
 
 th { color: var(--fk-steel); font-family: var(--fk-mono); font-weight: 500; }
 
+/* denser variant for tables with 7+ rows on a single slide (e.g. S10's
+   8-objective table) — the default row padding overflows the 1080px
+   canvas past 6-7 rows. */
+table.table-tight th,
+table.table-tight td {
+  padding: 0.22rem 0.7rem;
+  font-size: 0.78rem;
+}
+
 .longship-motif {
   opacity: 0.9;
 }
