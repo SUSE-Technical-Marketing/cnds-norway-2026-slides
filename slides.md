@@ -362,7 +362,7 @@ layout: default
 
 <div class="mt-3 muted text-sm text-center">Gartner: worldwide sovereign cloud IaaS spend. A budget line, not a marketing trend.</div>
 
-<div class="mt-8 text-lg max-w-3xl">Sovereignty is growing as a topic. The investment behind it is growing just as fast. This is becoming real, with real traction, not a think-piece.</div>
+<div class="mt-8 text-lg max-w-3xl mx-auto text-center">Sovereignty is growing fast, and the investment behind it is growing just as fast. IT and engineering teams are the ones who turn that investment into something real.</div>
 
 <!--
 Added 2026-09-17 per Andrés, NOT yet reviewed by Jeroen. New slide, S9 left
