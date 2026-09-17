@@ -624,7 +624,7 @@ class: text-center
 
 <div v-click class="mt-12">
 <div class="steel font-mono">SAFE TO USE</div>
-<div class="mt-3 text-lg max-w-2xl mx-auto">The abstraction lives at the seam. Swap the implementation later without touching every caller.</div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">The abstraction lives at the seam, built for a clean exit: swap the proprietary SDK for something else later without touching a single caller.</div>
 </div>
 
 <!--
@@ -633,6 +633,10 @@ genuinely good patterns, not all five traps. This is now the fixed
 version of the original trap 2 ("proprietary SDK feature on a hot path"):
 same starting scenario, but wrapped behind an interface, which is
 literally the fix line the trap version used to show. Reinforces the fix
+
+Reworded same day, per Andrés: the fix line now names what the interface
+is actually for, a clean exit from the proprietary SDK, not just "swap
+the implementation" in the abstract.
 by presenting its "already applied" state as its own quiz item instead of
 only stating it as a bullet.
 
