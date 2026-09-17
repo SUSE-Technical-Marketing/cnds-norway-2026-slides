@@ -563,11 +563,21 @@ Turned into a live quiz 2026-09-17 per Andrés, spread across 6 slides
 (this intro + one per item) instead of cramming into one dense slide,
 per Andrés's own follow-up ("usa mas de una slide si lo necesitas").
 Each item slide (S15-S19) shows the statement alone first; a click
-reveals the verdict and the one-line fix via Slidev's v-click. Same 5
-anti-patterns as before, content unchanged, framing rewritten to be
-neutral/plausible instead of tipping the answer in the statement itself
-(the old table literally called item 1 "a black hole" and quoted item 5
-sarcastically, both giveaways).
+reveals the verdict and the one-line fix via Slidev's v-click. Framing
+rewritten to be neutral/plausible instead of tipping the answer in the
+statement itself (the old table literally called item 1 "a black hole"
+and quoted item 5 sarcastically, both giveaways).
+
+Mixed verdicts added 2026-09-17, same day, per Andrés: not all five are
+traps anymore. S16 (pattern 2, SDK) and S18 (pattern 4, telemetry/DNS/
+identity) are now "SAFE TO USE", the already-fixed version of what used
+to be a trap there, shown as its own item instead of just a bullet under
+the trap. S15, S17, S19 stay traps; S19 specifically was called out by
+Andrés as not to touch. This makes "guess before the click" a genuine
+50/50-ish call instead of a predictable "everything is secretly bad."
+Kicker labels changed from "trap N of 5" to "pattern N of 5" for this
+same reason: the old label spoiled the verdict before the statement was
+even read.
 
 This pushes the deck from 21 to 26 slides and adds real stage time (a
 guess-then-reveal beat per item, ~15-20s each if kept snappy = ~90-100s
@@ -577,7 +587,9 @@ with Jeroen given the overall timing budget once he reviews.
 ANDRÉS: land this as a genuine pause, not a rhetorical question. "I'm
 going to show you five real choices, one at a time. Before each one, make
 a call: trap, or something you'd actually ship? Click to see if you're
-right." Keep it light, this is the fun beat of the talk, not a test.
+right." Keep it light, this is the fun beat of the talk, not a test. Two
+of these five are genuinely fine, don't let the room assume every answer
+is "trap" by item 3.
 -->
 
 ---
@@ -585,7 +597,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S15 · trap 1 of 5</div>
+<div class="kicker">S15 · pattern 1 of 5</div>
 
 <div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">Your checkout flow's business logic lives entirely inside serverless functions.</div>
 
@@ -606,19 +618,28 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S16 · trap 2 of 5</div>
+<div class="kicker">S16 · pattern 2 of 5</div>
 
-<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">You reach for a proprietary SDK feature on your hottest code path because it ships faster.</div>
+<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">You use a proprietary SDK feature on your hottest code path, wrapped behind your own interface.</div>
 
 <div v-click class="mt-12">
-<div class="gold font-mono">LOCK-IN TRAP</div>
-<div class="mt-3 text-lg max-w-2xl mx-auto">Wrap it behind an interface, keep the abstraction at the seam.</div>
+<div class="steel font-mono">SAFE TO USE</div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">The abstraction lives at the seam. Swap the implementation later without touching every caller.</div>
 </div>
 
 <!--
-ANDRÉS: this is the one most likely to split the room, "it ships faster"
-is a genuinely normal, defensible reason, so the pause matters more here
-than on trap 1. Don't rush the click.
+Flipped to "safe" 2026-09-17 per Andrés: two of the five items should be
+genuinely good patterns, not all five traps. This is now the fixed
+version of the original trap 2 ("proprietary SDK feature on a hot path"):
+same starting scenario, but wrapped behind an interface, which is
+literally the fix line the trap version used to show. Reinforces the fix
+by presenting its "already applied" state as its own quiz item instead of
+only stating it as a bullet.
+
+ANDRÉS: this is the one most likely to split the room the other way,
+"proprietary SDK" alone might make people reflexively guess trap before
+they register "wrapped behind your own interface" at the end. Read the
+whole sentence before pausing, the qualifier is the whole point.
 -->
 
 ---
@@ -626,7 +647,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S17 · trap 3 of 5</div>
+<div class="kicker">S17 · pattern 3 of 5</div>
 
 <div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">Your database leans on the provider's managed extensions and stored procedures.</div>
 
@@ -647,21 +668,29 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S18 · trap 4 of 5</div>
+<div class="kicker">S18 · pattern 4 of 5</div>
 
-<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">Telemetry, DNS, and identity are all wired through one vendor's native services.</div>
+<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">Telemetry runs on OpenTelemetry, with your own DNS and identity provider.</div>
 
 <div v-click class="mt-12">
-<div class="gold font-mono">LOCK-IN TRAP</div>
-<div class="mt-3 text-lg max-w-2xl mx-auto">Self-hosted alternatives: OpenTelemetry, your own DNS/identity.</div>
+<div class="steel font-mono">SAFE TO USE</div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">This is what "off-ramp ready" looks like. No single vendor holds your observability or identity hostage.</div>
 </div>
+
+<!--
+Flipped to "safe" 2026-09-17 per Andrés, second of the two "good pattern"
+items (see S16's comment for the same reasoning). Fixed version of the
+original trap 4 ("telemetry/DNS/identity glued to one vendor"): same
+topic, but running the self-hosted alternatives that trap's fix line
+already named (OpenTelemetry, own DNS/identity).
+-->
 
 ---
 layout: default
 class: text-center
 ---
 
-<div class="kicker">S19 · trap 5 of 5</div>
+<div class="kicker">S19 · pattern 5 of 5</div>
 
 <div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">"We don't have a tested exit plan yet. We'll write one if we ever need it."</div>
 
