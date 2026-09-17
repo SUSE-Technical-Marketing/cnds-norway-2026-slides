@@ -283,22 +283,22 @@ layout: default
 <div class="grid grid-cols-3 gap-4 mt-6">
 <div class="panel">
 <div class="gold font-mono text-sm">DATA ACT · ART. 25</div>
-<div class="mt-2">Switching rights are now contractual: interoperable export, no artificial obstacles, "without undue delay."</div>
+<div class="mt-2">Switching providers is now a contractual right, not a favor.</div>
 <div class="mt-3 steel text-xs">In force since Sep 2025</div>
 </div>
 <div class="panel">
 <div class="gold font-mono text-sm">CLOUD SOVEREIGNTY FRAMEWORK</div>
-<div class="mt-2">The EU's own scoring system for providers, SEAL 0–4. A €180M tender already used it to award contracts.</div>
-<div class="mt-3 steel text-xs">Published Oct 2025 · tender awarded Apr 2026</div>
+<div class="mt-2">The EU's own scoring system for providers, SEAL 0–4, already backed by a €180M tender.</div>
+<div class="mt-3 steel text-xs">Oct 2025 · tender Apr 2026</div>
 </div>
 <div class="panel">
-<div class="gold font-mono text-sm">TECHNOLOGICAL SOVEREIGNTY PACKAGE</div>
-<div class="mt-2">Generalizes that scoring system and unblocks EUCS certification.</div>
+<div class="gold font-mono text-sm">TECH SOVEREIGNTY PACKAGE</div>
+<div class="mt-2">Brings <span class="gold">CADA</span>, a coming public-sector sovereignty scale, and unblocks EUCS certification.</div>
 <div class="mt-3 steel text-xs">Jun 2026</div>
 </div>
 </div>
 
-<div class="mt-8 text-lg">Three different instruments, same direction: sovereignty stopped being a talking point and became something you get scored on.</div>
+<div class="mt-8 text-lg">Three instruments, one direction: sovereignty is now something you get scored on.</div>
 
 <!--
 Simplified 2026-09-17 per Andrés: was 4 date-first panels ("Nine months,
@@ -312,8 +312,17 @@ one-liner that used to close this slide: S10 (the next slide) now owns the
 full Gartner trajectory in more depth, so it was becoming redundant back
 to back.
 
-ANDRÉS: ~75s. Target block S8-S12, drafted for split option (a). Not yet
-confirmed with Jeroen, see brief.md.
+Trimmed further 2026-09-17, same pass: shorter panel copy throughout, and
+CADA moved from a speaker-notes-only aside onto the slide itself (panel 3
+now names it directly: "Brings CADA, a coming public-sector sovereignty
+scale..."). Andrés flagged that CADA needs to be visible on screen, not
+just spoken, since it's easy to cut under time pressure and invisible to
+anyone reading the deck without audio (same reasoning that put CADA on
+S10 briefly before it moved to S21; this is now CADA's only on-screen
+appearance in the deck).
+
+ANDRÉS: ~60-70s. Target block S8-S12, drafted for split option (a). Not
+yet confirmed with Jeroen, see brief.md.
 
 Frame before the panels: "Three things happened, in the same rough window,
 that turned this from a policy conversation into something you get scored
@@ -325,16 +334,13 @@ on."
   scoring system, and put €180M behind a tender that already used it.
   Four named providers won, scored against the framework in the next
   slide.
-- Technological Sovereignty Package: be careful with this one (see
-  optional CADA aside below).
+- Technological Sovereignty Package: this is the one to say slowly. "CADA
+  is a second sovereignty scale, different numbers from SEAL, for
+  public-sector and critical workloads. Its top tiers legally require an
+  EUCS certificate that doesn't exist yet." Same dry energy as "no such
+  thing as a SEAL-3 product" in S11.
 
 Close on the "same direction" line, then move to S10's money slide.
-
-[OPTIONAL, verbal only, not on slide] CADA aside: "One thing worth knowing
-if you go looking afterward: this same package created a second sovereignty
-scale, with different numbers, for public-sector workloads, and its top
-tiers require a certificate that hasn't been written yet." Say it dry, same
-energy as "no such thing as a SEAL-3 product" in S11.
 
 [OPTIONAL, verbal only] Gaia-X aside if the audience clearly knows the name:
 "If you're thinking 'didn't Europe already try this with Gaia-X?', yes,
