@@ -14,18 +14,17 @@ fonts:
 ---
 
 <!--
-SOURCE OF TRUTH: outline.md (19-slide structure, timing, sources), kept in
-../../SUSE/CNDS-Norway-2026/outline.md, describes Jeroen's original v1
-19-slide order (his S7 = "why now", his S12 = "measure yourself", etc.).
-This file has since diverged from that numbering after a 2026-09-17
-storytelling pass (added S7 "the fix, formalized", cut the old "sovereignty
-as culture" slide) and is back to 19 slides, but the mapping to outline.md
-is no longer 1:1 — treat outline.md as content/timing reference only, not
-as a slide-number map. This file replaces deck.html as the editable source;
-palette/type conventions from HANDOFF.md are in style.css. Speaker split
-not yet confirmed with Jeroen (options a/b/c in brief.md). S7-S10 currently
-carry Andrés's drafted notes for split option (a); adjust the handoff lines
-in S6/S8/S10 notes if the split changes.
+SOURCE OF TRUTH: outline.md (kept in ../../SUSE/CNDS-Norway-2026/outline.md)
+describes Jeroen's original v1, 19-slide order. This file has diverged from
+that numbering after a 2026-09-17 storytelling pass (added a "the fix,
+formalized" slide, cut a redundant "sovereignty as culture" slide, merged
+the old "the other lens" + "from the fjord to the stack" slides into one)
+and is at 18 slides — treat outline.md as content/timing reference only,
+never as a slide-number map for this file. This file replaces deck.html as
+the editable source; palette/type conventions from HANDOFF.md are in
+style.css. Speaker split not yet confirmed with Jeroen (options a/b/c in
+brief.md). S6-S9 currently carry Andrés's drafted notes for split option
+(a); adjust the handoff lines in S5/S7/S9 notes if the split changes.
 -->
 
 <div class="kicker">Cloud Native Days Norway · 26–27 Oct 2026</div>
@@ -70,63 +69,56 @@ Beat: pause after "Now look through the other lens." Let it breathe before S3.
 layout: default
 ---
 
-<div class="kicker">S3 · the other lens</div>
+<div class="kicker">S3 · the other lens, and the pivot</div>
 
 # The engineering story
 
-<div class="grid-4 mt-6">
-<div class="panel">
+<div class="flex gap-4 mt-6 text-sm">
+<div class="panel" style="flex:1">
 <div class="stat-num">1</div>
 Knowledge and tools: they built their own ships (oak, rope, sails, iron), made where they lived
+<div class="mt-3 steel" style="font-size:0.75rem">→ transparency/control</div>
 </div>
-<div class="panel">
+<div class="panel" style="flex:1">
 <div class="stat-num">2</div>
 The world was open. They traded and explored from Newfoundland to Baghdad, and never needed to source capability from another power
+<div class="mt-3 steel" style="font-size:0.75rem">→ jurisdiction/supply chain</div>
 </div>
-<div class="panel">
+<div class="panel" style="flex:1">
 <div class="stat-num">3</div>
 And they defended it: they protected themselves and their families
-</div>
-<div class="panel">
-Each leg maps forward:<br/>
-own ships → <span class="steel">transparency/control</span><br/>
-no foreign sourcing → <span class="steel">jurisdiction/supply chain</span><br/>
-self-defense → <span class="steel">contingency/off-ramp</span>
+<div class="mt-3 steel" style="font-size:0.75rem">→ contingency/off-ramp</div>
 </div>
 </div>
 
-<div class="quote-block mt-8">The image we carry is a film about their ships. The truth is an engineering story about capability.</div>
+<div class="quote-block mt-6">The image we carry is a film about their ships. The truth is an engineering story about capability.</div>
+
+<div class="mt-6 text-lg">Today's cloud demands the same mindset. AWS/Azure/GCP are not the enemy. This talk won't pretend otherwise.</div>
+
+<div class="mt-4 text-2xl gold">Dependency without contingency is.</div>
 
 <!--
+Merged 2026-09-17 per Andrés (was S3 "the other lens" + S4 "from the fjord
+to the stack" as two separate slides): S4 used to open with its own quote
+("They sailed their own ships, charted their own routes...") that just
+restated what panel 1 already says here, so it's cut, not carried over.
+Layout also fixed while merging: the "maps forward" mapping used to live
+in a disconnected 4th panel the reader had to cross-reference by eye
+against panels 1-3; now each panel carries its own mapping directly
+underneath it.
+
 Positioning: sovereignty = CAPABILITY, not isolation. The trading point
-pre-empts "is this anti-cloud?" before it's asked.
+(panel 2) pre-empts "is this anti-cloud?" before this slide's own pivot
+line answers it directly ("AWS/Azure/GCP are not the enemy").
+Beat: still pause after "Now look through the other lens" (end of S2)
+before this slide opens.
 -->
 
 ---
 layout: default
-class: text-center
 ---
 
-<div class="kicker">S4 · from the fjord to the stack</div>
-
-<div class="quote-block text-left max-w-3xl mx-auto mt-10">
-They sailed their own ships, charted their own routes, and never handed control of their journey to a foreign power.
-</div>
-
-<div class="text-left max-w-3xl mx-auto mt-8 text-xl">
-Today's cloud demands the same mindset. AWS/Azure/GCP are not the enemy.
-This talk won't pretend otherwise.
-</div>
-
-<div class="text-left max-w-3xl mx-auto mt-8 text-2xl gold">
-Dependency without contingency is.
-</div>
-
----
-layout: default
----
-
-<div class="kicker">S5 · the spine</div>
+<div class="kicker">S4 · the spine</div>
 
 # Sovereignty as an engineering property
 
@@ -145,7 +137,7 @@ layout: default
 layout: default
 ---
 
-<div class="kicker">S6 · the threat model techies should know</div>
+<div class="kicker">S5 · the threat model techies should know</div>
 
 # The US CLOUD Act
 
@@ -171,23 +163,23 @@ The fix: <span class="gold">control the keys, know your jurisdiction chain, keep
 Fixed quote (was invented and longer in deck.html v1, see deck-review-notes.md
 #3). Real event: French Senate inquiry hearing, 10 Jun 2025. Real speaker:
 Anton Carniaux (named individual, not "Microsoft's French subsidiary").
-Handoff bridge into S7 (Andrés, if split option a/b holds):
+Handoff bridge into S6 (Andrés, if split option a/b holds):
 "So that's the threat model. What does actually fixing it get called?"
 
 (This used to bridge straight into a procurement-budget line, but that
-belongs to the EU pivot, not here. S7 now carries it into S8 instead. See
-S7's own comment for the storytelling rationale.)
+belongs to the EU pivot, not here. S6 now carries it into S7 instead. See
+S6's own comment for the storytelling rationale.)
 -->
 
 ---
 layout: default
 ---
 
-<div class="kicker">S7 · the fix, formalized</div>
+<div class="kicker">S6 · the fix, formalized</div>
 
 # Two words for "keep an off-ramp"
 
-<div class="muted mt-2 max-w-2xl">S6 ended on a fix, not a framework. Here's a name for it.</div>
+<div class="muted mt-2 max-w-2xl">S5 ended on a fix, not a framework. Here's a name for it.</div>
 
 <div class="panel mt-6 max-w-2xl">
 <div class="steel font-mono text-sm">SUSE · OPERATIONAL DEFINITION OF SOVEREIGNTY</div>
@@ -196,18 +188,18 @@ layout: default
 <div class="mt-3 muted">An industry framework (Jun 2026), anchored in open architecture, not contract terms. Not a product.</div>
 </div>
 
-<div class="mt-8 muted max-w-2xl">Why it matters: gives engineers something to build against, not just legal language to sign. The architecture section of this talk (S11 onward) is this axis in practice.</div>
+<div class="mt-8 muted max-w-2xl">Why it matters: gives engineers something to build against, not just legal language to sign. The architecture section of this talk (S10 onward) is this axis in practice.</div>
 
 <!--
 ANDRÉS: rewritten 2026-09-17 per Andrés's own storytelling review, NOT yet
 reviewed by Jeroen. Original version of this slide compared the EU Cloud
 Sovereignty Framework side by side with SUSE's definition, but that
-duplicated work S8-S10 already do for the EU side (S8's timeline literally
-names "the SEAL rubric" and S9 is titled "Borrow the vocabulary", so
-pre-naming SEAL here undercut that reveal), and it competed with S5's own
+duplicated work S7-S9 already do for the EU side (S7's timeline literally
+names "the SEAL rubric" and S8 is titled "Borrow the vocabulary", so
+pre-naming SEAL here undercut that reveal), and it competed with S4's own
 "PORTABILITY" attribute for the audience's attention. Cut the EU panel
 entirely. This slide now does one job only: put an industry name on the
-"control the keys, know your jurisdiction chain, keep an off-ramp" line S6
+"control the keys, know your jurisdiction chain, keep an off-ramp" line S5
 already ended on, so "exit velocity" and "pivotability" read as a
 formalization of what was just said, not a competing framework.
 
@@ -219,11 +211,11 @@ own public research and vocabulary, like citing Gartner, not a product. No
 product names appear. Still worth Jeroen's explicit sign-off given the
 house rule, since he owns final content decisions on the deck.
 
-Handoff bridge from S6 (Andrés, if split option a/b holds): "So that's the
+Handoff bridge from S5 (Andrés, if split option a/b holds): "So that's the
 threat model. What does actually fixing it get called?" Then walk the two
 terms, don't read them verbatim.
 
-Handoff bridge into S8's timeline (moved here from S6's old bridge line,
+Handoff bridge into S7's timeline (moved here from S5's old bridge line,
 since it fits the EU regulatory pivot better than it fit right after the
 CLOUD Act): "So that's the engineer's definition. Now, why is this
 suddenly a line item in a procurement budget, and not just a compliance
@@ -234,7 +226,7 @@ footnote?"
 layout: default
 ---
 
-<div class="kicker">S8 · why now: three dates that matter to engineers</div>
+<div class="kicker">S7 · why now: three dates that matter to engineers</div>
 
 # Nine months, four dates
 
@@ -260,8 +252,8 @@ Technological Sovereignty Package / CADA generalizes it + unblocks EUCS certific
 <div class="mt-6 muted">Gartner: sovereign IaaS spend $6.9B ('25) → $23.1B ('27). Structural shift, not a fad.</div>
 
 <!--
-ANDRÉS: ~90s. Target block S7-S10 (was S7-S9 pre-renumber), drafted for
-split option (a). Not yet confirmed with Jeroen, see brief.md.
+ANDRÉS: ~90s. Target block S6-S9, drafted for split option (a). Not yet
+confirmed with Jeroen, see brief.md.
 
 Frame before the dates: "Four things happened in about nine months that
 turned this from a policy conversation into a budget line."
@@ -280,7 +272,7 @@ turned this from a policy conversation into a budget line."
 if you go looking afterward: this same package created a second sovereignty
 scale, with different numbers, for public-sector workloads, and its top
 tiers require a certificate that hasn't been written yet." Say it dry, same
-energy as "no such thing as a SEAL-3 product" in S9.
+energy as "no such thing as a SEAL-3 product" in S8.
 
 [OPTIONAL, verbal only] Gaia-X aside if the audience clearly knows the name:
 "If you're thinking 'didn't Europe already try this with Gaia-X?', yes,
@@ -297,7 +289,7 @@ your plan?"
 layout: default
 ---
 
-<div class="kicker">S9 · SEAL: the cloud sovereignty maturity model</div>
+<div class="kicker">S8 · SEAL: the cloud sovereignty maturity model</div>
 
 # Borrow the vocabulary
 
@@ -339,7 +331,7 @@ line that stops someone asking procurement for "a SEAL-3 vendor."
 layout: default
 ---
 
-<div class="kicker">S10 · the 8 objectives, in engineer-speak</div>
+<div class="kicker">S9 · the 8 objectives, in engineer-speak</div>
 
 # What the Commission actually scores
 
@@ -365,7 +357,7 @@ layout: default
 
 <!--
 ANDRÉS: ~60s. This is the droppable block if behind schedule (Jeroen's
-stated fallback: fold into S9).
+stated fallback: fold into S8).
 
 Added 2026-09-17: the "8 Sovereignty Objectives... add up to that rating"
 line under the title, so the table doesn't land cold. Say it, don't skip
@@ -391,7 +383,7 @@ going to show you what actually building toward it looks like."
 layout: default
 ---
 
-<div class="kicker">S11 · what "off-ramp ready" looks like</div>
+<div class="kicker">S10 · what "off-ramp ready" looks like</div>
 
 # The architecture slide
 
@@ -406,7 +398,7 @@ layout: default
 layout: default
 ---
 
-<div class="kicker">S12 · lock-in anti-patterns</div>
+<div class="kicker">S11 · lock-in anti-patterns</div>
 
 # Each one seals the ramp: the one-line fix
 
@@ -426,7 +418,7 @@ layout: default
 layout: default
 ---
 
-<div class="kicker">S13 · walk one workload up the ladder</div>
+<div class="kicker">S12 · walk one workload up the ladder</div>
 
 # Fintech, 4 years, one workload
 
@@ -459,8 +451,8 @@ layout: default
 <!--
 Added 2026-09-17 per Andrés: developer-adaptation row under each SEAL stage,
 so the ladder isn't just a procurement/legal view. It shows what actually
-changes in the codebase at each step. Mirrors the S11 anti-pattern fixes
-and the S7 "exit velocity" framing (SEAL-1 costs nothing in code; SEAL-2/3
+changes in the codebase at each step. Mirrors the S10 anti-pattern fixes
+and the S6 "exit velocity" framing (SEAL-1 costs nothing in code; SEAL-2/3
 is where engineering time actually goes). Say the DEVELOPER line per panel
 instead of reading the top line. The top line is the procurement/legal
 view.
@@ -478,7 +470,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S14 · measure yourself: be honest</div>
+<div class="kicker">S13 · measure yourself: be honest</div>
 
 # Four questions
 
@@ -517,16 +509,16 @@ Do not rush this slide. If the room is too big or too formal for hands
 (seated theater style, streamed talk), fall back to: "Count on your own
 fingers, don't show anyone" and still do the beat in step 5 verbally
 ("some of you just ran out of fingers").
-Cut 2026-09-17 (storytelling review, applied per Andrés): S15 "sovereignty
-as culture, not bolt-on" removed. Its 3 lines didn't add new information:
-line 1 restated S19's portability-gate content almost verbatim, line 2
-restated S11/S12, line 3 restated the S4/S5 thesis. The title also promised
-an organizational/culture angle the bullets never delivered (no ownership,
-incentives, or onboarding, just more architecture). S14 to S16 (now S15) is
-a clean transition on its own: "answer honestly and you have a sovereignty
-posture" leads straight into "three things you can do Monday morning."
-Removing this also brings the deck back to 19 slides, offsetting the time
-S7 added. Former S16-S20 renumbered to S15-S19.
+Cut 2026-09-17 (storytelling review, applied per Andrés): a slide called
+"sovereignty as culture, not bolt-on" used to sit here. Its 3 lines didn't
+add new information: one restated the portability-gate action slide almost
+verbatim, one restated the architecture/anti-patterns slides, one restated
+the deck's own early thesis. The title also promised an
+organizational/culture angle the bullets never delivered (no ownership,
+incentives, or onboarding, just more architecture). This slide (the
+self-assessment questions) now leads straight into bring-home below, which
+is a clean transition on its own: "answer honestly and you have a
+sovereignty posture" into "three things you can do Monday morning."
 -->
 
 ---
@@ -534,7 +526,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S15 · bring-home</div>
+<div class="kicker">S14 · bring-home</div>
 
 # Three things you can do Monday morning
 
@@ -567,8 +559,8 @@ Reused existing motifs instead of inventing new ones: the big serif
 .stat-num numerals from S3, the panel style used everywhere else, and the
 → arrow glyph from S3's "own ships → transparency/control" mapping, to
 keep this consistent with the rest of the deck rather than a one-off
-design. Each panel's description previews the next 3 slides (S16, S17,
-S18) so this doubles as a visual table of contents for the closing block,
+design. Each panel's description previews the next 3 slides (S15, S16,
+S17) so this doubles as a visual table of contents for the closing block,
 not just 3 disconnected words. No icon-topper cards, no gradients, per
 HANDOFF.md's established "do not revert" design rules.
 -->
@@ -577,7 +569,7 @@ HANDOFF.md's established "do not revert" design rules.
 layout: default
 ---
 
-<div class="kicker">S16 · action 1</div>
+<div class="kicker">S15 · action 1</div>
 
 # Ship one off-ramp
 
@@ -596,7 +588,7 @@ layout: default
 layout: default
 ---
 
-<div class="kicker">S17 · action 2</div>
+<div class="kicker">S16 · action 2</div>
 
 # Run an off-ramp test
 
@@ -616,7 +608,7 @@ Verify: does export work in standard formats? Do keys follow? Does the app start
 layout: default
 ---
 
-<div class="kicker">S18 · action 3</div>
+<div class="kicker">S17 · action 3</div>
 
 # A portability gate in your review habit
 
@@ -637,7 +629,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S19 · close</div>
+<div class="kicker">S18 · close</div>
 
 <svg class="longship-motif w-32 mx-auto mb-6" viewBox="0 0 200 90" fill="none" stroke="#E2A63D" stroke-width="1.6">
   <path d="M10 70 Q100 95 190 70 L175 75 Q100 88 25 75 Z" />
