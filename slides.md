@@ -15,13 +15,17 @@ fonts:
 
 <!--
 SOURCE OF TRUTH: outline.md (19-slide structure, timing, sources), kept in
-../../SUSE/CNDS-Norway-2026/outline.md. This file replaces deck.html as the
-editable source; palette/type conventions from HANDOFF.md are in style.css.
-Speaker split not yet confirmed with Jeroen (options a/b/c in brief.md).
-S7-S10 currently carry Andrés's drafted notes for split option (a); adjust
-the handoff lines in S6/S8/S10 notes if the split changes. S7 (frameworks
-intro) is new, added 2026-09-17, not yet reviewed by Jeroen. It renumbers
-the rest of the original 19-slide outline by +1 (old S7-S19 → new S8-S20).
+../../SUSE/CNDS-Norway-2026/outline.md, describes Jeroen's original v1
+19-slide order (his S7 = "why now", his S12 = "measure yourself", etc.).
+This file has since diverged from that numbering after a 2026-09-17
+storytelling pass (added S7 "the fix, formalized", cut the old "sovereignty
+as culture" slide) and is back to 19 slides, but the mapping to outline.md
+is no longer 1:1 — treat outline.md as content/timing reference only, not
+as a slide-number map. This file replaces deck.html as the editable source;
+palette/type conventions from HANDOFF.md are in style.css. Speaker split
+not yet confirmed with Jeroen (options a/b/c in brief.md). S7-S10 currently
+carry Andrés's drafted notes for split option (a); adjust the handoff lines
+in S6/S8/S10 notes if the split changes.
 -->
 
 <div class="kicker">Cloud Native Days Norway · 26–27 Oct 2026</div>
@@ -513,28 +517,24 @@ Do not rush this slide. If the room is too big or too formal for hands
 (seated theater style, streamed talk), fall back to: "Count on your own
 fingers, don't show anyone" and still do the beat in step 5 verbally
 ("some of you just ran out of fingers").
+Cut 2026-09-17 (storytelling review, applied per Andrés): S15 "sovereignty
+as culture, not bolt-on" removed. Its 3 lines didn't add new information:
+line 1 restated S19's portability-gate content almost verbatim, line 2
+restated S11/S12, line 3 restated the S4/S5 thesis. The title also promised
+an organizational/culture angle the bullets never delivered (no ownership,
+incentives, or onboarding, just more architecture). S14 to S16 (now S15) is
+a clean transition on its own: "answer honestly and you have a sovereignty
+posture" leads straight into "three things you can do Monday morning."
+Removing this also brings the deck back to 19 slides, offsetting the time
+S7 added. Former S16-S20 renumbered to S15-S19.
 -->
-
----
-layout: default
----
-
-<div class="kicker">S15 · sovereignty as culture, not bolt-on</div>
-
-# Name the trade-offs explicitly
-
-<div class="mt-6 grid gap-4">
-<div class="panel">"Cost to leave" becomes a required field in architecture reviews, like RPO/RTO</div>
-<div class="panel">Build abstraction where lock-in risk is highest: data, keys, identity, IaC</div>
-<div class="panel">Portability as a first-class architectural concern, not a compliance-team afterthought at the end of the project</div>
-</div>
 
 ---
 layout: default
 class: text-center
 ---
 
-<div class="kicker">S16 · bring-home</div>
+<div class="kicker">S15 · bring-home</div>
 
 # Three things you can do Monday morning
 
@@ -550,7 +550,7 @@ class: text-center
 layout: default
 ---
 
-<div class="kicker">S17 · action 1</div>
+<div class="kicker">S16 · action 1</div>
 
 # Ship one off-ramp
 
@@ -569,7 +569,7 @@ layout: default
 layout: default
 ---
 
-<div class="kicker">S18 · action 2</div>
+<div class="kicker">S17 · action 2</div>
 
 # Run an off-ramp test
 
@@ -589,7 +589,7 @@ Verify: does export work in standard formats? Do keys follow? Does the app start
 layout: default
 ---
 
-<div class="kicker">S19 · action 3</div>
+<div class="kicker">S18 · action 3</div>
 
 # A portability gate in your review habit
 
@@ -610,7 +610,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S20 · close</div>
+<div class="kicker">S19 · close</div>
 
 <svg class="longship-motif w-32 mx-auto mb-6" viewBox="0 0 200 90" fill="none" stroke="#E2A63D" stroke-width="1.6">
   <path d="M10 70 Q100 95 190 70 L175 75 Q100 88 25 75 Z" />
