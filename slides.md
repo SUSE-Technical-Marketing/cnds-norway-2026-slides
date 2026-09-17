@@ -534,6 +534,19 @@ layout: default
 <div class="panel"><b class="steel">Egress</b><br/>Standard export formats; telemetry/observability pipelines that survive a provider change</div>
 </div>
 
+<div class="mt-6 steel text-xs font-mono">S3 = Simple Storage Service · OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · KMS = Key Management Service · IaC = Infrastructure as Code</div>
+
+<!--
+Footnote added 2026-09-17 per Andrés, same pattern as S10's SEAL/CADA/EUCS
+footnote: spells out every acronym on this slide (S3, OCI, CNI, CSI, BYOK,
+HYOK, KMS, IaC) so none are left undefined on screen. Grouped CNI/CSI and
+BYOK/HYOK into one entry each since they're paired on the slide itself and
+spelling both out separately would just repeat "Container ... Interface"
+and "... Your Own Key" twice. S3 clarified as the storage API/protocol
+(now a de facto standard beyond Amazon), not the AWS product specifically,
+since the panel already says "S3-compatible."
+-->
+
 ---
 layout: default
 ---
