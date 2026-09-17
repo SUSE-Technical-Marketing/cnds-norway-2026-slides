@@ -167,61 +167,63 @@ The fix: <span class="gold">control the keys, know your jurisdiction chain, keep
 Fixed quote (was invented and longer in deck.html v1, see deck-review-notes.md
 #3). Real event: French Senate inquiry hearing, 10 Jun 2025. Real speaker:
 Anton Carniaux (named individual, not "Microsoft's French subsidiary").
-Handoff bridge into S7, the new frameworks-intro slide (Andrés, if split
-option a/b holds):
-"So that's the threat model. Now, why is this suddenly a line item in a
-procurement budget and not just a compliance footnote?"
+Handoff bridge into S7 (Andrés, if split option a/b holds):
+"So that's the threat model. What does actually fixing it get called?"
+
+(This used to bridge straight into a procurement-budget line, but that
+belongs to the EU pivot, not here. S7 now carries it into S8 instead. See
+S7's own comment for the storytelling rationale.)
 -->
 
 ---
 layout: default
 ---
 
-<div class="kicker">S7 · two working definitions of sovereignty</div>
+<div class="kicker">S7 · the fix, formalized</div>
 
-# Two frameworks, same question
+# Two words for "keep an off-ramp"
 
-<div class="grid-2 mt-6">
-<div class="panel">
-<div class="gold font-mono text-sm">EU · CLOUD SOVEREIGNTY FRAMEWORK</div>
-<div class="mt-2"><b>What it is:</b> the European Commission's official framework (published Oct 2025): 8 Sovereignty Objectives, scored on the SEAL 0–4 assurance scale.</div>
-<div class="mt-2"><b>Why it matters:</b> turns "sovereignty" from a marketing word into a graded, auditable procurement criterion. A €180M tender already used it.</div>
-<div class="mt-2"><b>What it gives you:</b> a common vocabulary for RFPs and compliance. That's next (S8–S10).</div>
-</div>
-<div class="panel">
-<div class="steel font-mono text-sm">SUSE · OPERATIONAL DEFINITION</div>
-<div class="mt-2"><b>What it is:</b> an industry framework (Jun 2026) built on two axes: <span class="gold">exit velocity</span> (how fast and costly it is to leave a provider) and <span class="gold">pivotability</span> (can you adapt when conditions change). Anchored in open architecture, not contract terms.</div>
-<div class="mt-2"><b>Why it matters:</b> gives engineers something to build against, not just legal language to sign.</div>
-<div class="mt-2"><b>What it gives you:</b> the architecture section of this talk (S11–S15) is this axis in practice.</div>
-</div>
+<div class="muted mt-2 max-w-2xl">S6 ended on a fix, not a framework. Here's a name for it.</div>
+
+<div class="panel mt-6 max-w-2xl">
+<div class="steel font-mono text-sm">SUSE · OPERATIONAL DEFINITION OF SOVEREIGNTY</div>
+<div class="mt-3"><span class="gold">Exit velocity</span>: how fast, and how costly, it actually is to leave a provider.</div>
+<div class="mt-2"><span class="gold">Pivotability</span>: can you adapt when the conditions around you change, not just when you plan to.</div>
+<div class="mt-3 muted">An industry framework (Jun 2026), anchored in open architecture, not contract terms. Not a product.</div>
 </div>
 
-<div class="mt-8 muted">Different vocabularies, same underlying question: if you had to leave, could you? Both frameworks land on the same answer: open architecture is what makes it "yes."</div>
+<div class="mt-8 muted max-w-2xl">Why it matters: gives engineers something to build against, not just legal language to sign. The architecture section of this talk (S11 onward) is this axis in practice.</div>
 
 <!--
-ANDRÉS: new slide, added 2026-09-17, NOT yet reviewed by Jeroen. Bridges
-S6 (CLOUD Act threat model) into the EU timeline block (S8-S10, Andrés's
-drafted content). Sources: SUSE "What Is Digital Sovereignty? An
-Operational Framework for IT Leaders" (suse.com/c/an-operational-definition-
-for-digital-sovereignty, 16 Jun 2026, Andreas Prins): covers exit velocity
-and pivotability, and explicitly ties SEAL-3/4 to open architecture as the
-only levels giving "genuine operational choice." An older SUSE piece ("The
-Foundations of Digital Sovereignty") gives an alternate 3-pillar framing
-(Technical/Data/Operational Sovereignty). Swap in if that fits the talk's
-voice better. Flagging this so it's a deliberate choice, not a default.
+ANDRÉS: rewritten 2026-09-17 per Andrés's own storytelling review, NOT yet
+reviewed by Jeroen. Original version of this slide compared the EU Cloud
+Sovereignty Framework side by side with SUSE's definition, but that
+duplicated work S8-S10 already do for the EU side (S8's timeline literally
+names "the SEAL rubric" and S9 is titled "Borrow the vocabulary", so
+pre-naming SEAL here undercut that reveal), and it competed with S5's own
+"PORTABILITY" attribute for the audience's attention. Cut the EU panel
+entirely. This slide now does one job only: put an industry name on the
+"control the keys, know your jurisdiction chain, keep an off-ramp" line S6
+already ended on, so "exit velocity" and "pivotability" read as a
+formalization of what was just said, not a competing framework.
 
-Naming SUSE here is a deliberate exception to the "no vendor pitching" rule
-for CNCF-adjacent talks. This cites SUSE's own public research and
-vocabulary, like citing Gartner, not a product. No product names appear.
-Kept strictly factual and neutral, not marketing language. Still worth
-Jeroen's explicit sign-off given the house rule, since he owns final
-content decisions on the deck.
+Source: SUSE "What Is Digital Sovereignty? An Operational Framework for IT
+Leaders" (suse.com/c/an-operational-definition-for-digital-sovereignty, 16
+Jun 2026, Andreas Prins). Naming SUSE here is still a deliberate exception
+to the "no vendor pitching" rule for CNCF-adjacent talks: this cites SUSE's
+own public research and vocabulary, like citing Gartner, not a product. No
+product names appear. Still worth Jeroen's explicit sign-off given the
+house rule, since he owns final content decisions on the deck.
 
-Say, roughly: "Before we dive into the EU's version, it's worth knowing
-there isn't just one definition of sovereignty on the table right now.
-There are at least two, and they're not in conflict. They're two lenses on
-the same problem." Then walk both panels: don't read them, paraphrase.
-Close on the shared bottom line before handing into S8's timeline.
+Handoff bridge from S6 (Andrés, if split option a/b holds): "So that's the
+threat model. What does actually fixing it get called?" Then walk the two
+terms, don't read them verbatim.
+
+Handoff bridge into S8's timeline (moved here from S6's old bridge line,
+since it fits the EU regulatory pivot better than it fit right after the
+CLOUD Act): "So that's the engineer's definition. Now, why is this
+suddenly a line item in a procurement budget, and not just a compliance
+footnote?"
 -->
 
 ---
@@ -274,7 +276,7 @@ turned this from a policy conversation into a budget line."
 if you go looking afterward: this same package created a second sovereignty
 scale, with different numbers, for public-sector workloads, and its top
 tiers require a certificate that hasn't been written yet." Say it dry, same
-energy as "no such thing as a SEAL-3 product" in S8.
+energy as "no such thing as a SEAL-3 product" in S9.
 
 [OPTIONAL, verbal only] Gaia-X aside if the audience clearly knows the name:
 "If you're thinking 'didn't Europe already try this with Gaia-X?', yes,
@@ -357,7 +359,7 @@ layout: default
 
 <!--
 ANDRÉS: ~60s. This is the droppable block if behind schedule (Jeroen's
-stated fallback: fold into S8).
+stated fallback: fold into S9).
 
 Frame: "The Commission scores providers on eight objectives. Here's the
 translation, engineer to engineer." Don't read all eight. The table is
