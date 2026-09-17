@@ -300,7 +300,20 @@ layout: default
 
 <div class="mt-8 text-lg">Three instruments, one direction: sovereignty is now something you get scored on.</div>
 
+<div class="mt-6 steel text-xs font-mono">SEAL = Sovereignty Effective Assurance Levels · CADA = Cloud and AI Development Act · EUCS = European Cybersecurity Certification Scheme for Cloud Services</div>
+
 <!--
+Footnote added 2026-09-17 per Andrés: spells out the three acronyms used
+on this slide (SEAL, CADA, EUCS) so they're not left undefined on screen.
+Verified via web search 2026-09-17: SEAL = Sovereignty Effective Assurance
+Levels (EC Cloud Sovereignty Framework v1.2.1); CADA = Cloud and AI
+Development Act, the specific regulation the Technological Sovereignty
+Package brings (this slide's third panel), not a rename of the package
+itself (digital-strategy.ec.europa.eu/en/library/proposal-cloud-and-ai-
+development-act-cada); EUCS = European Cybersecurity Certification Scheme
+for Cloud Services (ENISA candidate
+scheme).
+
 Simplified 2026-09-17 per Andrés: was 4 date-first panels ("Nine months,
 four dates") built around a timeline. Andrés wants the dates de-emphasized
 and the frameworks/laws themselves as the focus, so this is now 3 panels
