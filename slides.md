@@ -276,47 +276,59 @@ footnote?"
 layout: default
 ---
 
-<div class="kicker">S9 · why now: three dates that matter to engineers</div>
+<div class="kicker">S9 · why now: the frameworks that matter</div>
 
-# Nine months, four dates
+# Three regulations, one direction
 
-<div class="grid-2 mt-6">
+<div class="grid grid-cols-3 gap-4 mt-6">
 <div class="panel">
-<div class="gold font-mono">12 Sep 2025</div>
-Data Act Art. 25 in force for new data-processing contracts. Switching rights become contractual: interoperable export, no artificial obstacles, "without undue delay." Legacy long-term contracts covered by 2027.
+<div class="gold font-mono text-sm">DATA ACT · ART. 25</div>
+<div class="mt-2">Switching rights are now contractual: interoperable export, no artificial obstacles, "without undue delay."</div>
+<div class="mt-3 steel text-xs">In force since Sep 2025</div>
 </div>
 <div class="panel">
-<div class="gold font-mono">20 Oct 2025</div>
-EC publishes Cloud Sovereignty Framework (CSF) + €180M sovereign cloud tender.
+<div class="gold font-mono text-sm">CLOUD SOVEREIGNTY FRAMEWORK</div>
+<div class="mt-2">The EU's own scoring system for providers, SEAL 0–4. A €180M tender already used it to award contracts.</div>
+<div class="mt-3 steel text-xs">Published Oct 2025 · tender awarded Apr 2026</div>
 </div>
 <div class="panel">
-<div class="gold font-mono">17 Apr 2026</div>
-Tender awarded to 4 providers, scored on the SEAL rubric. Sovereignty is now a procurement line item with budget.
-</div>
-<div class="panel">
-<div class="gold font-mono">3 Jun 2026</div>
-Technological Sovereignty Package / CADA generalizes it + unblocks EUCS certification.
+<div class="gold font-mono text-sm">TECHNOLOGICAL SOVEREIGNTY PACKAGE</div>
+<div class="mt-2">Generalizes that scoring system and unblocks EUCS certification.</div>
+<div class="mt-3 steel text-xs">Jun 2026</div>
 </div>
 </div>
 
-<div class="mt-6 muted">Gartner: sovereign IaaS spend $6.9B ('25) → $23.1B ('27). Structural shift, not a fad.</div>
+<div class="mt-8 text-lg">Three different instruments, same direction: sovereignty stopped being a talking point and became something you get scored on.</div>
 
 <!--
-ANDRÉS: ~90s. Target block S8-S12, drafted for split option (a). Not yet
+Simplified 2026-09-17 per Andrés: was 4 date-first panels ("Nine months,
+four dates") built around a timeline. Andrés wants the dates de-emphasized
+and the frameworks/laws themselves as the focus, so this is now 3 panels
+led by the instrument's name, with its date as a small secondary line, not
+the headline. Dropped the 4th panel (tender awarded) as its own item since
+it isn't a separate law, it's a consequence of the Cloud Sovereignty
+Framework, folded into that panel instead. Also dropped the Gartner
+one-liner that used to close this slide: S10 (the next slide) now owns the
+full Gartner trajectory in more depth, so it was becoming redundant back
+to back.
+
+ANDRÉS: ~75s. Target block S8-S12, drafted for split option (a). Not yet
 confirmed with Jeroen, see brief.md.
 
-Frame before the dates: "Four things happened in about nine months that
-turned this from a policy conversation into a budget line."
+Frame before the panels: "Three things happened, in the same rough window,
+that turned this from a policy conversation into something you get scored
+on."
 
-- 12 Sep 2025, Data Act: the one that actually touches your contracts.
-  A provider can't just say no anymore, and can't drag it out indefinitely.
-- 20 Oct 2025, Cloud Sovereignty Framework: EU didn't just regulate, they
-  built a scoring system, and put €180M behind a tender using it.
-- 17 Apr 2026, tender awarded: not theoretical, four named providers won,
-  scored against the framework in the next slide.
-- 3 Jun 2026, Technological Sovereignty Package: be careful with this one
-  (see optional CADA aside below).
-- Close on the Gartner number as the "why should I, a techie, care" payoff.
+- Data Act: the one that actually touches your contracts. A provider
+  can't just say no anymore, and can't drag it out indefinitely.
+- Cloud Sovereignty Framework: the EU didn't just regulate, they built a
+  scoring system, and put €180M behind a tender that already used it.
+  Four named providers won, scored against the framework in the next
+  slide.
+- Technological Sovereignty Package: be careful with this one (see
+  optional CADA aside below).
+
+Close on the "same direction" line, then move to S10's money slide.
 
 [OPTIONAL, verbal only, not on slide] CADA aside: "One thing worth knowing
 if you go looking afterward: this same package created a second sovereignty
