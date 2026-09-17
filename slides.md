@@ -339,6 +339,8 @@ layout: default
 
 # What the Commission actually scores
 
+<div class="muted mt-1 text-sm">8 Sovereignty Objectives (SOV), each rated 0–4 on the SEAL scale from the last slide. The weights below add up to that rating.</div>
+
 <table class="table-tight mt-3">
 <thead>
 <tr><th>Objective</th><th>Weight</th><th>Engineer-speak</th></tr>
@@ -361,9 +363,12 @@ layout: default
 ANDRÉS: ~60s. This is the droppable block if behind schedule (Jeroen's
 stated fallback: fold into S9).
 
-Frame: "The Commission scores providers on eight objectives. Here's the
-translation, engineer to engineer." Don't read all eight. The table is
-meant to be scanned. Call out the two extremes by weight:
+Added 2026-09-17: the "8 Sovereignty Objectives... add up to that rating"
+line under the title, so the table doesn't land cold. Say it, don't skip
+it: "The SEAL rating you just saw isn't one number, it's a blend of eight
+of these, each weighted." Then: "Here's the translation, engineer to
+engineer." Don't read all eight. The table is meant to be scanned. Call out
+the two extremes by weight:
 - Lightest: SOV-8, environmental, 5%. One breath, move on.
 - Heaviest: SOV-5, supply chain, 20%. Spend remaining seconds here.
 
