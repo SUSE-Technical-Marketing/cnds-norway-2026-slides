@@ -244,8 +244,8 @@ layout: default
 ANDRÉS: rewritten 2026-09-17 per Andrés's own storytelling review, NOT yet
 reviewed by Jeroen. Original version of this slide compared the EU Cloud
 Sovereignty Framework side by side with SUSE's definition, but that
-duplicated work S9-S12 already do for the EU side (S9's timeline literally
-names "the SEAL rubric" and S11 is titled "Borrow the vocabulary", so
+duplicated work S9-S12 already do for the EU side (S10's frameworks slide
+covers the CSF/SEAL rubric directly and S11 is titled "Borrow the vocabulary", so
 pre-naming SEAL here undercut that reveal), and it competed with S6's own
 "PORTABILITY" attribute for the audience's attention. Cut the EU panel
 entirely. This slide now does one job only: put an industry name on the
@@ -265,9 +265,9 @@ Handoff bridge from S7 (Andrés, if split option a/b holds): "So that's the
 threat model. What does actually fixing it get called?" Then walk the two
 terms, don't read them verbatim.
 
-Handoff bridge into S9's timeline (moved here from S7's old bridge line,
-since it fits the EU regulatory pivot better than it fit right after the
-CLOUD Act): "So that's the engineer's definition. Now, why is this
+Handoff bridge into S9, the money slide (moved here from S7's old bridge
+line, since it fits the EU regulatory pivot better than it fit right after
+the CLOUD Act): "So that's the engineer's definition. Now, why is this
 suddenly a line item in a procurement budget, and not just a compliance
 footnote?"
 -->
@@ -276,7 +276,63 @@ footnote?"
 layout: default
 ---
 
-<div class="kicker">S9 · why now: the frameworks that matter</div>
+<div class="kicker">S9 · the money behind it</div>
+
+# $23.1B by 2027
+
+<div class="flex items-stretch justify-center gap-3 mt-6 text-center" style="max-width:1300px; margin-left:auto; margin-right:auto">
+<div class="panel" style="flex:1">
+<div class="gold text-3xl" style="font-family:var(--fk-serif)">$6.9B</div>
+<div class="steel font-mono text-xs mt-1">2025</div>
+</div>
+<div class="steel flex items-center text-xl">→</div>
+<div class="panel" style="flex:1">
+<div class="gold text-3xl" style="font-family:var(--fk-serif)">$12.6B</div>
+<div class="steel font-mono text-xs mt-1">2026</div>
+</div>
+<div class="steel flex items-center text-xl">→</div>
+<div class="panel" style="flex:1">
+<div class="gold text-3xl" style="font-family:var(--fk-serif)">$23.1B</div>
+<div class="steel font-mono text-xs mt-1">2027</div>
+</div>
+</div>
+
+<div class="mt-3 muted text-sm text-center">Gartner: worldwide sovereign cloud IaaS spend. A budget line, not a marketing trend.</div>
+
+<div class="mt-8 text-lg max-w-3xl mx-auto text-center">Sovereignty is growing fast, and the investment behind it is growing just as fast. IT and engineering teams are the ones who turn that investment into something real.</div>
+
+<!--
+Added 2026-09-17 per Andrés. Gives the Gartner number its own slide with
+the full 3-point trajectory (2025/2026/2027), then names the trend
+directly: topic and investment both growing, this is traction, not a
+think-piece.
+
+Swapped 2026-09-17 per Andrés with "the frameworks that matter": money now
+leads (S9), frameworks follows (S10). This slide used to close on "keep an
+exit-plan doc, an SBOM..." and a CADA panel; both were cut earlier (the
+action line now closes the whole talk on S21, CADA now lives on S10
+instead), so this swap is purely about slide order, no content changed
+here beyond the kicker number.
+
+Source for the Gartner trajectory: press release 9 Feb 2026
+(gartner.com/en/newsroom/press-releases/2026-02-09-gartner-says-worldwide-
+sovereign-cloud-iaas-spending-will-total-us-dollars-80-billion-in-2026),
+corroborated by ITPro and Computerworld coverage, cross-checked in this
+project's deck-review-notes.md (2026-09-11 session).
+
+ANDRÉS: ~20-30s, keep it tight, this is a bridge slide not a deep dive.
+Say, roughly: "One numbers slide, then we'll move fast." Walk the three
+numbers as one beat, don't over-explain the trajectory. Land the closing
+line plainly, this is the "so what": the topic and the money are both
+accelerating together. Move straight into S10: "So what's actually
+driving that number?"
+-->
+
+---
+layout: default
+---
+
+<div class="kicker">S10 · why now: the frameworks that matter</div>
 
 # Three regulations, one direction
 
@@ -303,43 +359,45 @@ layout: default
 <div class="mt-6 steel text-xs font-mono">SEAL = Sovereignty Effective Assurance Levels · CADA = Cloud and AI Development Act · EUCS = European Cybersecurity Certification Scheme for Cloud Services</div>
 
 <!--
-Footnote added 2026-09-17 per Andrés: spells out the three acronyms used
-on this slide (SEAL, CADA, EUCS) so they're not left undefined on screen.
-Verified via web search 2026-09-17: SEAL = Sovereignty Effective Assurance
-Levels (EC Cloud Sovereignty Framework v1.2.1); CADA = Cloud and AI
-Development Act, the specific regulation the Technological Sovereignty
-Package brings (this slide's third panel), not a rename of the package
-itself (digital-strategy.ec.europa.eu/en/library/proposal-cloud-and-ai-
+Swapped 2026-09-17 per Andrés with "the money behind it": this slide now
+follows the money slide (S9) instead of leading it. Bridge in: S9 shows
+the number is real and growing; this slide answers "what's actually
+driving it."
+
+Footnote spells out the three acronyms used on this slide (SEAL, CADA,
+EUCS) so they're not left undefined on screen. Verified via web search
+2026-09-17: SEAL = Sovereignty Effective Assurance Levels (EC Cloud
+Sovereignty Framework v1.2.1); CADA = Cloud and AI Development Act, the
+specific regulation the Technological Sovereignty Package brings (this
+slide's third panel), not a rename of the package itself
+(digital-strategy.ec.europa.eu/en/library/proposal-cloud-and-ai-
 development-act-cada); EUCS = European Cybersecurity Certification Scheme
-for Cloud Services (ENISA candidate
-scheme).
+for Cloud Services (ENISA candidate scheme).
 
 Simplified 2026-09-17 per Andrés: was 4 date-first panels ("Nine months,
 four dates") built around a timeline. Andrés wants the dates de-emphasized
-and the frameworks/laws themselves as the focus, so this is now 3 panels
-led by the instrument's name, with its date as a small secondary line, not
-the headline. Dropped the 4th panel (tender awarded) as its own item since
-it isn't a separate law, it's a consequence of the Cloud Sovereignty
-Framework, folded into that panel instead. Also dropped the Gartner
-one-liner that used to close this slide: S10 (the next slide) now owns the
-full Gartner trajectory in more depth, so it was becoming redundant back
-to back.
+and the frameworks/laws themselves as the focus, so this is 3 panels led
+by the instrument's name, with its date as a small secondary line, not the
+headline. Dropped "tender awarded" as its own panel since it isn't a
+separate law, it's a consequence of the Cloud Sovereignty Framework,
+folded into that panel instead. Also no Gartner one-liner here: S9 (the
+previous slide) already owns the full trajectory, repeating it here would
+be redundant.
 
-Trimmed further 2026-09-17, same pass: shorter panel copy throughout, and
-CADA moved from a speaker-notes-only aside onto the slide itself (panel 3
-now names it directly: "Brings CADA, a coming public-sector sovereignty
-scale..."). Andrés flagged that CADA needs to be visible on screen, not
+Trimmed further, same pass: shorter panel copy throughout, and CADA moved
+from a speaker-notes-only aside onto the slide itself (panel 3 names it
+directly). Andrés flagged that CADA needs to be visible on screen, not
 just spoken, since it's easy to cut under time pressure and invisible to
-anyone reading the deck without audio (same reasoning that put CADA on
-S10 briefly before it moved to S21; this is now CADA's only on-screen
-appearance in the deck).
+anyone reading the deck without audio. This is CADA's only on-screen
+appearance in the deck (it briefly lived on the money slide before being
+cut from there, see that slide's comment).
 
 ANDRÉS: ~60-70s. Target block S8-S12, drafted for split option (a). Not
 yet confirmed with Jeroen, see brief.md.
 
-Frame before the panels: "Three things happened, in the same rough window,
-that turned this from a policy conversation into something you get scored
-on."
+Frame before the panels: "So what's actually behind that number? Three
+things happened, in the same rough window, that turned this from a policy
+conversation into something you get scored on."
 
 - Data Act: the one that actually touches your contracts. A provider
   can't just say no anymore, and can't drag it out indefinitely.
@@ -353,7 +411,8 @@ on."
   EUCS certificate that doesn't exist yet." Same dry energy as "no such
   thing as a SEAL-3 product" in S11.
 
-Close on the "same direction" line, then move to S10's money slide.
+Close on the "same direction" line, then move straight into S11's SEAL
+vocabulary.
 
 [OPTIONAL, verbal only] Gaia-X aside if the audience clearly knows the name:
 "If you're thinking 'didn't Europe already try this with Gaia-X?', yes,
@@ -364,64 +423,6 @@ DORA (application 17 Jan 2025) / NIS2 (transposition 17 Oct 2024) are
 intentionally not on the slide. Mention only as a spoken one-liner if time
 allows: "regulators now ask: if your provider fails or is compelled, what's
 your plan?"
--->
-
----
-layout: default
----
-
-<div class="kicker">S10 · the money behind it</div>
-
-# $23.1B by 2027
-
-<div class="flex items-stretch justify-center gap-3 mt-6 text-center" style="max-width:1300px; margin-left:auto; margin-right:auto">
-<div class="panel" style="flex:1">
-<div class="gold text-3xl" style="font-family:var(--fk-serif)">$6.9B</div>
-<div class="steel font-mono text-xs mt-1">2025</div>
-</div>
-<div class="steel flex items-center text-xl">→</div>
-<div class="panel" style="flex:1">
-<div class="gold text-3xl" style="font-family:var(--fk-serif)">$12.6B</div>
-<div class="steel font-mono text-xs mt-1">2026</div>
-</div>
-<div class="steel flex items-center text-xl">→</div>
-<div class="panel" style="flex:1">
-<div class="gold text-3xl" style="font-family:var(--fk-serif)">$23.1B</div>
-<div class="steel font-mono text-xs mt-1">2027</div>
-</div>
-</div>
-
-<div class="mt-3 muted text-sm text-center">Gartner: worldwide sovereign cloud IaaS spend. A budget line, not a marketing trend.</div>
-
-<div class="mt-8 text-lg max-w-3xl mx-auto text-center">Sovereignty is growing fast, and the investment behind it is growing just as fast. IT and engineering teams are the ones who turn that investment into something real.</div>
-
-<!--
-Added 2026-09-17 per Andrés, NOT yet reviewed by Jeroen. New slide, S9 left
-untouched on purpose. Gives the Gartner number its own slide with the full
-3-point trajectory (2025/2026/2027) instead of the compressed 2-point
-version in S9's footline, then names the trend directly: topic and
-investment both growing, this is traction, not a think-piece.
-
-Edited 2026-09-17 per Andrés: cut the CADA panel (it was here, moved
-nowhere, just removed) and the old closing line ("What it means for
-engineering and ops teams: keep an exit-plan doc, an SBOM..."). That line
-now closes the whole talk instead, see S21's comment. CADA is still
-mentioned as an "[OPTIONAL, verbal only]" aside in S9's notes; it no
-longer has an on-screen home anywhere in the deck, flag to Jeroen if he
-wants it back somewhere else, or leave it verbal-only as originally
-designed.
-
-Source for the fuller Gartner trajectory: press release 9 Feb 2026
-(gartner.com/en/newsroom/press-releases/2026-02-09-gartner-says-worldwide-
-sovereign-cloud-iaas-spending-will-total-us-dollars-80-billion-in-2026),
-corroborated by ITPro and Computerworld coverage, cross-checked in this
-project's deck-review-notes.md (2026-09-11 session).
-
-ANDRÉS: ~20-30s, keep it tight, this is a bridge slide not a deep dive.
-Say, roughly: "One numbers slide, then we'll move fast." Walk the three
-numbers as one beat, don't over-explain the trajectory. Land the closing
-line plainly, this is the "so what": the topic and the money are both
-accelerating together. Move straight into S11's SEAL vocabulary.
 -->
 
 ---
@@ -790,10 +791,11 @@ you can install on Monday.
 <div class="mt-8 kicker">hierynomus.com/talks/cloud-native-days-norway-2026</div>
 
 <!--
-CTA line added 2026-09-17 per Andrés: moved here from S10, which used to
-close on "what it means for engineering and ops teams: keep an exit-plan
-doc, an SBOM..." Andrés wanted the deck's last concrete, actionable line to
-land at the very end of the talk instead of buried mid-deck, right before
-the closing line and the slides/recording link. S10 itself now closes on a
-growth/traction line instead (see S10's own comment).
+CTA line added 2026-09-17 per Andrés: moved here from the money slide
+(now S9), which used to close on "what it means for engineering and ops
+teams: keep an exit-plan doc, an SBOM..." Andrés wanted the deck's last
+concrete, actionable line to land at the very end of the talk instead of
+buried mid-deck, right before the closing line and the slides/recording
+link. S9 itself now closes on a growth/traction line instead (see S9's
+own comment).
 -->
