@@ -19,13 +19,14 @@ describes Jeroen's original v1, 19-slide order. This file has diverged from
 that numbering after a 2026-09-17 storytelling pass (added a "the fix,
 formalized" slide, cut a redundant "sovereignty as culture" slide, briefly
 merged "the other lens" + "from the fjord to the stack" then split them
-back apart, added a presenter-intro slide) and is at 20 slides — treat
-outline.md as content/timing reference only, never as a slide-number map
-for this file. This file replaces deck.html as the editable source;
-palette/type conventions from HANDOFF.md are in style.css. Speaker split
-not yet confirmed with Jeroen (options a/b/c in brief.md). S8-S11 currently
-carry Andrés's drafted notes for split option (a); adjust the handoff
-lines in S7/S8/S11 notes if the split changes.
+back apart, added a presenter-intro slide, added a "the money behind it"
+slide) and is at 21 slides — treat outline.md as content/timing reference
+only, never as a slide-number map for this file. This file replaces
+deck.html as the editable source; palette/type conventions from HANDOFF.md
+are in style.css. Speaker split not yet confirmed with Jeroen (options
+a/b/c in brief.md). S8-S12 currently carry Andrés's drafted notes for
+split option (a); adjust the handoff lines in S7/S8/S12 notes if the
+split changes.
 -->
 
 <div class="kicker">Cloud Native Days Norway · 26–27 Oct 2026</div>
@@ -237,14 +238,14 @@ layout: default
 <div class="mt-3 muted">An industry framework (Jun 2026), anchored in open architecture, not contract terms. Not a product.</div>
 </div>
 
-<div class="mt-8 muted max-w-2xl">Why it matters: gives engineers something to build against, not just legal language to sign. The architecture section of this talk (S12 onward) is this axis in practice.</div>
+<div class="mt-8 muted max-w-2xl">Why it matters: gives engineers something to build against, not just legal language to sign. The architecture section of this talk (S13 onward) is this axis in practice.</div>
 
 <!--
 ANDRÉS: rewritten 2026-09-17 per Andrés's own storytelling review, NOT yet
 reviewed by Jeroen. Original version of this slide compared the EU Cloud
 Sovereignty Framework side by side with SUSE's definition, but that
-duplicated work S9-S11 already do for the EU side (S9's timeline literally
-names "the SEAL rubric" and S10 is titled "Borrow the vocabulary", so
+duplicated work S9-S12 already do for the EU side (S9's timeline literally
+names "the SEAL rubric" and S11 is titled "Borrow the vocabulary", so
 pre-naming SEAL here undercut that reveal), and it competed with S6's own
 "PORTABILITY" attribute for the audience's attention. Cut the EU panel
 entirely. This slide now does one job only: put an industry name on the
@@ -301,7 +302,7 @@ Technological Sovereignty Package / CADA generalizes it + unblocks EUCS certific
 <div class="mt-6 muted">Gartner: sovereign IaaS spend $6.9B ('25) → $23.1B ('27). Structural shift, not a fad.</div>
 
 <!--
-ANDRÉS: ~90s. Target block S8-S11, drafted for split option (a). Not yet
+ANDRÉS: ~90s. Target block S8-S12, drafted for split option (a). Not yet
 confirmed with Jeroen, see brief.md.
 
 Frame before the dates: "Four things happened in about nine months that
@@ -321,7 +322,7 @@ turned this from a policy conversation into a budget line."
 if you go looking afterward: this same package created a second sovereignty
 scale, with different numbers, for public-sector workloads, and its top
 tiers require a certificate that hasn't been written yet." Say it dry, same
-energy as "no such thing as a SEAL-3 product" in S10.
+energy as "no such thing as a SEAL-3 product" in S11.
 
 [OPTIONAL, verbal only] Gaia-X aside if the audience clearly knows the name:
 "If you're thinking 'didn't Europe already try this with Gaia-X?', yes,
@@ -338,7 +339,74 @@ your plan?"
 layout: default
 ---
 
-<div class="kicker">S10 · SEAL: the cloud sovereignty maturity model</div>
+<div class="kicker">S10 · the money behind it</div>
+
+# $23.1B by 2027
+
+<div class="flex items-stretch justify-center gap-3 mt-6 text-center" style="max-width:1300px; margin-left:auto; margin-right:auto">
+<div class="panel" style="flex:1">
+<div class="gold text-3xl" style="font-family:var(--fk-serif)">$6.9B</div>
+<div class="steel font-mono text-xs mt-1">2025</div>
+</div>
+<div class="steel flex items-center text-xl">→</div>
+<div class="panel" style="flex:1">
+<div class="gold text-3xl" style="font-family:var(--fk-serif)">$12.6B</div>
+<div class="steel font-mono text-xs mt-1">2026</div>
+</div>
+<div class="steel flex items-center text-xl">→</div>
+<div class="panel" style="flex:1">
+<div class="gold text-3xl" style="font-family:var(--fk-serif)">$23.1B</div>
+<div class="steel font-mono text-xs mt-1">2027</div>
+</div>
+</div>
+
+<div class="mt-3 muted text-sm text-center">Gartner: worldwide sovereign cloud IaaS spend. A budget line, not a marketing trend.</div>
+
+<div class="mt-6 panel">
+<div class="steel font-mono text-sm">CADA · TECHNOLOGICAL SOVEREIGNTY PACKAGE, 3 JUN 2026</div>
+<div class="mt-2">A second sovereignty scale, separate from SEAL, for public-sector and critical workloads. Its top tiers legally require an EUCS certificate that doesn't exist yet, worth knowing before someone asks you for "a CADA score."</div>
+</div>
+
+<div class="mt-6 text-lg max-w-3xl">What it means for engineering and ops teams: procurement starts asking for a score, not a promise. Keep an exit-plan doc, an SBOM, and an answer to "who holds the keys" ready before the RFP does.</div>
+
+<!--
+Added 2026-09-17 per Andrés, NOT yet reviewed by Jeroen. New slide, S9 left
+untouched on purpose. Does three things: (1) gives the Gartner number its
+own slide with the full 3-point trajectory (2025/2026/2027) instead of the
+compressed 2-point version in S9's footline, (2) puts CADA on screen for
+the first time, it was previously only an "[OPTIONAL, verbal only]" aside
+in S9's speaker notes, easy to cut under time pressure and never seen by
+anyone reading the deck without audio, (3) translates both into one
+concrete, simple action for engineering/ops instead of leaving "why should
+I care" implicit.
+
+Source for the fuller Gartner trajectory: press release 9 Feb 2026
+(gartner.com/en/newsroom/press-releases/2026-02-09-gartner-says-worldwide-
+sovereign-cloud-iaas-spending-will-total-us-dollars-80-billion-in-2026),
+corroborated by ITPro and Computerworld coverage, cross-checked in this
+project's deck-review-notes.md (2026-09-11 session). CADA facts sourced
+the same place as the CADA aside already in S9's notes.
+
+ANDRÉS: ~30-40s, keep it tight, this is a bridge slide not a deep dive.
+Say, roughly: "One numbers slide, then we'll move fast." Walk the three
+numbers as one beat, don't over-explain the trajectory. On CADA: "One
+thing worth knowing so you're never caught flat-footed: there's a second
+sovereignty scale, not the one we're about to cover, with a certificate
+requirement that literally doesn't exist yet." Land the closing line as
+the "so what" and move straight into S11's SEAL vocabulary.
+
+Housekeeping: S9's speaker notes still carry the original "[OPTIONAL,
+verbal only, not on slide] CADA aside" — that's now redundant since CADA
+is on-screen here. Left it alone per instruction not to touch S9 yet;
+worth trimming from S9's notes in a follow-up pass so the same fact isn't
+duplicated in two places with different framing.
+-->
+
+---
+layout: default
+---
+
+<div class="kicker">S11 · SEAL: the cloud sovereignty maturity model</div>
 
 # Borrow the vocabulary
 
@@ -380,7 +448,7 @@ line that stops someone asking procurement for "a SEAL-3 vendor."
 layout: default
 ---
 
-<div class="kicker">S11 · the 8 objectives, in engineer-speak</div>
+<div class="kicker">S12 · the 8 objectives, in engineer-speak</div>
 
 # What the Commission actually scores
 
@@ -406,7 +474,7 @@ layout: default
 
 <!--
 ANDRÉS: ~60s. This is the droppable block if behind schedule (Jeroen's
-stated fallback: fold into S10).
+stated fallback: fold into S11).
 
 Added 2026-09-17: the "8 Sovereignty Objectives... add up to that rating"
 line under the title, so the table doesn't land cold. Say it, don't skip
@@ -432,7 +500,7 @@ going to show you what actually building toward it looks like."
 layout: default
 ---
 
-<div class="kicker">S12 · what "off-ramp ready" looks like</div>
+<div class="kicker">S13 · what "off-ramp ready" looks like</div>
 
 # The architecture slide
 
@@ -447,7 +515,7 @@ layout: default
 layout: default
 ---
 
-<div class="kicker">S13 · lock-in anti-patterns</div>
+<div class="kicker">S14 · lock-in anti-patterns</div>
 
 # Each one seals the ramp: the one-line fix
 
@@ -467,7 +535,7 @@ layout: default
 layout: default
 ---
 
-<div class="kicker">S14 · walk one workload up the ladder</div>
+<div class="kicker">S15 · walk one workload up the ladder</div>
 
 # Fintech, 4 years, one workload
 
@@ -500,7 +568,7 @@ layout: default
 <!--
 Added 2026-09-17 per Andrés: developer-adaptation row under each SEAL stage,
 so the ladder isn't just a procurement/legal view. It shows what actually
-changes in the codebase at each step. Mirrors the S13 anti-pattern fixes
+changes in the codebase at each step. Mirrors the S14 anti-pattern fixes
 and the S8 "exit velocity" framing (SEAL-1 costs nothing in code; SEAL-2/3
 is where engineering time actually goes). Say the DEVELOPER line per panel
 instead of reading the top line. The top line is the procurement/legal
@@ -519,7 +587,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S15 · measure yourself: be honest</div>
+<div class="kicker">S16 · measure yourself: be honest</div>
 
 # Four questions
 
@@ -575,7 +643,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S16 · bring-home</div>
+<div class="kicker">S17 · bring-home</div>
 
 # Three things you can do Monday morning
 
@@ -608,8 +676,8 @@ Reused existing motifs instead of inventing new ones: the big serif
 .stat-num numerals from S4, the panel style used everywhere else, and the
 → arrow glyph from S4's "own ships → transparency/control" mapping, to
 keep this consistent with the rest of the deck rather than a one-off
-design. Each panel's description previews the next 3 slides (S17, S18,
-S19) so this doubles as a visual table of contents for the closing block,
+design. Each panel's description previews the next 3 slides (S18, S19,
+S20) so this doubles as a visual table of contents for the closing block,
 not just 3 disconnected words. No icon-topper cards, no gradients, per
 HANDOFF.md's established "do not revert" design rules.
 -->
@@ -618,7 +686,7 @@ HANDOFF.md's established "do not revert" design rules.
 layout: default
 ---
 
-<div class="kicker">S17 · action 1</div>
+<div class="kicker">S18 · action 1</div>
 
 # Ship one off-ramp
 
@@ -637,7 +705,7 @@ layout: default
 layout: default
 ---
 
-<div class="kicker">S18 · action 2</div>
+<div class="kicker">S19 · action 2</div>
 
 # Run an off-ramp test
 
@@ -657,7 +725,7 @@ Verify: does export work in standard formats? Do keys follow? Does the app start
 layout: default
 ---
 
-<div class="kicker">S19 · action 3</div>
+<div class="kicker">S20 · action 3</div>
 
 # A portability gate in your review habit
 
@@ -678,7 +746,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S20 · close</div>
+<div class="kicker">S21 · close</div>
 
 <svg class="longship-motif w-32 mx-auto mb-6" viewBox="0 0 200 90" fill="none" stroke="#E2A63D" stroke-width="1.6">
   <path d="M10 70 Q100 95 190 70 L175 75 Q100 88 25 75 Z" />
