@@ -1,4 +1,4 @@
-# Friheten i Koden — CNDS Norway 2026 slides
+# Friheten i Koden · CNDS Norway 2026 slides
 
 Slidev deck for **"Friheten i Koden: Digital Sovereignty for the Nordic Age"**,
 co-presented by Jeroen van Erp and Andrés Valero (SUSE) at Cloud Native Days
@@ -11,23 +11,32 @@ content as plain text/diffs instead of hand-editing HTML.
 Content source of truth, talk brief, and full context (facts to keep
 accurate, established conventions, the still-open speaker split) live in the
 Obsidian vault, not here:
-`~/Documents/avalero/SUSE/CNDS-Norway-2026/` — see `brief.md` there first.
+`~/Documents/avalero/SUSE/CNDS-Norway-2026/`. See `brief.md` there first.
 
 ## Layout
 
-- `slides/` — the live Slidev source: `slides.md` (the deck) and `style.css`
-  (design system, auto-loaded by Slidev since it sits next to the entry file).
-  This is what you edit.
-- `raw-content/` — `deck.html`, Jeroen's original single-file HTML draft.
-  Kept as historical/reference raw content only; `slides/slides.md`
-  explicitly superseded it as the editable source (see the note at the top
-  of that file) and is not generated from it.
+- `slides/` is the main deck: `slides.md` (26 slides), `style.css` (the Viking
+  voyage theme) and `global-top.vue` (the voyage bar: a longship that sails
+  along the bottom, with one waypoint per chapter). This is what you edit.
+- `slides/components/` holds the Viking illustrations, usable in any slide:
+  `<Viking variant="real|myth" />`, `<Axe />`, `<Shield a="#color" b="#color" label="JE" />`
+  and `<Longship />`. All hand-drawn SVG, so the deck stays fully offline.
+- `raw-content/deck.html` is Jeroen's single-file HTML deck of 22 Sep 2026,
+  kept for reference.
+- `archive/2026-09-17-andres-slidev/` is Andrés's earlier Slidev pass of
+  17 Sep 2026, kept for reference. Run it with
+  `npx slidev archive/2026-09-17-andres-slidev/slides.md`.
+
+The main deck merges both versions (6 Oct 2026) into one story line: the talk
+is a voyage in seven chapters (the myth, the keel, foreign waters, the charts,
+shipbuilding, sea trial, home port). The header comment in `slides.md` maps
+chapters to slides and speakers.
 
 ## Usage
 
 ```bash
 npm install
-npm run dev      # http://localhost:3030 — live edit
+npm run dev      # http://localhost:3030  live edit
 npm run build    # static build, fully offline (venue has no internet)
 npm run export   # PDF export
 ```
@@ -45,11 +54,7 @@ closing slide. Lives in `slides/style.css`, loaded automatically by Slidev.
 
 ## Status
 
-26 slides as of the 2026-09-17 storytelling pass (up from an initial
-19-slide port of `outline.md`) — see the header comment at the top of
-`slides/slides.md` for what changed and why; treat `outline.md` as
-content/timing reference only, not a slide-number map for this file.
-Speaker notes for S7–S9 (Andrés's drafted block, split not yet confirmed
-with Jeroen) are inline as HTML comments under each slide — visible in
-Slidev's presenter mode (`npm run dev`, then the presenter view), not on
-the projected slide.
+26 slides, merged 2026-10-06. Still open: confirm the speaker split with
+Jeroen (the deck assumes Andrés takes chapter IV, the charts) and do a timed
+run-through, since content is about 25 minutes in a 30-minute slot. Speaker
+notes are HTML comments under each slide, shown in presenter mode.

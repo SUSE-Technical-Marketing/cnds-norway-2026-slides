@@ -1,4 +1,9 @@
-/* Friheten i Koden — design system (per HANDOFF.md, ported from deck.html) */
+/* Friheten i Koden: Viking voyage theme for Slidev.
+   Illustrations live in components/ (Viking, Axe, Shield, Longship).
+   Palette and type from HANDOFF.md (night sea, gold, steel; serif headlines).
+   Norse motifs used: longship, waves, clinker planks, braided band, keel.
+   Deliberately NOT used: runes, valknut, sun-wheels or any other symbol that
+   extremist groups have co-opted. No gradients, no glassmorphism, no emoji. */
 
 :root {
   --fk-bg: #0C121B;
@@ -6,11 +11,21 @@
   --fk-ink: #F3F0E8;
   --fk-muted: #98A5B6;
   --fk-gold: #E2A63D;
+  --fk-gold-dim: rgba(226, 166, 61, 0.35);
   --fk-steel: #8FB0CF;
+  --fk-line: #24344a;
+  /* Norse paint colors, as on shields and sails */
+  --fk-red: #D0573F;
+  --fk-teal: #4FA3A0;
+  --fk-blue: #5B8CC9;
+  --fk-wood: #8B5A2B;
 
-  --fk-serif: 'Iowan Old Style', Palatino, Georgia, 'Times New Roman', serif;
+  --fk-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
   --fk-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   --fk-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* braided band: two interlaced strands, drawn inline so the deck stays offline */
+  --fk-braid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='10' viewBox='0 0 24 10'%3E%3Cpath d='M0 2 C6 2 6 8 12 8 S18 2 24 2' fill='none' stroke='%23E2A63D' stroke-width='1.4'/%3E%3Cpath d='M0 8 C6 8 6 2 12 2 S18 8 24 8' fill='none' stroke='%23D0573F' stroke-width='1.4'/%3E%3C/svg%3E");
 }
 
 html.dark,
@@ -22,6 +37,7 @@ html {
   background: var(--fk-bg) !important;
   color: var(--fk-ink) !important;
   font-family: var(--fk-sans);
+  padding-bottom: 3.4rem !important; /* room for the voyage bar */
 }
 
 .slidev-layout h1,
@@ -30,14 +46,12 @@ html {
   font-family: var(--fk-serif);
   font-weight: 600;
   letter-spacing: -0.01em;
+  color: var(--fk-ink);
 }
 
-.slidev-layout h1 { color: var(--fk-ink); }
-.slidev-layout h2 { color: var(--fk-ink); }
+.slidev-layout h1 { margin-bottom: 0.4rem; }
 
-.slidev-layout a {
-  color: var(--fk-gold);
-}
+.slidev-layout a { color: var(--fk-gold); }
 
 .slidev-layout code {
   font-family: var(--fk-mono);
@@ -45,45 +59,71 @@ html {
   color: var(--fk-steel);
 }
 
-.slidev-layout pre {
-  background: var(--fk-panel) !important;
-  border: 1px solid #24344a;
-}
-
 .slidev-layout strong { color: var(--fk-gold); font-weight: 600; }
 
-/* --- reusable components (raw HTML classes used inside slides.md) --- */
+/* --- kicker: chapter label with a braided band in front --- */
 
 .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: var(--fk-mono);
-  color: var(--fk-steel);
-  letter-spacing: 0.08em;
+  color: var(--fk-gold);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
+}
+
+.kicker::before {
+  content: '';
+  width: 48px;
+  height: 10px;
+  background: var(--fk-braid) repeat-x center / 24px 10px;
+  flex: none;
 }
 
 .muted { color: var(--fk-muted); }
 .gold { color: var(--fk-gold); }
 .steel { color: var(--fk-steel); }
+.serif { font-family: var(--fk-serif); }
+
+/* --- panels: clinker planks (overlapping strakes on the top edge) --- */
 
 .panel {
   background: var(--fk-panel);
-  border: 1px solid #24344a;
-  border-radius: 10px;
-  padding: 1.1rem 1.4rem;
+  border: 1px solid var(--fk-line);
+  border-radius: 3px;
+  padding: 1rem 1.3rem;
+  box-shadow:
+    inset 0 2px 0 var(--fk-gold-dim),
+    inset 0 5px 0 var(--fk-panel),
+    inset 0 6px 0 rgba(226, 166, 61, 0.15);
 }
 
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
+.panel:nth-child(4n+2) { box-shadow: inset 0 3px 0 var(--fk-red), inset 0 5px 0 var(--fk-panel), inset 0 6px 0 rgba(208, 87, 63, 0.3); }
+.panel:nth-child(4n+3) { box-shadow: inset 0 3px 0 var(--fk-teal), inset 0 5px 0 var(--fk-panel), inset 0 6px 0 rgba(79, 163, 160, 0.3); }
+.panel:nth-child(4n) { box-shadow: inset 0 3px 0 var(--fk-blue), inset 0 5px 0 var(--fk-panel), inset 0 6px 0 rgba(91, 140, 201, 0.3); }
+.panel:nth-child(4n+1) { box-shadow: inset 0 3px 0 var(--fk-gold), inset 0 5px 0 var(--fk-panel), inset 0 6px 0 rgba(226, 166, 61, 0.3); }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
+.panel.hot { border-color: rgba(226, 166, 61, 0.6); }
+
+.red { color: var(--fk-red); }
+.teal { color: var(--fk-teal); }
+
+/* icon + label row used for the three ship legs */
+.leg.leg-icon, .leg-icon { display: flex; align-items: center; gap: 0.5rem; min-height: 24px; white-space: nowrap; }
+.leg-icon > svg { flex: none; }
+
+/* keel slide: equal-height boxes, ship-leg tag pinned to the bottom of each */
+.keel > .panel { display: flex; flex-direction: column; }
+.keel > .panel > .leg { margin-top: auto; padding-top: 0.7rem; border-top: 1px solid var(--fk-line); }
+
+/* northern lights on the title and closing slides: soft colored ribbons */
+.aurora { position: absolute; inset: 0; pointer-events: none; opacity: 0.8; }
+
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
 
 .stat-num {
   font-family: var(--fk-serif);
@@ -95,11 +135,13 @@ html {
 .term {
   font-family: var(--fk-mono);
   background: #0a0f17;
-  border: 1px solid #24344a;
-  border-radius: 8px;
+  border: 1px solid var(--fk-line);
+  border-radius: 3px;
   padding: 1rem 1.2rem;
   color: var(--fk-steel);
 }
+
+/* --- saga quote: gold keel line on the left --- */
 
 .quote-block {
   border-left: 3px solid var(--fk-gold);
@@ -110,26 +152,30 @@ html {
   color: var(--fk-ink);
 }
 
-.seal-row {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin: 0.5rem 0;
+/* --- ship-leg tag: links a concept back to the opening story --- */
+
+.leg {
+  display: block;
+  margin-top: 0.6rem;
+  font-family: var(--fk-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fk-steel);
 }
 
-.seal-bar {
-  height: 10px;
-  background: var(--fk-gold);
-  border-radius: 4px;
-}
+/* --- SEAL ladder --- */
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
+.seal-row { display: flex; align-items: center; gap: 0.8rem; margin: 0.45rem 0; }
+.seal-track { width: 34%; flex: none; height: 10px; background: var(--fk-panel); border: 1px solid var(--fk-line); border-radius: 2px; }
+.seal-bar { height: 100%; background: var(--fk-gold); border-radius: 1px; }
+
+/* --- tables --- */
+
+table { border-collapse: collapse; width: 100%; }
 
 th, td {
-  border-bottom: 1px solid #24344a;
+  border-bottom: 1px solid var(--fk-line);
   padding: 0.4rem 0.7rem;
   text-align: left;
   font-size: 0.85rem;
@@ -137,20 +183,48 @@ th, td {
 
 th { color: var(--fk-steel); font-family: var(--fk-mono); font-weight: 500; }
 
-/* denser variant for tables with 7+ rows on a single slide (e.g. S10's
-   8-objective table) — the default row padding overflows the 1080px
-   canvas past 6-7 rows. */
 table.table-tight th,
-table.table-tight td {
-  padding: 0.22rem 0.7rem;
-  font-size: 0.78rem;
+table.table-tight td { padding: 0.2rem 0.7rem; font-size: 0.74rem; }
+
+tr.dim td { color: var(--fk-muted); opacity: 0.65; }
+
+/* --- 2x2 sea trial --- */
+
+.matrix {
+  display: grid;
+  grid-template-columns: 130px 1fr 1fr;
+  grid-template-rows: 28px 1fr 1fr;
+  gap: 2px;
+  background: var(--fk-line);
 }
 
-.longship-motif {
-  opacity: 0.9;
+.matrix > div { background: var(--fk-bg); padding: 0.55rem 0.8rem; }
+.matrix .axis { font-family: var(--fk-mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fk-muted); display: flex; align-items: flex-end; }
+.matrix .row-h { font-family: var(--fk-serif); font-size: 1.05rem; display: flex; align-items: center; }
+.matrix .cell { background: var(--fk-panel); font-size: 0.8rem; line-height: 1.35; }
+
+/* --- footnote line for acronyms --- */
+
+.foot { font-family: var(--fk-mono); font-size: 0.58rem; color: var(--fk-steel); }
+
+/* --- chapter openers: a faint longship sails in the top right corner --- */
+
+.voyage-open::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  width: 120px;
+  height: 52px;
+  opacity: 0.5;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 94' fill='none' stroke='%238B5A2B' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M18 50 Q60 72 112 72 Q170 72 206 44'/%3E%3Cpath d='M18 50 Q8 38 16 26 Q24 20 26 30'/%3E%3Cpath d='M206 44 Q214 30 206 20'/%3E%3Cpath d='M112 72 V12'/%3E%3Cpath d='M86 14 H138 L135 50 Q112 55 89 50 Z' fill='%23F3F0E8' stroke='none'/%3E%3Cpath d='M96 14 V52 M114 14 V54 M128 14 V52' stroke='%23D0573F' stroke-width='7'/%3E%3Cpath d='M30 86 q12 -7 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0' stroke='%234FA3A0'/%3E%3C/svg%3E") no-repeat center / contain;
 }
 
-/* print / PDF export: keep dark theme (venue is offline, deck may be shown as PDF) */
+/* --- title and close slides --- */
+
+.longship-motif { opacity: 0.9; }
+
 @media print {
   .slidev-layout { background: var(--fk-bg) !important; }
 }

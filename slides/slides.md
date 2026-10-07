@@ -7,6 +7,7 @@ info: |
 class: text-center
 transition: fade
 mdc: true
+voyage: false
 fonts:
   sans: -apple-system
   serif: Georgia
@@ -14,20 +15,29 @@ fonts:
 ---
 
 <!--
-SOURCE OF TRUTH: outline.md (kept in ../../SUSE/CNDS-Norway-2026/outline.md)
-describes Jeroen's original v1, 19-slide order. This file has diverged
-heavily from that numbering after a 2026-09-17 storytelling pass (new
-slides, a cut, a merge-then-split, a swap, and the lock-in anti-patterns
-table turned into a 6-slide click-through quiz) and is at 26 slides —
-treat outline.md as content/timing reference only, never as a slide-number
-map for this file. This file replaces deck.html as the editable source;
-palette/type conventions from HANDOFF.md are in style.css. Speaker split
-not yet confirmed with Jeroen (options a/b/c in brief.md). S8-S12 currently
-carry Andrés's drafted notes for split option (a); adjust the handoff
-lines in S7/S8/S12 notes if the split changes. Slide count has grown a lot
-today (19 -> 26); flag to Jeroen that the ~24min content budget in
-outline.md needs re-checking against a run-through, not assumed.
+MAIN DECK, built 2026-10-06. Merges the two versions that had split apart:
+- Jeroen's deck.html of 22 Sep (kept in raw-content/deck.html)
+- Andrés's Slidev pass of 17 Sep (archived in archive/2026-09-17-andres-slidev/)
+Content rules still come from HANDOFF.md and outline.md in the vault folder.
+
+STORY LINE: the talk is one voyage with seven chapters. The three ship legs
+are planted in I, named against the keel in II, and cashed in out loud in VI.
+  I    The myth          S3-S5    Jeroen
+  II   The keel          S6       Jeroen
+  III  Foreign waters    S7       Jeroen
+  IV   The charts        S8-S11   Andrés (split option a, still to confirm)
+  V    Shipbuilding      S12-S19  Jeroen
+  VI   Sea trial         S20-S21  Jeroen
+  VII  Home port         S22-S26  Jeroen
+Ship legs used everywhere: own ships = control + transparency; open seas, no
+foreign master = jurisdiction + supply chain; they defended it = the off-ramp.
+
+Theme: style.css (Viking motifs, no runes or co-opted symbols) and
+global-bottom.vue (the voyage bar). Rough timing: about 25 minutes of content
+in a 30-minute slot. Needs a timed run-through before Bergen.
 -->
+
+<svg class="aurora" viewBox="0 0 980 552" preserveAspectRatio="none" aria-hidden="true"><defs><filter id="aur1" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="16"/></filter></defs><g filter="url(#aur1)" fill="none" stroke-linecap="round"><path d="M-40 130 Q220 30 440 110 T1020 50" stroke="#3FD7A0" stroke-width="46" opacity=".55"/><path d="M-40 185 Q260 80 520 160 T1030 100" stroke="#5B8CC9" stroke-width="34" opacity=".5"/><path d="M180 80 Q420 10 720 80" stroke="#B07CD8" stroke-width="18" opacity=".35"/></g></svg>
 
 <div class="kicker">Cloud Native Days Norway · 26–27 Oct 2026</div>
 
@@ -36,560 +46,414 @@ outline.md needs re-checking against a run-through, not assumed.
 
 <div class="mt-6 muted">Jeroen van Erp · Andrés Valero · SUSE</div>
 
-<svg class="longship-motif absolute bottom-10 right-10 w-40 opacity-80" viewBox="0 0 200 90" fill="none" stroke="#E2A63D" stroke-width="1.6">
-  <path d="M10 70 Q100 95 190 70 L175 75 Q100 88 25 75 Z" />
-  <path d="M25 70 L25 20 Q35 10 45 20 L45 70" />
-  <path d="M35 20 L35 5" />
-  <path d="M20 30 L50 30 M18 45 L52 45 M18 58 L52 58" />
-</svg>
+<Longship :width="290" class="absolute bottom-12 right-12" />
 
 ---
 layout: default
 class: text-center
+voyage: false
 ---
 
-<div class="kicker">S2 · your speakers</div>
+<div class="kicker">the crew</div>
 
-# Two voices, one deck
+# Two voices, one ship
 
-<div class="flex items-start justify-center gap-20 mt-16">
+<div class="flex items-start justify-center gap-20 mt-10">
+<Axe :size="70" class="self-center opacity-90" />
 <div class="text-center">
-<div class="mx-auto" style="width:140px;height:140px;border-radius:50%;border:1.6px solid #E2A63D;display:flex;align-items:center;justify-content:center;font-family:var(--fk-serif);font-size:2.4rem;color:#E2A63D">JE</div>
-<div class="mt-4 text-xl" style="font-family:var(--fk-serif)">Jeroen van Erp</div>
+<Shield class="mx-auto" :size="140" label="JE" a="#D0573F" b="#F3F0E8" />
+<div class="mt-4 text-xl serif">Jeroen van Erp</div>
 <div class="mt-1 steel text-sm">Principal Technology Advocate, SUSE</div>
 </div>
 <div class="text-center">
-<div class="mx-auto" style="width:140px;height:140px;border-radius:50%;border:1.6px solid #E2A63D;display:flex;align-items:center;justify-content:center;font-family:var(--fk-serif);font-size:2.4rem;color:#E2A63D">AV</div>
-<div class="mt-4 text-xl" style="font-family:var(--fk-serif)">Andrés Valero</div>
+<Shield class="mx-auto" :size="140" label="AV" a="#4FA3A0" b="#E2A63D" />
+<div class="mt-4 text-xl serif">Andrés Valero</div>
 <div class="mt-1 steel text-sm">Principal Technology Advocate, SUSE</div>
 </div>
+<Axe :size="70" class="self-center opacity-90" style="transform:scaleX(-1)" />
 </div>
 
 <!--
-Added 2026-09-17 per Andrés: presenter-intro slide, both speakers on one
-slide, right after the title. PLACEHOLDER PHOTOS: the circles are just
-initials on a thin gold ring (matches the deck's no-photos-yet, line-icon
-aesthetic) since no headshot files have been provided. To swap in real
-photos: replace each placeholder div's content with
-<img src="./jeroen.jpg" style="width:140px;height:140px;border-radius:50%;
-object-fit:cover;border:1.6px solid #E2A63D"/> (same for Andrés), add the
-image files to this repo, and reference them by relative path. Title line
-is intentionally identical for both per Andrés ("same title as me") —
-Andrés's fuller title (Arm Ambassador, focus areas) was deliberately left
-off to keep both entries symmetric; ask if Jeroen wants his own expanded.
+Initials on painted shields until headshots arrive. To swap in a photo, replace the
+<Shield> with <img src="./jeroen.jpg" style="width:140px;height:140px;
+border-radius:50%;object-fit:cover;border:1.6px solid #E2A63D"/>.
+Same title on both on purpose (Andrés's call). Check with Jeroen that it is
+his real title.
 -->
 
 ---
 layout: default
+chapter: "I · The myth"
+class: voyage-open
 ---
 
-<div class="kicker">S3 · the image we carry</div>
+<div class="kicker">I · the myth</div>
 
 # Picture what you saw as a kid
 
 <div class="grid-2 mt-8">
 <div class="term">
-beard<br/>axe<br/>longship<br/><span class="muted"># that's all we remember</span>
+$ ls<br/>beard<br/>axe<br/>longship<br/><span class="muted"># that's all we remember</span>
 </div>
-<div class="panel">
+<div class="panel flex items-center gap-5">
+<Viking variant="myth" :size="105" class="flex-none" />
+<div>
 Bearded men. Axes. Burning ships.<br/>
-Conquering. Raiding. Taking what other people built.
+Conquering, raiding, sailing the oceans and taking what other people <span class="gold">built</span>.
+<div class="mt-3 red text-xs font-mono">FUN FACT: THE HORNS COME FROM AN 1876 OPERA COSTUME</div>
+</div>
 </div>
 </div>
 
-<div class="mt-10 text-xl gold">Now look through the other lens.</div>
+<div class="mt-8 text-xl gold">Now look through the other lens.</div>
 
 <!--
-Beat: pause after "Now look through the other lens." Let it breathe before S3.
+JEROEN. Pause after "Now look through the other lens." Let it breathe.
+
+Optional laugh line: "And the horns? Those come from costume designs for
+Wagner's Ring cycle, 1876. No Viking ever wore them into a fight."
 -->
 
 ---
 layout: default
 ---
 
-<div class="kicker">S4 · the other lens</div>
+<div class="kicker">I · the other lens</div>
 
-# The engineering story
+# Now picture the other image
 
-<div class="grid-4 mt-6">
+<div class="grid-3 mt-6">
 <div class="panel">
-<div class="stat-num">1</div>
-Knowledge and tools: they built their own ships (oak, rope, sails, iron), made where they lived
-</div>
-<div class="panel">
-<div class="stat-num">2</div>
-The world was open. They traded and explored from Newfoundland to Baghdad, and never needed to source capability from another power
+<div class="flex items-center gap-3"><Axe :size="44" /><div class="serif text-lg">Their own ships</div></div>
+<div class="muted mt-1 text-sm">The knowledge and the tools to build them: oak, rope, sails, iron nails. Made where they lived.</div>
 </div>
 <div class="panel">
-<div class="stat-num">3</div>
-And they defended it: they protected themselves and their families
+<div class="flex items-center gap-3"><Longship :width="64" /><div class="serif text-lg">Open seas</div></div>
+<div class="muted mt-1 text-sm">They traded and sailed from Newfoundland to Baghdad. They never had to source their capability from another power.</div>
 </div>
 <div class="panel">
-Each leg maps forward:<br/>
-own ships → <span class="steel">transparency/control</span><br/>
-no foreign sourcing → <span class="steel">jurisdiction/supply chain</span><br/>
-self-defense → <span class="steel">contingency/off-ramp</span>
+<div class="flex items-center gap-3"><Shield :size="44" a="#2F5D8A" b="#E2A63D" /><div class="serif text-lg">They defended it</div></div>
+<div class="muted mt-1 text-sm">They could protect themselves and their families from anyone who came knocking.</div>
 </div>
 </div>
 
-<div class="quote-block mt-8">The image we carry is a film about their ships. The truth is an engineering story about capability.</div>
-
-<!--
-Positioning: sovereignty = CAPABILITY, not isolation. The trading point
-pre-empts "is this anti-cloud?" before it's asked.
--->
-
----
-layout: default
-class: text-center
----
-
-<div class="kicker">S5 · from the fjord to the stack</div>
-
-<div class="text-left max-w-3xl mx-auto mt-10 text-xl">
-Today's cloud demands the same mindset. AWS/Azure/GCP are not the enemy.
-This talk won't pretend otherwise.
+<div class="flex items-center gap-5 mt-6">
+<Viking variant="real" :size="70" class="flex-none" />
+<div>
+<div class="quote-block">The film shows their ships. The history shows people who could build them.</div>
+<div class="mt-2 teal text-xs font-mono">THE REAL HELMET: ROUND, WITH AN EYE GUARD · GJERMUNDBU, NORWAY, 10TH CENTURY</div>
 </div>
-
-<div class="text-left max-w-4xl mx-auto mt-10 text-6xl gold" style="font-family:var(--fk-serif); font-weight:600; line-height:1.15">
-Dependency without contingency is.
 </div>
 
 <!--
-Split back out 2026-09-17 per Andrés: this was briefly merged into S3, then
-un-merged on request. S4 no longer opens with the old "They sailed their
-own ships, charted their own routes..." quote (that repeated panel 1 of
-S3), just the two closing lines: the pivot to today's cloud, then the
-thesis line, now sized way up (text-6xl, serif) since it's the central,
-most important line on the slide, not a secondary punctuation line.
+JEROEN. Plant the three legs and keep them simple: own ships, open seas,
+they defended it. Don't explain what they map to yet. The icons (axe,
+longship, shield) come back every time a leg returns later in the talk. The keel slide names
+it, and the "remember the ships" slide (S21) cashes it in.
+
+Point at the helmet: "And this one is real. Found at Gjermundbu, right
+here in Norway. Round, no horns." The open-seas leg answers "is this an anti-cloud talk?" before anyone asks.
 -->
 
 ---
 layout: default
 ---
 
-<div class="kicker">S6 · the spine</div>
+<div class="kicker">I · from the fjord to the stack</div>
 
-# Sovereignty as an engineering property
-
-<div class="muted mt-2">The boardroom talks about it. But sovereignty gets built, or broken, in pull requests.</div>
-
-<div class="grid-4 mt-8">
-<div class="panel"><div class="gold font-mono text-sm">JURISDICTION</div>whose law can reach this workload</div>
-<div class="panel"><div class="gold font-mono text-sm">CONTROL</div>who holds the keys, the identity, the data</div>
-<div class="panel"><div class="gold font-mono text-sm">PORTABILITY</div>how hard is it to leave (the off-ramp)</div>
-<div class="panel"><div class="gold font-mono text-sm">TRANSPARENCY</div>can you audit the stack? (open source, docs, SBOM)</div>
+<div class="grid-2 mt-6 items-center">
+<div>
+<div class="text-lg muted">Today's cloud asks for the same mindset. AWS, Azure and GCP are great ports, and this talk won't pretend otherwise.</div>
+<div class="mt-8 text-5xl gold serif" style="line-height:1.15;font-weight:600">The enemy is dependency without contingency.</div>
+</div>
+<div class="panel">
+<div class="steel font-mono text-xs">THE TEST · NO GOVERNMENT MANDATE NEEDED</div>
+<div class="mt-3">1. What does it cost you to leave? Money, time, risk.</div>
+<div class="mt-2">2. Can you audit who runs your systems?</div>
+<div class="mt-4 gold">Answer "we don't know" to either one, and what you bought is a dependency.</div>
+</div>
 </div>
 
-<div class="mt-8 muted">All four are properties of your architecture, not of a logo.</div>
+<div class="mt-8 muted text-sm">Global and commercial: Norway, Singapore or Ohio, no regulator required.</div>
+
+<!--
+JEROEN. Merge of both versions: Andrés's big thesis line on the left,
+Jeroen's commercial test (22 Sep) on the right. The test lands before any EU
+material on purpose, so the room hears it as a global engineering question.
+-->
 
 ---
 layout: default
+chapter: "II · The keel"
+class: voyage-open
 ---
 
-<div class="kicker">S7 · the threat model techies should know</div>
+<div class="kicker">II · the keel</div>
 
-# The US CLOUD Act
+# Sovereignty is an engineering property
 
-<div class="mt-4 text-xl">A remote-access API you can't close.</div>
+<div class="muted mt-2">Every longship starts with a keel. This one has four timbers, and the boardroom doesn't lay them. Pull requests do.</div>
+
+<div class="grid-4 mt-8 keel">
+<div class="panel"><div class="gold font-mono text-sm">JURISDICTION</div>Whose law can reach this workload? Follow the parent entity, not the region logo.<span class="leg leg-icon"><Longship :width="34" /> open seas</span></div>
+<div class="panel"><div class="gold font-mono text-sm">CONTROL</div>Who holds the keys, the identity, the data?<span class="leg leg-icon"><Axe :size="20" /> their own ships</span></div>
+<div class="panel"><div class="gold font-mono text-sm">PORTABILITY</div>How hard is it to leave? The off-ramp.<span class="leg leg-icon"><Shield :size="20" a="#2F5D8A" b="#E2A63D" /> they defended it</span></div>
+<div class="panel"><div class="gold font-mono text-sm">TRANSPARENCY</div>Can you audit the stack? Open source, docs, SBOMs.<span class="leg leg-icon"><Planks :width="34" /> planks in sight</span></div>
+</div>
+
+<div class="mt-8 muted">All four live in your architecture. You can measure them, and you can change them one PR at a time.</div>
+
+<!--
+JEROEN. This is the one lens for the whole talk. Every later framework
+points back here (the SOV table, the sea trial 2x2). Read the small tags
+out loud once: "this is where the ships come back."
+
+Transparency gets its own picture: Viking ships were clinker-built, planks
+overlapping and riveted, every joint in plain sight. "Anyone on the beach
+could see exactly how the ship was built. That's what an auditable stack
+looks like."
+-->
+
+---
+layout: default
+chapter: "III · Foreign waters"
+class: voyage-open
+---
+
+<div class="kicker">III · foreign waters</div>
+
+<h1 style="font-size:2.1rem;max-width:80%">The CLOUD Act: a remote-access API you can't close</h1>
+
 <div class="muted mt-2 max-w-3xl">
-It applies to any US-jurisdiction entity: US authorities can compel disclosure
-of data the company "controls," including data sitting in <code>eu-west-1</code>.
-The region logo is not a firewall.
+It applies to any US-jurisdiction entity, wherever the data sits. US authorities can compel disclosure of
+data the company "controls," including data in <code>eu-west-1</code>. Sail in someone else's waters and
+you sail under their law.
 </div>
 
-<div class="quote-block mt-8">
-"No, I cannot guarantee it."
-</div>
-<div class="muted text-sm">Anton Carniaux, Microsoft France director of public &amp; legal affairs, under oath · French Senate inquiry commission, 10 June 2025</div>
+<div class="mt-6 text-2xl serif">The region logo is <span class="gold">not a firewall</span>.</div>
 
-<div class="mt-6 muted text-sm">GDPR/DPF don't block it (DPF upheld at General Court, Sep 2025, on appeal; Schrems II context).</div>
+<div class="quote-block mt-6">"No, I cannot guarantee it."</div>
+<div class="muted text-xs mt-2">Anton Carniaux, Microsoft France director of public &amp; legal affairs, under oath · French Senate inquiry commission, 10 June 2025</div>
 
-<div class="mt-8 text-xl">
-The fix: <span class="gold">control the keys, know your jurisdiction chain, keep an off-ramp.</span>
-</div>
+<div class="mt-6 text-lg">The fix: <span class="gold">control the keys, know your jurisdiction chain, keep an off-ramp.</span></div>
+
+<div class="mt-3 foot">GDPR and the EU–US Data Privacy Framework don't block it (DPF upheld at the General Court, Sep 2025, now on appeal).</div>
 
 <!--
-Fixed quote (was invented and longer in deck.html v1, see deck-review-notes.md
-#3). Real event: French Senate inquiry hearing, 10 Jun 2025. Real speaker:
-Anton Carniaux (named individual, not "Microsoft's French subsidiary").
-Handoff bridge into S8 (Andrés, if split option a/b holds):
-"So that's the threat model. What does actually fixing it get called?"
+JEROEN. The emotional core of the talk. Let the five-word quote sit for a
+second before reading the source line.
 
-(This used to bridge straight into a procurement-budget line, but that
-belongs to the EU pivot, not here. S8 now carries it into S9 instead. See
-S8's own comment for the storytelling rationale.)
+Handoff to Andrés (split option a): "That's the storm. So how do you
+navigate it? Andrés has the charts."
 -->
 
 ---
 layout: default
+chapter: "IV · The charts"
+class: voyage-open
 ---
 
-<div class="kicker">S8 · the fix, formalized</div>
-
-# Two words for "keep an off-ramp"
-
-<div class="muted mt-2 max-w-2xl">S7 ended on a fix, not a framework. Here's a name for it.</div>
-
-<div class="panel mt-6 max-w-2xl">
-<div class="steel font-mono text-sm">SUSE · OPERATIONAL DEFINITION OF SOVEREIGNTY</div>
-<div class="mt-3"><span class="gold">Exit velocity</span>: how fast, and how costly, it actually is to leave a provider.</div>
-<div class="mt-2"><span class="gold">Pivotability</span>: can you adapt when the conditions around you change, not just when you plan to.</div>
-<div class="mt-3 muted">An industry framework (Jun 2026), anchored in open architecture, not contract terms. Not a product.</div>
-</div>
-
-<div class="mt-8 muted max-w-2xl">Why it matters: gives engineers something to build against, not just legal language to sign. The architecture section of this talk (S13 onward) is this axis in practice.</div>
-
-<!--
-ANDRÉS: rewritten 2026-09-17 per Andrés's own storytelling review, NOT yet
-reviewed by Jeroen. Original version of this slide compared the EU Cloud
-Sovereignty Framework side by side with SUSE's definition, but that
-duplicated work S9-S12 already do for the EU side (S10's frameworks slide
-covers the CSF/SEAL rubric directly and S11 is titled "Borrow the vocabulary", so
-pre-naming SEAL here undercut that reveal), and it competed with S6's own
-"PORTABILITY" attribute for the audience's attention. Cut the EU panel
-entirely. This slide now does one job only: put an industry name on the
-"control the keys, know your jurisdiction chain, keep an off-ramp" line S7
-already ended on, so "exit velocity" and "pivotability" read as a
-formalization of what was just said, not a competing framework.
-
-Source: SUSE "What Is Digital Sovereignty? An Operational Framework for IT
-Leaders" (suse.com/c/an-operational-definition-for-digital-sovereignty, 16
-Jun 2026, Andreas Prins). Naming SUSE here is still a deliberate exception
-to the "no vendor pitching" rule for CNCF-adjacent talks: this cites SUSE's
-own public research and vocabulary, like citing Gartner, not a product. No
-product names appear. Still worth Jeroen's explicit sign-off given the
-house rule, since he owns final content decisions on the deck.
-
-Handoff bridge from S7 (Andrés, if split option a/b holds): "So that's the
-threat model. What does actually fixing it get called?" Then walk the two
-terms, don't read them verbatim.
-
-Handoff bridge into S9, the money slide (moved here from S7's old bridge
-line, since it fits the EU regulatory pivot better than it fit right after
-the CLOUD Act): "So that's the engineer's definition. Now, why is this
-suddenly a line item in a procurement budget, and not just a compliance
-footnote?"
--->
-
----
-layout: default
----
-
-<div class="kicker">S9 · the money behind it</div>
+<div class="kicker">IV · follow the trade</div>
 
 # $23.1B by 2027
 
-<div class="flex items-stretch justify-center gap-3 mt-6 text-center" style="max-width:1300px; margin-left:auto; margin-right:auto">
+<div class="flex items-stretch justify-center gap-3 mt-8 text-center" style="max-width:1300px;margin-left:auto;margin-right:auto">
 <div class="panel" style="flex:1">
-<div class="gold text-3xl" style="font-family:var(--fk-serif)">$6.9B</div>
+<div class="gold text-3xl serif">$6.9B</div>
 <div class="steel font-mono text-xs mt-1">2025</div>
 </div>
 <div class="steel flex items-center text-xl">→</div>
 <div class="panel" style="flex:1">
-<div class="gold text-3xl" style="font-family:var(--fk-serif)">$12.6B</div>
+<div class="gold text-3xl serif">$12.6B</div>
 <div class="steel font-mono text-xs mt-1">2026</div>
 </div>
 <div class="steel flex items-center text-xl">→</div>
 <div class="panel" style="flex:1">
-<div class="gold text-3xl" style="font-family:var(--fk-serif)">$23.1B</div>
+<div class="gold text-3xl serif">$23.1B</div>
 <div class="steel font-mono text-xs mt-1">2027</div>
 </div>
 </div>
 
-<div class="mt-3 muted text-sm text-center">Gartner: worldwide sovereign cloud IaaS spend. A budget line, not a marketing trend.</div>
+<div class="mt-3 muted text-sm text-center">Gartner (Feb 2026): sovereign cloud IaaS spend in Europe. This is where budgets are moving.</div>
 
-<div class="mt-8 text-lg max-w-3xl mx-auto text-center">Sovereignty is growing fast, and the investment behind it is growing just as fast. IT and engineering teams are the ones who turn that investment into something real.</div>
+<div class="mt-8 text-lg max-w-3xl mx-auto text-center">The money is growing as fast as the topic. IT and engineering teams are the ones who turn it into something real.</div>
 
 <!--
-Added 2026-09-17 per Andrés. Gives the Gartner number its own slide with
-the full 3-point trajectory (2025/2026/2027), then names the trend
-directly: topic and investment both growing, this is traction, not a
-think-piece.
+ANDRÉS. About 20 to 30 seconds. A bridge slide, keep it tight.
 
-Swapped 2026-09-17 per Andrés with "the frameworks that matter": money now
-leads (S9), frameworks follows (S10). This slide used to close on "keep an
-exit-plan doc, an SBOM..." and a CADA panel; both were cut earlier (the
-action line now closes the whole talk on S26, CADA now lives on S10
-instead), so this swap is purely about slide order, no content changed
-here beyond the kicker number.
+Open: "The Vikings followed the trade routes. So let's follow the money."
+Walk the three numbers as one beat, then land the closing line plainly.
 
-Source for the Gartner trajectory: press release 9 Feb 2026
-(gartner.com/en/newsroom/press-releases/2026-02-09-gartner-says-worldwide-
-sovereign-cloud-iaas-spending-will-total-us-dollars-80-billion-in-2026),
-corroborated by ITPro and Computerworld coverage, cross-checked in this
-project's deck-review-notes.md (2026-09-11 session).
+Move on with: "So what's actually driving that number? Three charts got
+drawn in the last year, plus one that went live six weeks ago."
 
-ANDRÉS: ~20-30s, keep it tight, this is a bridge slide not a deep dive.
-Say, roughly: "One numbers slide, then we'll move fast." Walk the three
-numbers as one beat, don't over-explain the trajectory. Land the closing
-line plainly, this is the "so what": the topic and the money are both
-accelerating together. Move straight into S10: "So what's actually
-driving that number?"
+Fact check 2026-10-06: these are the European figures (Computerworld: "European
+spending on sovereign cloud IaaS to nearly double in 2026"). The 17 Sep
+Slidev version said "worldwide", which was wrong: Gartner puts worldwide at
+about $80B for 2026.
 -->
 
 ---
 layout: default
 ---
 
-<div class="kicker">S10 · why now: the frameworks that matter</div>
+<div class="kicker">IV · the charts</div>
 
-# Three regulations, one direction
+# Four rules, one heading
 
-<div class="grid grid-cols-3 gap-4 mt-6">
+<div class="grid-4 mt-6 text-sm">
 <div class="panel">
-<div class="gold font-mono text-sm">DATA ACT · ART. 25</div>
-<div class="mt-2">Switching providers is now a contractual right, not a favor.</div>
-<div class="mt-3 steel text-xs">In force since Sep 2025</div>
+<div class="gold font-mono text-xs">DATA ACT · ART. 25</div>
+<div class="mt-2">Switching providers is a contractual right now. A provider can't just say no.</div>
+<div class="mt-3 steel text-xs">In force Sep 2025</div>
 </div>
 <div class="panel">
-<div class="gold font-mono text-sm">CLOUD SOVEREIGNTY FRAMEWORK</div>
-<div class="mt-2">The EU's own scoring system for providers, SEAL 0–4, already backed by a €180M tender.</div>
-<div class="mt-3 steel text-xs">Oct 2025 · tender Apr 2026</div>
+<div class="gold font-mono text-xs">CLOUD SOVEREIGNTY FRAMEWORK</div>
+<div class="mt-2">The EU's own scoring system, SEAL 0–4. A €180M tender was awarded on it to four providers.</div>
+<div class="mt-3 steel text-xs">Oct 2025 · awarded Apr 2026</div>
 </div>
 <div class="panel">
-<div class="gold font-mono text-sm">TECH SOVEREIGNTY PACKAGE</div>
-<div class="mt-2">Brings <span class="gold">CADA</span>, a coming public-sector sovereignty scale, and unblocks EUCS certification.</div>
+<div class="gold font-mono text-xs">TECH SOVEREIGNTY PACKAGE</div>
+<div class="mt-2">Brings <span class="gold">CADA</span>: a second sovereignty scale, numbered differently from SEAL. Unblocks EUCS.</div>
 <div class="mt-3 steel text-xs">Jun 2026</div>
 </div>
+<div class="panel hot">
+<div class="gold font-mono text-xs">CYBER RESILIENCE ACT</div>
+<div class="mt-2">Vulnerability reporting within 24h/72h. Also the legal source of the SBOM line coming up.</div>
+<div class="mt-3 gold text-xs">11 Sep 2026 · six weeks ago</div>
+</div>
 </div>
 
-<div class="mt-8 text-lg">Three instruments, one direction: sovereignty is now something you get scored on.</div>
+<div class="mt-8 text-lg">Four rules, one heading: sovereignty is something you get scored on now.</div>
 
-<div class="mt-6 steel text-xs font-mono">SEAL = Sovereignty Effective Assurance Levels · CADA = Cloud and AI Development Act · EUCS = European Cybersecurity Certification Scheme for Cloud Services</div>
+<div class="mt-6 foot">SEAL = Sovereignty Effective Assurance Levels · CADA = Cloud and AI Development Act · EUCS = European Cybersecurity Certification Scheme for Cloud Services · CRA = Cyber Resilience Act</div>
 
 <!--
-Swapped 2026-09-17 per Andrés with "the money behind it": this slide now
-follows the money slide (S9) instead of leading it. Bridge in: S9 shows
-the number is real and growing; this slide answers "what's actually
-driving it."
+ANDRÉS. About 70 seconds. Lead with the rule's name, dates are secondary.
+The one exception is CRA: "six weeks ago" is the hook, so say it.
 
-Footnote spells out the three acronyms used on this slide (SEAL, CADA,
-EUCS) so they're not left undefined on screen. Verified via web search
-2026-09-17: SEAL = Sovereignty Effective Assurance Levels (EC Cloud
-Sovereignty Framework v1.2.1); CADA = Cloud and AI Development Act, the
-specific regulation the Technological Sovereignty Package brings (this
-slide's third panel), not a rename of the package itself
-(digital-strategy.ec.europa.eu/en/library/proposal-cloud-and-ai-
-development-act-cada); EUCS = European Cybersecurity Certification Scheme
-for Cloud Services (ENISA candidate scheme).
+- Data Act: the one that touches your contracts. Your provider can't drag an exit out forever.
+- Cloud Sovereignty Framework: the EU built a scoring system and put €180M behind it. Four providers won, scored on the ladder you'll see next.
+- Tech Sovereignty Package: say this one slowly. "CADA is a second scale with different numbers from SEAL. Its top tiers need an EUCS certificate that doesn't exist yet."
+- CRA: "This one isn't coming. It started six weeks ago, and it's why SBOMs stopped being optional."
 
-Simplified 2026-09-17 per Andrés: was 4 date-first panels ("Nine months,
-four dates") built around a timeline. Andrés wants the dates de-emphasized
-and the frameworks/laws themselves as the focus, so this is 3 panels led
-by the instrument's name, with its date as a small secondary line, not the
-headline. Dropped "tender awarded" as its own panel since it isn't a
-separate law, it's a consequence of the Cloud Sovereignty Framework,
-folded into that panel instead. Also no Gartner one-liner here: S9 (the
-previous slide) already owns the full trajectory, repeating it here would
-be redundant.
+[OPTIONAL, verbal only] Gaia-X, if the room clearly knows the name: "Didn't
+Europe try this with Gaia-X? Yes. It hit the same sovereignty-washing
+problem we'll see in this tender."
 
-Trimmed further, same pass: shorter panel copy throughout, and CADA moved
-from a speaker-notes-only aside onto the slide itself (panel 3 names it
-directly). Andrés flagged that CADA needs to be visible on screen, not
-just spoken, since it's easy to cut under time pressure and invisible to
-anyone reading the deck without audio. This is CADA's only on-screen
-appearance in the deck (it briefly lived on the money slide before being
-cut from there, see that slide's comment).
-
-ANDRÉS: ~60-70s. Target block S8-S12, drafted for split option (a). Not
-yet confirmed with Jeroen, see brief.md.
-
-Frame before the panels: "So what's actually behind that number? Three
-things happened, in the same rough window, that turned this from a policy
-conversation into something you get scored on."
-
-- Data Act: the one that actually touches your contracts. A provider
-  can't just say no anymore, and can't drag it out indefinitely.
-- Cloud Sovereignty Framework: the EU didn't just regulate, they built a
-  scoring system, and put €180M behind a tender that already used it.
-  Four named providers won, scored against the framework in the next
-  slide.
-- Technological Sovereignty Package: this is the one to say slowly. "CADA
-  is a second sovereignty scale, different numbers from SEAL, for
-  public-sector and critical workloads. Its top tiers legally require an
-  EUCS certificate that doesn't exist yet." Same dry energy as "no such
-  thing as a SEAL-3 product" in S11.
-
-Close on the "same direction" line, then move straight into S11's SEAL
-vocabulary.
-
-[OPTIONAL, verbal only] Gaia-X aside if the audience clearly knows the name:
-"If you're thinking 'didn't Europe already try this with Gaia-X?', yes,
-and it ran into the same sovereignty-washing problem we're about to see in
-this tender award." Only if it flows naturally.
-
-DORA (application 17 Jan 2025) / NIS2 (transposition 17 Oct 2024) are
-intentionally not on the slide. Mention only as a spoken one-liner if time
-allows: "regulators now ask: if your provider fails or is compelled, what's
-your plan?"
+DORA and NIS2 stay off the slide. One spoken line if time allows: "Regulators
+now ask: if your provider fails or gets compelled, what's your plan?"
 -->
 
 ---
 layout: default
 ---
 
-<div class="kicker">S11 · SEAL: the cloud sovereignty maturity model</div>
+<div class="kicker">IV · the depth scale</div>
 
-# Borrow the vocabulary
+# SEAL: borrow the vocabulary
 
 <div class="mt-6">
-<div class="seal-row"><div class="seal-bar" style="width:8%"></div><div><b class="gold">SEAL-0</b> no sovereignty: us-east-1 because it was cheaper, the default</div></div>
-<div class="seal-row"><div class="seal-bar" style="width:28%"></div><div><b class="gold">SEAL-1</b> jurisdictional: EU region, GDPR; parent still US</div></div>
-<div class="seal-row"><div class="seal-bar" style="width:50%"></div><div><b class="gold">SEAL-2</b> data: BYOK in EU HSM, audit rights, exit clauses</div></div>
-<div class="seal-row"><div class="seal-bar" style="width:72%"></div><div><b class="gold">SEAL-3</b> digital resilience: EU entity, EU operators, EU certification</div></div>
-<div class="seal-row"><div class="seal-bar" style="width:95%"></div><div><b class="gold">SEAL-4</b> full: EU-only supply chain in the critical path (rare)</div></div>
+<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:8%;background:#D0573F"></div></div><div><b class="gold">SEAL-0</b> no sovereignty: us-east-1 because it was cheaper. The default.</div></div>
+<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:24%;background:#E07B3C"></div></div><div><b class="gold">SEAL-1</b> jurisdictional: EU region, GDPR, parent still US</div></div>
+<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:40%;background:#E2A63D"></div></div><div><b class="gold">SEAL-2</b> data: BYOK in an EU HSM, audit rights, exit clauses</div></div>
+<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:56%;background:#4FA3A0"></div></div><div><b class="gold">SEAL-3</b> resilience: EU entity, EU operators, EU certification</div></div>
+<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:72%;background:#5B8CC9"></div></div><div><b class="gold">SEAL-4</b> full: EU-only supply chain in the critical path. Rare.</div></div>
 </div>
 
-<div class="quote-block mt-8">SEAL-1 is GDPR compliance with a Brussels accent, not sovereignty.</div>
+<div class="quote-block mt-6">SEAL-1 is GDPR compliance with a Brussels accent.</div>
 
-<div class="mt-6 muted">Ratings are per objective, per procurement. There's no such thing as "a SEAL-3 product."</div>
+<div class="mt-5 muted">Ratings are per objective, per procurement. There's no such thing as "a SEAL-3 product."</div>
 
 <!--
-ANDRÉS: ~90s.
+ANDRÉS. About 90 seconds.
 
-Open: "The EU didn't just write policy, they gave us a maturity model, and
-if you've ever worked with a CMMI or DevOps maturity model, this will feel
+Open: "Sailors measure depth before they trust the water. The EU gave us a
+depth scale, and if you've used a CMMI or DevOps maturity model, it'll feel
 familiar."
 
-Walk the ladder fast, add one beat of color per level (don't repeat the
-on-screen lines verbatim):
-- SEAL 0: "The default nobody chose on purpose, just where it was cheapest."
-- SEAL 1: land "Brussels accent" as the laugh line, then move on quickly.
-- SEAL 2: "This is where it starts costing engineering time, not just a
-  contract signature. BYOK means someone owns key rotation now."
+One beat of color per level, don't read the lines:
+- SEAL 0: "The default nobody picked on purpose."
+- SEAL 1: land "Brussels accent" as the laugh line, move on fast.
+- SEAL 2: "This is where it costs engineering time. BYOK means someone owns key rotation now."
 - SEAL 3: "For most regulated workloads, this is the realistic ceiling."
-- SEAL 4: one line, don't dwell. "Rare, and usually not worth it unless
-  you're told to be there."
+- SEAL 4: "Rare, and only worth it if you're told to be there."
 
-SLOW DOWN for the footline: "Ratings are per objective, per procurement.
-There is no such thing as 'a SEAL-3 product.'" Pause after. This is the
-line that stops someone asking procurement for "a SEAL-3 vendor."
+Slow down for the last line and pause after it. That's the line that stops
+someone asking procurement for "a SEAL-3 vendor."
 -->
 
 ---
 layout: default
 ---
 
-<div class="kicker">S12 · the 8 objectives, in engineer-speak</div>
+<div class="kicker">IV · what gets scored</div>
 
-# What the Commission actually scores
+# The 8 objectives, in engineer-speak
 
-<div class="muted mt-1 text-sm">8 Sovereignty Objectives (SOV), each rated 0–4 on the SEAL scale from the last slide. The weights below add up to that rating.</div>
+<div class="muted mt-1 text-sm">Each objective gets its own SEAL rating. The weights blend them into one score.</div>
 
 <table class="table-tight mt-3">
 <thead>
 <tr><th>Objective</th><th>Weight</th><th>Engineer-speak</th></tr>
 </thead>
 <tbody>
-<tr><td>SOV-1 Strategic</td><td>15%</td><td>Can it keep operating if the vendor's government pulls the plug?</td></tr>
-<tr><td>SOV-2 Legal</td><td>10%</td><td>Jurisdiction of the entity that controls the keys and the code</td></tr>
-<tr><td>SOV-3 Data &amp; AI</td><td>10%</td><td>Cryptographic control, auditable access, EU-governed models</td></tr>
-<tr><td>SOV-4 Operational</td><td>15%</td><td>Can EU people run/migrate it? docs, operator pool</td></tr>
-<tr><td><b class="gold">SOV-5 Supply chain</b></td><td><b class="gold">20%</b></td><td>SBOMs, firmware/hardware provenance: "hardest to fake"</td></tr>
-<tr><td>SOV-6 Technology</td><td>15%</td><td>Open, documented APIs; open source; CNCF-aligned tooling</td></tr>
-<tr><td>SOV-7 Security</td><td>10%</td><td>ISO 27001, SecNumCloud/BSI C5, EUCS, audit rights</td></tr>
-<tr><td>SOV-8 Environmental</td><td>5%</td><td>PUE, carbon/water disclosure</td></tr>
+<tr class="dim"><td>SOV-1 Strategic</td><td>15%</td><td>Can it keep running if the vendor's government pulls the plug?</td></tr>
+<tr class="dim"><td>SOV-2 Legal</td><td>10%</td><td>Jurisdiction of whoever controls the keys and the code</td></tr>
+<tr class="dim"><td>SOV-3 Data &amp; AI</td><td>10%</td><td>Cryptographic control, auditable access, EU-governed models</td></tr>
+<tr><td><b>SOV-4 Operational</b></td><td>15%</td><td>Can EU people run and migrate it? A perfect ship still needs a <span class="gold">crew</span>: no skilled operators, no voyage.</td></tr>
+<tr><td><b class="gold">SOV-5 Supply chain</b></td><td><b class="gold">20%</b></td><td>"Hardest to fake": SBOMs and provenance. Since CRA, a legal deadline too.</td></tr>
+<tr><td><b>SOV-6 Technology</b></td><td>15%</td><td>Open, documented APIs. Open source. CNCF-aligned tooling.</td></tr>
+<tr class="dim"><td>SOV-7 Security</td><td>10%</td><td>ISO 27001, SecNumCloud / BSI C5, EUCS, audit rights</td></tr>
+<tr class="dim"><td>SOV-8 Environmental</td><td>5%</td><td>PUE, carbon and water disclosure</td></tr>
 </tbody>
 </table>
 
-<div class="mt-4 muted">The Commission's own words: "hardest to fake" = supply chain. Translation: what's actually in your stack?</div>
+<div class="mt-4 muted">The heaviest weight is supply chain. The engineer's translation: <span class="gold">what's actually in your stack?</span></div>
 
 <!--
-ANDRÉS: ~60s. This is the droppable block if behind schedule (Jeroen's
-stated fallback: fold into S11).
+ANDRÉS. About 60 seconds. This is the droppable slide if we're behind:
+fold the SOV-5 line into the SEAL slide and skip it.
 
-Added 2026-09-17: the "8 Sovereignty Objectives... add up to that rating"
-line under the title, so the table doesn't land cold. Say it, don't skip
-it: "The SEAL rating you just saw isn't one number, it's a blend of eight
-of these, each weighted." Then: "Here's the translation, engineer to
-engineer." Don't read all eight. The table is meant to be scanned. Call out
-the two extremes by weight:
-- Lightest: SOV-8, environmental, 5%. One breath, move on.
-- Heaviest: SOV-5, supply chain, 20%. Spend remaining seconds here.
+"The SEAL rating isn't one number, it's a blend of eight of these." Don't
+read all eight, the dimmed rows are there for completeness. Talk about the
+three bright ones:
+- SOV-4: "A perfect stack with nobody who can run it goes nowhere. That's the silent failure point."
+- SOV-5: the heaviest, 20%. "Hardest to fake," and CRA made it a legal deadline.
+- SOV-6: open APIs and open source, the part this room builds every day.
 
-[OPTIONAL, verbal only] SOV-5: name SLSA (supply-chain levels for software
-artifacts) as the real standard behind "SBOMs, firmware/hardware provenance."
-[OPTIONAL, verbal only] SOV-6: CNCF shipped a conformance program late last
-year specifically to stop AI/GPU workloads locking into one cloud's stack.
-That's what "CNCF-aligned" cashes out to. (No vendor pitching: CNCF program
-only, not a SUSE product.)
+[OPTIONAL, verbal only] SOV-5: name SLSA as the real standard behind
+provenance. SOV-6: the CNCF conformance program for AI workloads, if it fits.
 
-Handback to Jeroen: "So that's what's being measured, and by whom. Jeroen's
-going to show you what actually building toward it looks like."
+Handback to Jeroen: "So that's what gets measured. Jeroen's going to show
+you how to build a ship that scores well."
 -->
 
 ---
 layout: default
+chapter: "V · Shipbuilding"
+class: voyage-open
 ---
 
-<div class="kicker">S13 · what "off-ramp ready" looks like</div>
+<div class="kicker">V · shipbuilding</div>
 
-# The architecture slide
+# What "off-ramp ready" looks like
 
-<div class="grid-2 mt-6">
-<div class="panel"><b class="steel">Portable primitives</b><br/>S3-compatible object storage, vanilla Postgres (no exotic extensions), OCI images, Kubernetes with standard CNI/CSI</div>
-<div class="panel"><b class="steel">Keys under customer control</b><br/>Envelope encryption, BYOK/HYOK; KMS abstraction in the platform layer</div>
-<div class="panel"><b class="steel">IaC as the off-ramp</b><br/>A second provider/region in the same IaC is a tested exit, not a hope</div>
-<div class="panel"><b class="steel">Egress</b><br/>Standard export formats; telemetry/observability pipelines that survive a provider change</div>
+<div class="grid-2 mt-5 text-sm">
+<div class="panel"><b class="steel">Portable primitives</b><br/>S3-compatible object storage, vanilla Postgres, OCI images, Kubernetes with standard CNI/CSI</div>
+<div class="panel"><b class="steel">Keys under your control</b><br/>Envelope encryption, BYOK/HYOK, a KMS abstraction in the platform layer</div>
+<div class="panel"><b class="steel">IaC as the off-ramp</b><br/>A second provider or region in the same IaC is a tested exit</div>
+<div class="panel"><b class="steel">Egress</b><br/>Standard export formats, telemetry pipelines that survive a provider change</div>
 </div>
 
-<div class="mt-6 steel text-xs font-mono">S3 = Simple Storage Service · OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · KMS = Key Management Service · IaC = Infrastructure as Code</div>
+<div class="panel mt-3 text-sm"><b class="gold">Named patterns, all open source:</b> Cluster API-style lifecycle management · KubeVirt-style VMs with live migration · service-mesh mTLS plus OPA/Kyverno policy</div>
+
+<div class="mt-4 foot">OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · KMS = Key Management Service · IaC = Infrastructure as Code · mTLS = mutual TLS · OPA = Open Policy Agent</div>
 
 <!--
-Footnote added 2026-09-17 per Andrés, same pattern as S10's SEAL/CADA/EUCS
-footnote: spells out every acronym on this slide (S3, OCI, CNI, CSI, BYOK,
-HYOK, KMS, IaC) so none are left undefined on screen. Grouped CNI/CSI and
-BYOK/HYOK into one entry each since they're paired on the slide itself and
-spelling both out separately would just repeat "Container ... Interface"
-and "... Your Own Key" twice. S3 clarified as the storage API/protocol
-(now a de facto standard beyond Amazon), not the AWS product specifically,
-since the panel already says "S3-compatible."
--->
-
----
-layout: default
----
-
-<div class="kicker">S14 · lock-in anti-patterns</div>
-
-# Quiz: trap, or fine to use?
-
-<div class="mt-8 text-xl max-w-2xl mx-auto text-center">Five real architecture choices.</div>
-<div class="mt-4 text-lg muted max-w-2xl mx-auto text-center">One at a time. Guess before the click: lock-in trap, or safe to keep?</div>
-
-<!--
-Turned into a live quiz 2026-09-17 per Andrés, spread across 6 slides
-(this intro + one per item) instead of cramming into one dense slide,
-per Andrés's own follow-up ("usa mas de una slide si lo necesitas").
-Each item slide (S15-S19) shows the statement alone first; a click
-reveals the verdict and the one-line fix via Slidev's v-click. Framing
-rewritten to be neutral/plausible instead of tipping the answer in the
-statement itself (the old table literally called item 1 "a black hole"
-and quoted item 5 sarcastically, both giveaways).
-
-Mixed verdicts added 2026-09-17, same day, per Andrés: not all five are
-traps anymore. S16 (pattern 2, SDK) and S18 (pattern 4, telemetry/DNS/
-identity) are now "SAFE TO USE", the already-fixed version of what used
-to be a trap there, shown as its own item instead of just a bullet under
-the trap. S15, S17, S19 stay traps; S19 specifically was called out by
-Andrés as not to touch. This makes "guess before the click" a genuine
-50/50-ish call instead of a predictable "everything is secretly bad."
-Kicker labels changed from "trap N of 5" to "pattern N of 5" for this
-same reason: the old label spoiled the verdict before the statement was
-even read.
-
-This pushes the deck from 21 to 26 slides and adds real stage time (a
-guess-then-reveal beat per item, ~15-20s each if kept snappy = ~90-100s
-total, versus the old single dense slide's ~30-45s). Worth confirming
-with Jeroen given the overall timing budget once he reviews.
-
-ANDRÉS: land this as a genuine pause, not a rhetorical question. "I'm
-going to show you five real choices, one at a time. Before each one, make
-a call: trap, or something you'd actually ship? Click to see if you're
-right." Keep it light, this is the fun beat of the talk, not a test. Two
-of these five are genuinely fine, don't let the room assume every answer
-is "trap" by item 3.
+JEROEN. The named patterns row keeps the abstract's promise: cluster
+management, open virtualization, zero-trust security. CNCF project
+categories only, no vendor names.
 -->
 
 ---
@@ -597,20 +461,25 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S15 · pattern 1 of 5</div>
+<div class="kicker">V · leaks in the hull</div>
 
-<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">Your checkout flow's business logic lives entirely inside serverless functions.</div>
+# Quiz: lock-in trap, or seaworthy?
 
-<div v-click class="mt-12">
-<div class="gold font-mono">LOCK-IN TRAP</div>
-<div class="mt-3 text-lg max-w-2xl mx-auto">Extract to containers/K8s, keep vendor functions as thin glue.</div>
+<div class="flex items-center justify-center gap-6 mt-6">
+<Axe :size="60" />
+<Viking variant="real" :size="96" beard="#E2A63D" />
+<Axe :size="60" style="transform:scaleX(-1)" />
 </div>
 
+<div class="mt-4 text-xl max-w-2xl mx-auto">Five real architecture choices.</div>
+<div class="mt-4 text-lg muted max-w-2xl mx-auto">One at a time. Make your call before the click.</div>
+
 <!--
-ANDRÉS: read the statement, pause 3-4s, let the room silently guess, then
-click. This one's a fairly easy "trap" if the audience already knows
-"serverless as a black hole" as a pattern name, don't give that name away
-before the click, that's the giveaway the old table had.
+JEROEN. The axe marks a trap (chop it out), the longship marks a seaworthy
+choice. Make it a real pause: "Five real choices, one at a time. Before each
+one, decide: trap, or something you'd ship? Then I click." Keep it light,
+this is the fun beat. Two of the five are fine, so don't let the room
+settle on "always trap" by item 3.
 -->
 
 ---
@@ -618,32 +487,18 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S16 · pattern 2 of 5</div>
+<div class="kicker">V · pattern 1 of 5</div>
 
-<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">You use a proprietary SDK feature on your hottest code path, wrapped behind your own interface.</div>
+<div class="text-2xl mt-16 max-w-3xl mx-auto serif">Your checkout flow's business logic lives entirely inside serverless functions.</div>
 
 <div v-click class="mt-12">
-<div class="steel font-mono">SAFE TO USE</div>
-<div class="mt-3 text-lg max-w-2xl mx-auto">The abstraction lives at the seam, built for a clean exit: swap the proprietary SDK for something else later without touching a single caller.</div>
+<div class="inline-flex items-center gap-3"><Axe :size="34" /><span class="red font-mono text-lg">LOCK-IN TRAP</span></div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">Move it to containers on K8s. Keep vendor functions as thin glue.</div>
 </div>
 
 <!--
-Flipped to "safe" 2026-09-17 per Andrés: two of the five items should be
-genuinely good patterns, not all five traps. This is now the fixed
-version of the original trap 2 ("proprietary SDK feature on a hot path"):
-same starting scenario, but wrapped behind an interface, which is
-literally the fix line the trap version used to show. Reinforces the fix
-
-Reworded same day, per Andrés: the fix line now names what the interface
-is actually for, a clean exit from the proprietary SDK, not just "swap
-the implementation" in the abstract.
-by presenting its "already applied" state as its own quiz item instead of
-only stating it as a bullet.
-
-ANDRÉS: this is the one most likely to split the room the other way,
-"proprietary SDK" alone might make people reflexively guess trap before
-they register "wrapped behind your own interface" at the end. Read the
-whole sentence before pausing, the qualifier is the whole point.
+Read it, pause 3 to 4 seconds, then click. Don't say "black hole" before the
+click, it gives the answer away.
 -->
 
 ---
@@ -651,20 +506,18 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S17 · pattern 3 of 5</div>
+<div class="kicker">V · pattern 2 of 5</div>
 
-<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">Your database leans on the provider's managed extensions and stored procedures.</div>
+<div class="text-2xl mt-16 max-w-3xl mx-auto serif">You use a proprietary SDK feature on your hottest code path, wrapped behind your own interface.</div>
 
 <div v-click class="mt-12">
-<div class="gold font-mono">LOCK-IN TRAP</div>
-<div class="mt-3 text-lg max-w-2xl mx-auto">Stay on a portable, open-source database, not vendor-specific magic.</div>
+<div class="inline-flex items-center gap-3"><Longship :width="56" /><span class="teal font-mono text-lg">SEAWORTHY</span></div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">The seam is yours. Swap the SDK later and no caller notices.</div>
 </div>
 
 <!--
-ANDRÉS: if you want to name examples verbally without putting them on the
-slide, MySQL/MariaDB/Postgres are all fine as "a portable open-source
-database" (per Andrés: don't hardcode Postgres specifically as THE
-answer).
+The one most likely to fool the room. Read the whole sentence before the
+pause: "wrapped behind your own interface" is the whole point.
 -->
 
 ---
@@ -672,21 +525,18 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S18 · pattern 4 of 5</div>
+<div class="kicker">V · pattern 3 of 5</div>
 
-<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">Telemetry runs on OpenTelemetry, with your own DNS and identity provider.</div>
+<div class="text-2xl mt-16 max-w-3xl mx-auto serif">Your database leans on the provider's managed extensions and stored procedures.</div>
 
 <div v-click class="mt-12">
-<div class="steel font-mono">SAFE TO USE</div>
-<div class="mt-3 text-lg max-w-2xl mx-auto">This is what "off-ramp ready" looks like. No single vendor holds your observability or identity hostage.</div>
+<div class="inline-flex items-center gap-3"><Axe :size="34" /><span class="red font-mono text-lg">LOCK-IN TRAP</span></div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">Stay on a portable open-source database, without the vendor magic.</div>
 </div>
 
 <!--
-Flipped to "safe" 2026-09-17 per Andrés, second of the two "good pattern"
-items (see S16's comment for the same reasoning). Fixed version of the
-original trap 4 ("telemetry/DNS/identity glued to one vendor"): same
-topic, but running the self-hosted alternatives that trap's fix line
-already named (OpenTelemetry, own DNS/identity).
+Examples to name out loud if useful: Postgres, MySQL, MariaDB. Don't present
+Postgres as the only answer.
 -->
 
 ---
@@ -694,263 +544,274 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">S19 · pattern 5 of 5</div>
+<div class="kicker">V · pattern 4 of 5</div>
 
-<div class="text-2xl mt-16 max-w-3xl mx-auto" style="font-family:var(--fk-serif)">"We don't have a tested exit plan yet. We'll write one if we ever need it."</div>
+<div class="text-2xl mt-16 max-w-3xl mx-auto serif">Telemetry runs on OpenTelemetry, with your own DNS and identity provider.</div>
 
 <div v-click class="mt-12">
-<div class="gold font-mono">LOCK-IN TRAP</div>
+<div class="inline-flex items-center gap-3"><Longship :width="56" /><span class="teal font-mono text-lg">SEAWORTHY</span></div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">No single vendor holds your observability or your identity hostage.</div>
+</div>
+
+---
+layout: default
+class: text-center
+---
+
+<div class="kicker">V · pattern 5 of 5</div>
+
+<div class="text-2xl mt-16 max-w-3xl mx-auto serif">"We don't have a tested exit plan yet. We'll write one if we ever need it."</div>
+
+<div v-click class="mt-12">
+<div class="inline-flex items-center gap-3"><Axe :size="34" /><span class="red font-mono text-lg">LOCK-IN TRAP</span></div>
 <div class="mt-3 text-lg max-w-2xl mx-auto">The default that makes SEAL-2 impossible.</div>
 </div>
 
 <!--
-ANDRÉS: last one, land it a little heavier than the others, this is the
-attitude behind all four previous traps, not just a technical choice.
-Beat before moving to S20 (the fintech ladder, "walk one workload up").
+Land this one heavier. It's the attitude behind every other trap.
 -->
 
 ---
 layout: default
 ---
 
-<div class="kicker">S20 · walk one workload up the ladder</div>
+<div class="kicker">V · a four-year refit</div>
 
-# Fintech, 4 years, one workload
+# One workload, up the ladder
 
 <div class="grid-4 mt-4 text-sm">
 <div class="panel" style="padding:0.8rem 1rem">
-<div class="gold">SEAL-0</div>us-east-1 · <span class="muted">the starting point</span>
-<div class="mt-2 steel font-mono" style="font-size:0.7rem">DEVELOPER</div>
+<div class="gold">SEAL-0 · Year 1</div>us-east-1 <span class="muted">· cheaper</span>
+<div class="mt-2 steel font-mono" style="font-size:0.65rem">IN THE CODE</div>
 <div class="muted">Lambda + RDS, AWS SDK hardcoded in handlers. No exit in mind.</div>
 </div>
 <div class="panel" style="padding:0.8rem 1rem">
-<div class="gold">SEAL-1</div>EU region · <span class="muted">"almost nothing changed"</span>
-<div class="mt-2 steel font-mono" style="font-size:0.7rem">DEVELOPER</div>
+<div class="gold">SEAL-1 · Year 2</div>EU region <span class="muted">· parent still US</span>
+<div class="mt-2 steel font-mono" style="font-size:0.65rem">IN THE CODE</div>
 <div class="muted">One Terraform variable: region. Zero app code touched.</div>
 </div>
 <div class="panel" style="padding:0.8rem 1rem">
-<div class="gold">SEAL-2</div>BYOK in EU HSM · <span class="muted">audit rights, 60-day exit</span>
-<div class="mt-2 steel font-mono" style="font-size:0.7rem">DEVELOPER</div>
-<div class="muted">KMS wrapped behind an interface, envelope encryption. Key rotation now owned.</div>
+<div class="gold">SEAL-2 · Year 3</div>BYOK in an EU HSM <span class="muted">· audit rights, 60-day exit</span>
+<div class="mt-2 steel font-mono" style="font-size:0.65rem">IN THE CODE</div>
+<div class="muted">KMS behind an interface, envelope encryption. Key rotation now owned.</div>
 </div>
 <div class="panel" style="padding:0.8rem 1rem">
-<div class="gold">SEAL-3</div>EU provider · <span class="muted">self-managed Postgres, EU entity</span>
-<div class="mt-2 steel font-mono" style="font-size:0.7rem">DEVELOPER</div>
-<div class="muted">The big refactor: Lambda → containers on K8s. RDS → vanilla Postgres.</div>
+<div class="gold">SEAL-3 · Year 4</div>EU provider <span class="muted">· EU legal entity</span>
+<div class="mt-2 steel font-mono" style="font-size:0.65rem">IN THE CODE</div>
+<div class="muted">The big refactor: Lambda to containers on K8s, RDS to vanilla Postgres.</div>
 </div>
 </div>
 
-<div class="mt-6 text-lg gold">≈ €500K over 4 years ≈ 6 basis points of annual volume at maturity.</div>
-<div class="mt-1 muted">Affordable if you start now. Under a regulator's deadline, it's a project, not an option.</div>
+<div class="mt-4 steel text-sm">The SEAL-2 clauses aren't hypothetical: DORA Art. 28 already requires audit rights and an exit plan for financial entities.</div>
+
+<div class="mt-3 text-lg gold">≈ €500K over 4 years ≈ 6 basis points of annual volume.</div>
+<div class="mt-1 muted">Affordable if you start now. Wait for a regulator's deadline and it turns into a rushed project.</div>
 
 <!--
-Added 2026-09-17 per Andrés: developer-adaptation row under each SEAL stage,
-so the ladder isn't just a procurement/legal view. It shows what actually
-changes in the codebase at each step. Mirrors the S14 anti-pattern fixes
-and the S8 "exit velocity" framing (SEAL-1 costs nothing in code; SEAL-2/3
-is where engineering time actually goes). Say the DEVELOPER line per panel
-instead of reading the top line. The top line is the procurement/legal
-view.
+JEROEN. Say the "in the code" line for each step, it's what this room cares
+about. SEAL-1 costs nothing in code, SEAL-2 and 3 are where engineering time
+goes. The DORA line (22 Sep) shows the fintech story is already law.
+-->
 
-Layout note: content was overflowing the 1080px canvas after adding the
-DEVELOPER rows (checked via `npx slidev export --format png --range 13`,
-see the fix commit). Panel copy trimmed, padding tightened, and the old
-separate "each step is specific engineering work" line dropped since the
-DEVELOPER rows now say that directly. Re-check with the same export command
-after any further edits to this slide.
+---
+layout: default
+chapter: "VI · Sea trial"
+class: voyage-open
+---
+
+<div class="kicker">VI · sea trial</div>
+
+# The 2×2. <span class="gold">Be honest.</span>
+
+<div class="matrix mt-4" style="height:300px">
+<div></div>
+<div class="axis">Operational impact</div>
+<div class="axis">Existential risk</div>
+<div class="row-h">Independence</div>
+<div class="cell" v-click>If you had to leave your provider, how fast could you move without rearchitecting?<span class="leg">→ portability</span></div>
+<div class="cell" v-click>Long term, what does it cost to never be able to leave? Money and risk.<span class="leg">→ portability, compounded</span></div>
+<div class="row-h">Others in control</div>
+<div class="cell" v-click>If access to some services were withdrawn, what stops working, and for how long?<span class="leg">→ control</span></div>
+<div class="cell" v-click>Who can inspect, maintain and change what runs your system, and does a foreign law reach them?<span class="leg">→ transparency + jurisdiction</span></div>
+</div>
+
+<div class="mt-4 text-lg gold">Keep your hand up if you can answer out loud, right now.</div>
+
+<!--
+JEROEN. Jeroen's 2x2 (22 Sep) with Andrés's show of hands (17 Sep). Each
+quadrant points back to the keel, so it reads as the payoff of S6 and not
+a new framework.
+
+1. Before the first click: "Hands up. Keep it up only if you can answer
+   this one out loud, right now, with a straight face."
+2. Click each quadrant, pause 3 to 4 seconds, scan the room. Don't comment
+   on the drop, keep going.
+3. After the fourth: "Look around. The hands still up have a sovereignty
+   posture. Everyone else has a belief."
+4. Big or formal room: "Count on your own fingers, don't show anyone."
+
+Don't call on anyone. Optional European line: "In Europe? Ask if you're
+ready for CADA."
+-->
+
+---
+layout: default
+---
+
+<div class="kicker">VI · remember the ships</div>
+
+# Sovereignty lives in the crew
+
+<div class="grid-3 mt-6">
+<div class="panel">
+<div class="flex items-center gap-3"><Axe :size="40" /><div class="serif text-lg">Their own ships</div></div>
+<div class="mt-2 gold">Control + transparency</div>
+<div class="muted text-sm mt-1">You hold the keys and you can audit the stack.</div>
+</div>
+<div class="panel">
+<div class="flex items-center gap-3"><Longship :width="58" /><div class="serif text-lg">Open seas</div></div>
+<div class="mt-2 gold">Jurisdiction + supply chain</div>
+<div class="muted text-sm mt-1">You trade with everyone and answer to no foreign master.</div>
+</div>
+<div class="panel">
+<div class="flex items-center gap-3"><Shield :size="40" a="#2F5D8A" b="#E2A63D" /><div class="serif text-lg">They defended it</div></div>
+<div class="mt-2 gold">The off-ramp</div>
+<div class="muted text-sm mt-1">You can leave, and you've tested it.</div>
+</div>
+</div>
+
+<div class="mt-8 text-lg">So make "cost to leave" a required field in every architecture review, right next to <code>RPO / RTO</code>.</div>
+
+<!--
+JEROEN. The callback (22 Sep) that closes the loop planted in S4. Say it out
+loud: "Remember the ships? This is them." Then the one culture line.
+
+Andrés's 17 Sep cut was right about the old bullets: they repeated the
+actions. So only the callback and the RPO/RTO line stay.
 -->
 
 ---
 layout: default
 class: text-center
+chapter: "VII · Home port"
 ---
 
-<div class="kicker">S21 · measure yourself: be honest</div>
-
-# Four questions
-
-<div class="text-left max-w-2xl mx-auto mt-4 grid gap-3">
-<div class="panel" style="padding:0.7rem 1.1rem">1. Where does your primary provider's parent pay taxes and answer to law?</div>
-<div class="panel" style="padding:0.7rem 1.1rem">2. Who holds the encryption keys for your most sensitive data, and under whose jurisdiction?</div>
-<div class="panel" style="padding:0.7rem 1.1rem">3. Do you have a documented, tested exit plan? (Actually run one.)</div>
-<div class="panel" style="padding:0.7rem 1.1rem">4. If your provider received a non-EU legal order tomorrow, would you know, and could you keep operating?</div>
-</div>
-
-<div class="mt-4 kicker">keep your hand up if you can answer, out loud, right now</div>
-
-<div class="mt-2 text-xl gold">Answer honestly and you have a sovereignty posture.</div>
-
-<!--
-Audience-interaction moment. This is a live show-of-hands bit, not a silent
-pause. Facilitation:
-
-1. Before Q1, tell the room the rule: "Put your hand up. Keep it up only if
-   you can answer this one out loud, right now, with a straight face. No
-   Googling, no 'I'd have to check.'"
-2. Read Q1, pause 3-4 seconds, scan the room. Most hands stay up (it's the
-   easy one).
-3. Read Q2, pause. Expect the first real drop. Don't comment on the drop
-   yet, just keep going.
-4. Read Q3, pause. This is usually where most hands go down ("tested exit
-   plan" filters out "we have a plan" from "we've run it").
-5. Read Q4, pause. Land the beat: "Look around. However many hands are
-   still up, that's how many people in this room actually have a
-   sovereignty posture today. Everyone else has a belief."
-6. Then deliver the gold line: "Answer honestly and you have a sovereignty
-   posture." Don't call on anyone by name or ask people to justify a raised
-   or lowered hand. It's a private gut-check made visible, not a quiz.
-
-Do not rush this slide. If the room is too big or too formal for hands
-(seated theater style, streamed talk), fall back to: "Count on your own
-fingers, don't show anyone" and still do the beat in step 5 verbally
-("some of you just ran out of fingers").
-Cut 2026-09-17 (storytelling review, applied per Andrés): a slide called
-"sovereignty as culture, not bolt-on" used to sit here. Its 3 lines didn't
-add new information: one restated the portability-gate action slide almost
-verbatim, one restated the architecture/anti-patterns slides, one restated
-the deck's own early thesis. The title also promised an
-organizational/culture angle the bullets never delivered (no ownership,
-incentives, or onboarding, just more architecture). This slide (the
-self-assessment questions) now leads straight into bring-home below, which
-is a clean transition on its own: "answer honestly and you have a
-sovereignty posture" into "three things you can do Monday morning."
--->
-
----
-layout: default
-class: text-center
----
-
-<div class="kicker">S22 · bring-home</div>
+<div class="kicker">VII · home port</div>
 
 # Three things you can do Monday morning
 
 <div class="muted mt-2">No executive sign-off required.</div>
 
-<div class="flex items-stretch justify-center gap-4 mt-10 text-left" style="max-width:1400px; margin-left:auto; margin-right:auto">
+<div class="flex items-stretch justify-center gap-4 mt-10 text-left" style="max-width:1400px;margin-left:auto;margin-right:auto">
 <div class="panel" style="flex:1">
-<div class="stat-num">01</div>
+<div class="flex items-center justify-between"><div class="stat-num">01</div><Axe :size="40" /></div>
 <div class="gold text-xl mt-2">BUILD it</div>
-<div class="muted mt-2 text-sm">One PR, ~1 day. Ship one off-ramp.</div>
+<div class="muted mt-2 text-sm">One PR, about a day. Ship one off-ramp.</div>
 </div>
 <div class="steel flex items-center text-2xl">→</div>
 <div class="panel" style="flex:1">
-<div class="stat-num">02</div>
+<div class="flex items-center justify-between"><div class="stat-num">02</div><Longship :width="60" /></div>
 <div class="gold text-xl mt-2">TEST it</div>
 <div class="muted mt-2 text-sm">Quarterly. Run it like a DR drill.</div>
 </div>
 <div class="steel flex items-center text-2xl">→</div>
 <div class="panel" style="flex:1">
-<div class="stat-num">03</div>
+<div class="flex items-center justify-between"><div class="stat-num">03</div><Shield :size="40" a="#D0573F" b="#E2A63D" /></div>
 <div class="gold text-xl mt-2">make it a HABIT</div>
 <div class="muted mt-2 text-sm">Three lines in every PR or ADR.</div>
 </div>
 </div>
 
 <!--
-Made more visual 2026-09-17 per Andrés: was 3 gold words floating in a
-4-column grid (asymmetric for 3 items) with a lot of dead space below.
-Reused existing motifs instead of inventing new ones: the big serif
-.stat-num numerals from S4, the panel style used everywhere else, and the
-→ arrow glyph from S4's "own ships → transparency/control" mapping, to
-keep this consistent with the rest of the deck rather than a one-off
-design. Each panel's description previews the next 3 slides (S23, S24,
-S25) so this doubles as a visual table of contents for the closing block,
-not just 3 disconnected words. No icon-topper cards, no gradients, per
-HANDOFF.md's established "do not revert" design rules.
+JEROEN. Rule of three, a visual table of contents for the next three slides.
+Same icons as the ship legs: the axe builds, the longship sails, the shield holds.
 -->
 
 ---
 layout: default
 ---
 
-<div class="kicker">S23 · action 1</div>
+<div class="flex items-center gap-3"><Axe :size="30" /><div class="kicker">VII · action 1 · build</div></div>
 
 # Ship one off-ramp
 
-<div class="muted">One PR, ~1 day.</div>
+<div class="muted">One PR, about a day. Pick your most lock-in-exposed workload.</div>
 
 <div class="mt-6 grid gap-3">
-<div class="panel">Second region in the IaC: exit becomes a variable, not a project</div>
+<div class="panel">Second region in the IaC: leaving becomes a variable change</div>
 <div class="panel">Customer-managed keys (BYOK) on your most sensitive store</div>
-<div class="panel">One proprietary SDK call wrapped behind an interface</div>
+<div class="panel">One proprietary SDK call wrapped behind an interface you own</div>
 </div>
 
-<div class="mt-6 muted">Deliverable: a merged PR. No new tooling, no budget, no exec sign-off.</div>
-<div class="quote-block mt-6">You don't have to leave today. You just have to be able to leave.</div>
+<div class="mt-5 muted">Deliverable: a merged PR. No new tooling, no budget.</div>
+<div class="quote-block mt-5">You don't have to leave today. You just have to be able to leave.</div>
 
 ---
 layout: default
 ---
 
-<div class="kicker">S24 · action 2</div>
+<div class="flex items-center gap-3"><Longship :width="44" /><div class="kicker">VII · action 2 · test</div></div>
 
 # Run an off-ramp test
 
-<div class="muted">On your most lock-in-exposed workload, quarterly. Run it like a DR drill.</div>
+<div class="muted">Quarterly and on the calendar, like any DR drill.</div>
 
-<div class="mt-6 panel">
-Snapshot + export + import into a second environment (other region, other provider, or an on-prem VM).
+<div class="grid-2 mt-6 items-start">
+<div class="panel">
+Snapshot, export, import into a second environment: another region, another provider or an on-prem VM.
+</div>
+<div class="term text-sm">
+# verify<br/>
+□ export in standard formats?<br/>
+□ do the keys follow?<br/>
+□ app boots on vanilla Postgres<br/>
+&nbsp;&nbsp;/ S3-compatible storage?
+</div>
 </div>
 
-<div class="mt-6">
-Verify: does export work in standard formats? Do keys follow? Does the app start on vanilla Postgres / S3-compatible storage?
-</div>
-
-<div class="mt-6 muted">Data Act Art. 25 makes switching rights contractual. Learn the gaps now, not at contract renewal in 2027.</div>
+<div class="mt-6 muted">Data Act Art. 25 makes switching rights contractual. Find the gaps now, well before contract renewal in 2027.</div>
 
 ---
 layout: default
 ---
 
-<div class="kicker">S25 · action 3</div>
+<div class="flex items-center gap-3"><Shield :size="30" a="#D0573F" b="#E2A63D" /><div class="kicker">VII · action 3 · habit</div></div>
 
-# A portability gate in your review habit
+# A portability gate in your reviews
 
-<div class="mt-6 panel">
-Every new managed service / SDK / proprietary feature answers three lines in the PR or ADR:
+<div class="mt-5 muted">Every new managed service, SDK or proprietary feature answers three lines in the PR or ADR:</div>
+
+<div class="term mt-5 text-xl" style="line-height:2">
+<span class="gold">$</span> cost to leave?<br/>
+<span class="gold">$</span> who holds the keys?<br/>
+<span class="gold">$</span> what's the off-ramp?
 </div>
 
-<div class="mt-6 grid gap-3 text-xl">
-<div class="gold">What's the cost to leave?</div>
-<div class="gold">Who holds the keys?</div>
-<div class="gold">What's the off-ramp?</div>
-</div>
-
-<div class="mt-8 muted">A team norm, not a tool. One line in the PR description is enough. That's the habit that turns sovereignty from policy into code.</div>
+<div class="mt-6 muted">A team norm. No new tool needed, one line in the PR description is enough. That's the habit that turns sovereignty from policy into code.</div>
 
 ---
 layout: default
 class: text-center
 ---
 
-<div class="kicker">S26 · close</div>
+<svg class="aurora" viewBox="0 0 980 552" preserveAspectRatio="none" aria-hidden="true"><defs><filter id="aur2" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="16"/></filter></defs><g filter="url(#aur2)" fill="none" stroke-linecap="round"><path d="M-40 130 Q220 30 440 110 T1020 50" stroke="#3FD7A0" stroke-width="46" opacity=".55"/><path d="M-40 185 Q260 80 520 160 T1030 100" stroke="#5B8CC9" stroke-width="34" opacity=".5"/><path d="M180 80 Q420 10 720 80" stroke="#B07CD8" stroke-width="18" opacity=".35"/></g></svg>
 
-<svg class="longship-motif w-32 mx-auto mb-6" viewBox="0 0 200 90" fill="none" stroke="#E2A63D" stroke-width="1.6">
-  <path d="M10 70 Q100 95 190 70 L175 75 Q100 88 25 75 Z" />
-  <path d="M25 70 L25 20 Q35 10 45 20 L45 70" />
-  <path d="M35 20 L35 5" />
-  <path d="M20 30 L50 30 M18 45 L52 45 M18 58 L52 58" />
-</svg>
+<div class="kicker">VII · landfall</div>
+
+<Longship :width="200" class="mx-auto mb-2" style="position:relative" />
 
 # Your longship should be yours to sail.
 
-<div class="mt-6 max-w-2xl mx-auto muted">
-The EU just gave sovereignty a measurable definition and a budget. Ten years
-from now off-ramp-ready will be the boring default; today it's a team habit
-you can install on Monday.
+<div class="mt-5 max-w-2xl mx-auto muted">
+The EU just gave sovereignty a measurable definition and a budget. Ten years from now, off-ramp ready
+will be the boring default. Today, it's a team habit you can start on Monday.
 </div>
 
-<div class="mt-8 max-w-2xl mx-auto text-lg gold">Keep an exit-plan doc, an SBOM, and an answer to "who holds the keys" ready, before the RFP does.</div>
+<div class="mt-6 max-w-2xl mx-auto gold">Have an exit plan, an SBOM and an answer to "who holds the keys" ready before the RFP asks.</div>
 
-<div class="mt-8 kicker">hierynomus.com/talks/cloud-native-days-norway-2026</div>
+<div class="mt-6 kicker">github.com/avaleror/cnds-norway-2026-slides</div>
 
 <!--
-CTA line added 2026-09-17 per Andrés: moved here from the money slide
-(now S9), which used to close on "what it means for engineering and ops
-teams: keep an exit-plan doc, an SBOM..." Andrés wanted the deck's last
-concrete, actionable line to land at the very end of the talk instead of
-buried mid-deck, right before the closing line and the slides/recording
-link. S9 itself now closes on a growth/traction line instead (see S9's
-own comment).
+JEROEN. The longship from the title slide comes home. The voyage bar ends
+here too.
 -->

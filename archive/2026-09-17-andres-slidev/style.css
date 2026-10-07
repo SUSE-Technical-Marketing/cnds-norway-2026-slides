@@ -1,0 +1,156 @@
+/* Friheten i Koden — design system (per HANDOFF.md, ported from deck.html) */
+
+:root {
+  --fk-bg: #0C121B;
+  --fk-panel: #131D2B;
+  --fk-ink: #F3F0E8;
+  --fk-muted: #98A5B6;
+  --fk-gold: #E2A63D;
+  --fk-steel: #8FB0CF;
+
+  --fk-serif: 'Iowan Old Style', Palatino, Georgia, 'Times New Roman', serif;
+  --fk-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --fk-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+html.dark,
+html {
+  --slidev-theme-primary: var(--fk-gold);
+}
+
+.slidev-layout {
+  background: var(--fk-bg) !important;
+  color: var(--fk-ink) !important;
+  font-family: var(--fk-sans);
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  font-family: var(--fk-serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.slidev-layout h1 { color: var(--fk-ink); }
+.slidev-layout h2 { color: var(--fk-ink); }
+
+.slidev-layout a {
+  color: var(--fk-gold);
+}
+
+.slidev-layout code {
+  font-family: var(--fk-mono);
+  background: var(--fk-panel);
+  color: var(--fk-steel);
+}
+
+.slidev-layout pre {
+  background: var(--fk-panel) !important;
+  border: 1px solid #24344a;
+}
+
+.slidev-layout strong { color: var(--fk-gold); font-weight: 600; }
+
+/* --- reusable components (raw HTML classes used inside slides.md) --- */
+
+.kicker {
+  font-family: var(--fk-mono);
+  color: var(--fk-steel);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.muted { color: var(--fk-muted); }
+.gold { color: var(--fk-gold); }
+.steel { color: var(--fk-steel); }
+
+.panel {
+  background: var(--fk-panel);
+  border: 1px solid #24344a;
+  border-radius: 10px;
+  padding: 1.1rem 1.4rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat-num {
+  font-family: var(--fk-serif);
+  color: var(--fk-gold);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.term {
+  font-family: var(--fk-mono);
+  background: #0a0f17;
+  border: 1px solid #24344a;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  color: var(--fk-steel);
+}
+
+.quote-block {
+  border-left: 3px solid var(--fk-gold);
+  padding-left: 1.1rem;
+  font-family: var(--fk-serif);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--fk-ink);
+}
+
+.seal-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0.5rem 0;
+}
+
+.seal-bar {
+  height: 10px;
+  background: var(--fk-gold);
+  border-radius: 4px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border-bottom: 1px solid #24344a;
+  padding: 0.4rem 0.7rem;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+th { color: var(--fk-steel); font-family: var(--fk-mono); font-weight: 500; }
+
+/* denser variant for tables with 7+ rows on a single slide (e.g. S10's
+   8-objective table) — the default row padding overflows the 1080px
+   canvas past 6-7 rows. */
+table.table-tight th,
+table.table-tight td {
+  padding: 0.22rem 0.7rem;
+  font-size: 0.78rem;
+}
+
+.longship-motif {
+  opacity: 0.9;
+}
+
+/* print / PDF export: keep dark theme (venue is offline, deck may be shown as PDF) */
+@media print {
+  .slidev-layout { background: var(--fk-bg) !important; }
+}
