@@ -159,6 +159,46 @@ here in Norway. Round, no horns." The open-seas leg answers "is this an anti-clo
 layout: default
 ---
 
+<div class="kicker">I · two words people mix up</div>
+
+# Who owns the ship? Who sails it?
+
+<div class="grid-2 mt-6">
+<div class="panel">
+<div class="flex items-center gap-3"><Planks :width="48" /><div class="serif text-xl gold">Ownership</div></div>
+<div class="steel font-mono text-xs mt-2">WHO OWNS THE SHIP?</div>
+<div class="mt-2">The asset. The contract. The data in your region.</div>
+<div class="muted mt-3 text-sm">The name on the hull, the deed to the boathouse.</div>
+</div>
+<div class="panel">
+<div class="flex items-center gap-3"><Longship :width="64" /><div class="serif text-xl gold">Control</div></div>
+<div class="steel font-mono text-xs mt-2">WHO SAILS THE SHIP?</div>
+<div class="mt-2">Who sets the course? Who can stop it, or leave port when they choose?</div>
+<div class="muted mt-3 text-sm">The hand on the tiller, and the freedom to turn the bow.</div>
+</div>
+</div>
+
+<div class="mt-8 text-2xl serif">Ownership alone is not <span class="gold">sovereignty</span>. Control makes it real.</div>
+
+
+<!--
+JEROEN. Two words people mix up: Ownership = who owns the ship, Control =
+who sails it. Keep it short, about 30 seconds.
+
+Land it on the longship: nobody calls you free because your name is on the
+hull if someone else holds the tiller. The next slide turns it into an
+engineering test (cost to leave, can you audit), and the keel slide makes
+CONTROL one of the four timbers.
+
+Tie-back for later in the talk: dependency without contingency is what
+ownership without control looks like. Lock-in is the same thing seen from
+the migration side.
+-->
+
+---
+layout: default
+---
+
 <div class="kicker">I · from the fjord to the stack</div>
 
 <div class="grid-2 mt-6 items-center">
