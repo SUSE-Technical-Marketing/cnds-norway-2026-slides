@@ -25,7 +25,7 @@ Obsidian vault, not here:
   kept for reference.
 - `archive/2026-09-17-andres-slidev/` is Andrés's earlier Slidev pass of
   17 Sep 2026, kept for reference. Run it with
-  `npx slidev archive/2026-09-17-andres-slidev/slides.md`.
+  `bunx slidev archive/2026-09-17-andres-slidev/slides.md`.
 
 The main deck merges both versions (6 Oct 2026) into one story line: the talk
 is a voyage in seven chapters (the myth, the keel, foreign waters, the charts,
@@ -35,10 +35,10 @@ chapters to slides and speakers.
 ## Usage
 
 ```bash
-npm install
-npm run dev      # http://localhost:3030  live edit
-npm run build    # static build, fully offline (venue has no internet)
-npm run export   # PDF export
+bun install
+bun run dev      # http://localhost:3030  live edit
+bun run build    # static build, fully offline (venue has no internet)
+bun run export   # PDF export
 ```
 
 Keyboard: arrows/space to navigate, `f` for fullscreen, `o` for slide
