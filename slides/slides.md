@@ -30,7 +30,7 @@ are planted in I, named against the keel in II, and cashed in out loud in VI.
   VI   Sea trial         S20-S21  Jeroen
   VII  Home port         S22-S26  Jeroen
 Ship legs used everywhere: own ships = control + transparency; open seas, no
-foreign master = jurisdiction + supply chain; they defended it = the off-ramp.
+foreign master = jurisdiction + supply chain; built to turn back = the off-ramp.
 
 Theme: style.css (Viking motifs, no runes or co-opted symbols) and
 global-bottom.vue (the voyage bar). Rough timing: about 25 minutes of content
@@ -139,12 +139,12 @@ layout: default
 <div class="muted mt-1 text-sm">The knowledge and the tools to build them: oak, rope, sails, iron nails. Made where they lived.</div>
 </div>
 <div class="panel">
-<div class="flex items-center gap-3"><Longship :width="64" /><div class="serif text-lg">Open seas</div></div>
+<div class="flex items-center gap-3"><Sail :size="44" /><div class="serif text-lg">Open seas</div></div>
 <div class="muted mt-1 text-sm">They traded and sailed from Newfoundland to Baghdad. They never had to source their capability from another power.</div>
 </div>
 <div class="panel">
-<div class="flex items-center gap-3"><Shield :size="44" a="#2F5D8A" b="#E2A63D" /><div class="serif text-lg">They defended it</div></div>
-<div class="muted mt-1 text-sm">They could protect themselves and their families from anyone who came knocking.</div>
+<div class="flex items-center gap-3"><Portage :size="44" /><div class="serif text-lg">Built to turn back</div></div>
+<div class="muted mt-1 text-sm">Shallow hulls, the same shape at both ends. If the route closed, they turned round or hauled the ship overland to the next river.</div>
 </div>
 </div>
 
@@ -158,8 +158,8 @@ layout: default
 
 <!--
 JEROEN. Plant the three legs and keep them simple: own ships, open seas,
-they defended it. Don't explain what they map to yet. The icons (axe,
-longship, shield) come back every time a leg returns later in the talk. The keel slide names
+built to turn back. Don't explain what they map to yet. The icons (axe,
+sail, ship on rollers) come back every time a leg returns later in the talk. The keel slide names
 it, and the "remember the ships" slide (S21) cashes it in.
 
 Point at the helmet: "And this one is real. Found at Gjermundbu, right
@@ -176,7 +176,7 @@ layout: default
 
 <div class="grid-2 mt-6">
 <div class="panel">
-<div class="flex items-center gap-3"><Planks :width="48" /><div class="serif text-xl gold">Ownership</div></div>
+<div class="flex items-center gap-3"><Boathouse :size="44" /><div class="serif text-xl gold">Ownership</div></div>
 <div class="steel font-mono text-xs mt-2">WHO OWNS THE SHIP?</div>
 <div class="mt-2">The asset. The contract. The data in your region.</div>
 <div class="muted mt-3 text-sm">The name on the hull, the deed to the boathouse.</div>
@@ -246,9 +246,9 @@ class: voyage-open
 <div class="muted mt-2">Every longship starts with a keel. This one has four timbers, and the boardroom doesn't lay them. Pull requests do.</div>
 
 <div class="grid-4 mt-8 keel">
-<div class="panel"><div class="gold font-mono text-sm">JURISDICTION</div>Whose law can reach this workload? Follow the parent entity, not the region logo.<span class="leg leg-icon"><Longship :width="34" /> open seas</span></div>
+<div class="panel"><div class="gold font-mono text-sm">JURISDICTION</div>Whose law can reach this workload? Follow the parent entity, not the region logo.<span class="leg leg-icon"><Sail :size="24" /> open seas</span></div>
 <div class="panel"><div class="gold font-mono text-sm">CONTROL</div>Who holds the keys, the identity, the data?<span class="leg leg-icon"><Axe :size="20" /> their own ships</span></div>
-<div class="panel"><div class="gold font-mono text-sm">PORTABILITY</div>How hard is it to leave? The off-ramp.<span class="leg leg-icon"><Shield :size="20" a="#2F5D8A" b="#E2A63D" /> they defended it</span></div>
+<div class="panel"><div class="gold font-mono text-sm">PORTABILITY</div>How hard is it to leave? The off-ramp.<span class="leg leg-icon"><Portage :size="24" /> built to turn back</span></div>
 <div class="panel"><div class="gold font-mono text-sm">TRANSPARENCY</div>Can you audit the stack? Open source, docs, SBOMs.<span class="leg leg-icon"><Planks :width="34" /> planks in sight</span></div>
 </div>
 
@@ -720,12 +720,12 @@ layout: default
 <div class="muted text-sm mt-1">You hold the keys and you can audit the stack.</div>
 </div>
 <div class="panel">
-<div class="flex items-center gap-3"><Longship :width="58" /><div class="serif text-lg">Open seas</div></div>
+<div class="flex items-center gap-3"><Sail :size="40" /><div class="serif text-lg">Open seas</div></div>
 <div class="mt-2 gold">Jurisdiction + supply chain</div>
 <div class="muted text-sm mt-1">You trade with everyone and answer to no foreign master.</div>
 </div>
 <div class="panel">
-<div class="flex items-center gap-3"><Shield :size="40" a="#2F5D8A" b="#E2A63D" /><div class="serif text-lg">They defended it</div></div>
+<div class="flex items-center gap-3"><Portage :size="40" /><div class="serif text-lg">Built to turn back</div></div>
 <div class="mt-2 gold">The off-ramp</div>
 <div class="muted text-sm mt-1">You can leave, and you've tested it.</div>
 </div>
@@ -775,7 +775,7 @@ chapter: "VII · Home port"
 
 <!--
 JEROEN. Rule of three, a visual table of contents for the next three slides.
-Same icons as the ship legs: the axe builds, the longship sails, the shield holds.
+Own icon set, not the ship legs: the axe builds, the longship sails, the shield holds.
 -->
 
 ---
@@ -849,7 +849,7 @@ class: text-center
 
 <div class="kicker">VII · landfall</div>
 
-<Longship :width="200" class="mx-auto mb-2" style="position:relative" />
+<div class="flex items-end justify-center gap-6 mb-2" style="position:relative"><Longship :width="200" /></div>
 
 # Your longship should be yours to sail.
 
@@ -863,6 +863,6 @@ will be the boring default. Today, it's a team habit you can start on Monday.
 <div class="mt-6 kicker">github.com/avaleror/cnds-norway-2026-slides</div>
 
 <!--
-JEROEN. The longship from the title slide comes home. The voyage bar ends
+JEROEN. The longship from the title slide comes home, to the longhouse. The voyage bar ends
 here too.
 -->
