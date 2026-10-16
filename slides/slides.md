@@ -8,6 +8,7 @@ class: text-center
 transition: fade
 mdc: true
 voyage: false
+routerMode: hash
 fonts:
   sans: -apple-system
   serif: Georgia
