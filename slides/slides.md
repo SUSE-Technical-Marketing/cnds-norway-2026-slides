@@ -331,9 +331,11 @@ class: voyage-open
 </div>
 </div>
 
-<div class="mt-3 muted text-sm text-center">Gartner (Feb 2026): sovereign cloud IaaS spend in Europe. This is where budgets are moving.</div>
+<div class="mt-3 muted text-sm text-center">Sovereign cloud IaaS spend in Europe. This is where budgets are moving.</div>
 
 <div class="mt-8 text-lg max-w-3xl mx-auto text-center">The money is growing as fast as the topic. IT and engineering teams are the ones who turn it into something real.</div>
+
+<div class="foot text-center" style="position:absolute;left:0;right:0;bottom:3.4rem">Source: Gartner, "Gartner Says Worldwide Sovereign Cloud IaaS Spending Will Total $80 Billion in 2026", press release, 9 Feb 2026 · gartner.com/en/newsroom</div>
 
 <!--
 ANDRÉS. About 20 to 30 seconds. A bridge slide, keep it tight.
@@ -348,6 +350,13 @@ Fact check 2026-10-06: these are the European figures (Computerworld: "European
 spending on sovereign cloud IaaS to nearly double in 2026"). The 17 Sep
 Slidev version said "worldwide", which was wrong: Gartner puts worldwide at
 about $80B for 2026.
+
+Verified 2026-10-16 against Gartner's Table 1 (Source: Gartner, February
+2026), Europe row in $M: 6,868 (2025) / 12,587 (2026) / 23,118 (2027).
+Rounded on the slide to $6.9B / $12.6B / $23.1B. +83% in 2026; Europe
+overtakes North America ($21.1B) in 2027. Worldwide: $80.4B in 2026.
+Full URL: https://www.gartner.com/en/newsroom/press-releases/2026-02-09-gartner-says-worldwide-sovereign-cloud-iaas-spending-will-total-us-dollars-80-billion-in-2026
+Q&A line if useful: "Europe passes North America next year."
 -->
 
 ---
