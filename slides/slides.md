@@ -27,9 +27,10 @@ are planted in I, named against the keel in II, and cashed in out loud in VI.
   II   The keel          S7
   III  Foreign waters    S8
   IV   The charts        S9-S12
-  V    Shipbuilding      S13-S19
-  VI   Sea trial         S20-S21
+  V    Shipbuilding      S13-S20
+  VI   Sea trial         S21
   VII  Home port         S22-S26
+  Backup: the 2x2 "Be honest" (S27, after landfall)
 Speaker split not decided yet; the names in the notes are placeholders.
 Ship legs used everywhere: own ships = control + transparency; open seas, no
 foreign master = jurisdiction + supply chain; built to turn back = the off-ramp.
@@ -218,17 +219,21 @@ layout: default
 
 <div class="kicker">I · from the fjord to the stack</div>
 
-<div class="grid-2 mt-16 items-center">
-<div>
+<div class="flex items-center gap-6 mt-8">
+<Mooring :size="90" class="flex-none" />
 <div class="text-5xl gold serif" style="line-height:1.15;font-weight:600">The enemy is dependency without contingency.</div>
 </div>
-<div class="panel">
-<div class="steel font-mono text-xs">THE TEST · NO GOVERNMENT MANDATE NEEDED</div>
-<div class="mt-3">1. What does it cost you to leave? Money, time, risk.</div>
-<div class="mt-2">2. Can you audit who runs your systems?</div>
-<div class="mt-4 gold">Answer "we don't know" to either one, and what you bought is a dependency.</div>
+
+<div class="grid-2 mt-10">
+<div class="panel flex items-center" style="min-height:8.5rem">
+<div class="flex items-baseline gap-4"><div class="stat-num">01</div><div class="text-2xl">What does it cost you to leave?<div class="muted text-lg mt-2">Money, time, risk.</div></div></div>
+</div>
+<div class="panel flex items-center" style="min-height:8.5rem">
+<div class="flex items-baseline gap-4"><div class="stat-num">02</div><div class="text-2xl">Can you audit who runs your systems?</div></div>
 </div>
 </div>
+
+<div class="mt-8 text-xl gold text-center">Answer "we don't know" to either one, and what you bought is a dependency.</div>
 
 <!--
 JEROEN. Merge of both versions: Andrés's big thesis line on the left,
@@ -315,26 +320,26 @@ class: voyage-open
 
 # Sovereignty has a budget now
 
-<div class="flex items-stretch justify-center gap-3 mt-8 text-center" style="max-width:1300px;margin-left:auto;margin-right:auto">
-<div class="panel" style="flex:1">
-<div class="gold text-3xl serif">$6.9B</div>
-<div class="steel font-mono text-xs mt-1">2025</div>
+<div class="flex items-stretch justify-center gap-3 mt-14 text-center" style="max-width:1300px;margin-left:auto;margin-right:auto">
+<div class="panel flex flex-col justify-center" style="flex:1;min-height:9.5rem">
+<div class="gold text-6xl serif">$6.9B</div>
+<div class="steel font-mono text-sm mt-2">2025</div>
 </div>
-<div class="steel flex items-center text-xl">→</div>
-<div class="panel" style="flex:1">
-<div class="gold text-3xl serif">$12.6B</div>
-<div class="steel font-mono text-xs mt-1">2026</div>
+<div class="steel flex flex-col items-center justify-center px-1"><div class="font-mono text-sm">+83%</div><div class="text-2xl">→</div></div>
+<div class="panel flex flex-col justify-center" style="flex:1;min-height:9.5rem">
+<div class="gold text-6xl serif">$12.6B</div>
+<div class="steel font-mono text-sm mt-2">2026</div>
 </div>
-<div class="steel flex items-center text-xl">→</div>
-<div class="panel" style="flex:1">
-<div class="gold text-3xl serif">$23.1B</div>
-<div class="steel font-mono text-xs mt-1">2027</div>
+<div class="steel flex flex-col items-center justify-center px-1"><div class="font-mono text-sm">+84%</div><div class="text-2xl">→</div></div>
+<div class="panel flex flex-col justify-center" style="flex:1;min-height:9.5rem">
+<div class="gold text-6xl serif">$23.1B</div>
+<div class="steel font-mono text-sm mt-2">2027</div>
 </div>
 </div>
 
-<div class="mt-3 muted text-sm text-center">Sovereign cloud IaaS spend in Europe. This is where budgets are moving.</div>
+<div class="mt-5 muted text-base text-center">Sovereign cloud IaaS spend in Europe. This is where budgets are moving.</div>
 
-<div class="mt-8 text-lg max-w-3xl mx-auto text-center">The money is growing as fast as the topic. IT and engineering teams are the ones who turn it into something real.</div>
+<div class="mt-10 text-xl max-w-3xl mx-auto text-center">IT and engineering teams are the ones who turn it into something real.</div>
 
 <div class="foot text-center" style="position:absolute;left:0;right:0;bottom:3.4rem">Source: Gartner, "Gartner Says Worldwide Sovereign Cloud IaaS Spending Will Total $80 Billion in 2026", press release, 9 Feb 2026 · gartner.com/en/newsroom</div>
 
@@ -366,32 +371,32 @@ layout: default
 
 <div class="kicker">IV · the charts</div>
 
-# From nice-to-have to required
+# From nice-to-have to enforced
 
-<div class="grid-4 mt-6 text-sm">
-<div class="panel">
-<div class="gold font-mono text-xs">DATA ACT · ART. 25</div>
-<div class="mt-2">Switching providers is a contractual right now. A provider can't just say no.</div>
-<div class="mt-3 steel text-xs">In force Sep 2025</div>
+<div class="grid-4 mt-8 text-base">
+<div class="panel flex flex-col">
+<div class="gold font-mono text-xs" style="min-height:2.4em">DATA ACT · ART. 25</div>
+<div class="mt-2 flex-1">Switching providers is a contractual right now. A provider can't just say no.</div>
+<div class="mt-4 steel text-xs">In force Sep 2025</div>
 </div>
-<div class="panel">
-<div class="gold font-mono text-xs">CLOUD SOVEREIGNTY FRAMEWORK</div>
-<div class="mt-2">The EU's own scoring system, SEAL 0–4. A €180M tender was awarded on it to four providers.</div>
-<div class="mt-3 steel text-xs">Oct 2025 · awarded Apr 2026</div>
+<div class="panel flex flex-col">
+<div class="gold font-mono text-xs" style="min-height:2.4em">CLOUD SOVEREIGNTY FRAMEWORK</div>
+<div class="mt-2 flex-1">The EU's own scoring system, SEAL 0–4. A €180M tender was awarded on it to four providers.</div>
+<div class="mt-4 steel text-xs">Oct 2025 · awarded Apr 2026</div>
 </div>
-<div class="panel">
-<div class="gold font-mono text-xs">TECH SOVEREIGNTY PACKAGE</div>
-<div class="mt-2">Brings <span class="gold">CADA</span>: a second sovereignty scale, numbered differently from SEAL. Unblocks EUCS.</div>
-<div class="mt-3 steel text-xs">Jun 2026</div>
+<div class="panel flex flex-col">
+<div class="gold font-mono text-xs" style="min-height:2.4em">TECH SOVEREIGNTY PACKAGE</div>
+<div class="mt-2 flex-1">Brings <span class="gold">CADA</span>: a second sovereignty scale, numbered differently from SEAL. Unblocks EUCS.</div>
+<div class="mt-4 steel text-xs">Jun 2026</div>
 </div>
-<div class="panel hot">
-<div class="gold font-mono text-xs">CYBER RESILIENCE ACT</div>
-<div class="mt-2">Vulnerability reporting within 24h/72h. Also the legal source of the SBOM line coming up.</div>
-<div class="mt-3 gold text-xs">11 Sep 2026 · six weeks ago</div>
+<div class="panel hot flex flex-col">
+<div class="gold font-mono text-xs" style="min-height:2.4em">CYBER RESILIENCE ACT</div>
+<div class="mt-2 flex-1">Vulnerability reporting within 24h/72h. Also the legal source of the SBOM line coming up.</div>
+<div class="mt-4 gold text-xs">11 Sep 2026 · six weeks ago</div>
 </div>
 </div>
 
-<div class="mt-8 text-lg">Two of these are law. Two decide who wins public contracts. Either way, <span class="gold">"nice to have" is over</span>.</div>
+<div class="mt-8 text-lg">Two of these are law. Two decide who wins public contracts. Either way, <span class="gold">it's enforced now</span>.</div>
 
 <div class="mt-6 foot">SEAL = Sovereignty Effective Assurance Levels · CADA = Cloud and AI Development Act · EUCS = European Cybersecurity Certification Scheme for Cloud Services · CRA = Cyber Resilience Act</div>
 
@@ -426,9 +431,9 @@ layout: default
 
 # The 8 objectives, in engineer-speak
 
-<div class="muted mt-1 text-sm">Each one gets its own rating from 0 to 4. The weights blend them into one score.</div>
+<div class="muted mt-1 text-base">Each one gets its own rating from 0 to 4. The weights blend them into one score.</div>
 
-<table class="table-tight mt-3">
+<table class="table-tight mt-4">
 <thead>
 <tr><th>Objective</th><th>Weight</th><th>Engineer-speak</th></tr>
 </thead>
@@ -436,7 +441,7 @@ layout: default
 <tr class="dim"><td>SOV-1 Strategic</td><td>15%</td><td>Can it keep running if the vendor's government pulls the plug?</td></tr>
 <tr class="dim"><td>SOV-2 Legal</td><td>10%</td><td>Jurisdiction of whoever controls the keys and the code</td></tr>
 <tr class="dim"><td>SOV-3 Data &amp; AI</td><td>10%</td><td>Cryptographic control, auditable access, EU-governed models</td></tr>
-<tr><td><b>SOV-4 Operational</b></td><td>15%</td><td>Can EU people run and migrate it? A perfect ship still needs a <span class="gold">crew</span>: no skilled operators, no voyage.</td></tr>
+<tr><td><b>SOV-4 Operational</b></td><td>15%</td><td>Can EU people run and migrate it? No skilled <span class="gold">crew</span>, no voyage.</td></tr>
 <tr><td><b class="gold">SOV-5 Supply chain</b></td><td><b class="gold">20%</b></td><td>"Hardest to fake": SBOMs and provenance. Since CRA, a legal deadline too.</td></tr>
 <tr><td><b>SOV-6 Technology</b></td><td>15%</td><td>Open, documented APIs. Open source. CNCF-aligned tooling.</td></tr>
 <tr class="dim"><td>SOV-7 Security</td><td>10%</td><td>ISO 27001, SecNumCloud / BSI C5, EUCS, audit rights</td></tr>
@@ -444,7 +449,12 @@ layout: default
 </tbody>
 </table>
 
-<div class="mt-4 muted">The heaviest weight is supply chain. The engineer's translation: <span class="gold">what's actually in your stack?</span></div>
+<div class="mt-4 text-xl muted">The heaviest weight is supply chain. The engineer's translation: <span class="gold">what's actually in your stack?</span></div>
+
+<style>
+table.table-tight th, table.table-tight td { padding: 0.36rem 0.8rem; font-size: 0.9rem; }
+table.table-tight td:first-child { white-space: nowrap; }
+</style>
 
 <!--
 ANDRÉS. About 60 seconds. If we're behind, skim it in about 20 seconds:
@@ -472,16 +482,22 @@ layout: default
 <div class="muted mt-1 text-sm">The 0–4 scale every one of those 8 objectives is rated on.</div>
 
 <div class="mt-6">
-<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:8%;background:#D0573F"></div></div><div><b class="gold">SEAL-0</b> no sovereignty: us-east-1 because it was cheaper. The default.</div></div>
-<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:24%;background:#E07B3C"></div></div><div><b class="gold">SEAL-1</b> jurisdictional: EU region, GDPR, parent still US</div></div>
-<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:40%;background:#E2A63D"></div></div><div><b class="gold">SEAL-2</b> data: BYOK in an EU HSM, audit rights, exit clauses</div></div>
-<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:56%;background:#4FA3A0"></div></div><div><b class="gold">SEAL-3</b> resilience: EU entity, EU operators, EU certification</div></div>
-<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:72%;background:#5B8CC9"></div></div><div><b class="gold">SEAL-4</b> full: EU-only supply chain in the critical path. Rare.</div></div>
+<div class="seal-row"><div class="seal-gauge"><i class="seg"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i></div><div><b class="gold">SEAL-0</b> no sovereignty: us-east-1 because it was cheaper. The default.</div></div>
+<div class="seal-row"><div class="seal-gauge"><i class="seg on" style="background:#E07B3C;border-color:#E07B3C"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i></div><div><b class="gold">SEAL-1</b> jurisdictional: EU region, GDPR, parent still US</div></div>
+<div class="seal-row"><div class="seal-gauge"><i class="seg on" style="background:#E2A63D;border-color:#E2A63D"></i><i class="seg on" style="background:#E2A63D;border-color:#E2A63D"></i><i class="seg"></i><i class="seg"></i></div><div><b class="gold">SEAL-2</b> data: BYOK in an EU HSM, audit rights, exit clauses</div></div>
+<div class="seal-row"><div class="seal-gauge"><i class="seg on" style="background:#4FA3A0;border-color:#4FA3A0"></i><i class="seg on" style="background:#4FA3A0;border-color:#4FA3A0"></i><i class="seg on" style="background:#4FA3A0;border-color:#4FA3A0"></i><i class="seg"></i></div><div><b class="gold">SEAL-3</b> resilience: EU entity, EU operators, EU certification</div></div>
+<div class="seal-row"><div class="seal-gauge"><i class="seg on" style="background:#5B8CC9;border-color:#5B8CC9"></i><i class="seg on" style="background:#5B8CC9;border-color:#5B8CC9"></i><i class="seg on" style="background:#5B8CC9;border-color:#5B8CC9"></i><i class="seg on" style="background:#5B8CC9;border-color:#5B8CC9"></i></div><div><b class="gold">SEAL-4</b> full: EU-only supply chain in the critical path. Rare.</div></div>
 </div>
 
 <div class="quote-block mt-6">SEAL-1 is GDPR compliance with a Brussels accent.</div>
 
 <div class="mt-5 muted">Ratings are per procurement. There's no such thing as "a SEAL-3 product."</div>
+
+<style>
+.seal-gauge { display: flex; gap: 5px; flex: none; width: 26%; }
+.seal-gauge .seg { flex: 1; height: 16px; border: 1px solid var(--fk-line); background: var(--fk-panel); border-radius: 2px; }
+.seal-row { margin: 0.7rem 0; font-size: 1.1rem; }
+</style>
 
 <!--
 ANDRÉS. About 90 seconds.
@@ -514,25 +530,39 @@ class: voyage-open
 
 # What "off-ramp ready" looks like
 
-<div class="mt-2 text-lg gold">Open source + open standards: the hull every off-ramp is built on.</div>
+<div class="mt-3 text-2xl gold serif">Open source is how you get out of vendor lock-in.</div>
 
-<div class="grid-3 mt-5 text-base">
-<div class="panel" v-click><b class="steel">Portable primitives</b><br/>S3 API · Postgres · OCI · Kubernetes with CNI/CSI</div>
-<div class="panel" v-click><b class="steel">Keys you hold</b><br/>Envelope encryption, BYOK/HYOK, KMS behind an interface</div>
-<div class="panel" v-click><b class="steel">IaC is the exit</b><br/>Second region or provider in the same code: a tested off-ramp</div>
-<div class="panel" v-click><b class="steel">Standard egress</b><br/>Open export formats, telemetry that survives a provider change</div>
-<div class="panel" v-click><b class="steel">Cluster lifecycle</b><br/>Cluster API-style: create, upgrade, move clusters the same way anywhere</div>
-<div class="panel" v-click><b class="steel">Open virt + policy</b><br/>KubeVirt-style VMs, mTLS + OPA/Kyverno</div>
+<div class="grid-4 mt-8 text-base">
+<div class="panel flex flex-col" v-click>
+<div class="gold font-mono text-xs" style="min-height:2.4em">PORTABLE PRIMITIVES</div>
+<div class="mt-2 flex-1">Build on open standards any provider can run.</div>
+<div class="mt-4 steel text-xs">S3 API · Postgres · OCI · K8s with CNI/CSI</div>
+</div>
+<div class="panel flex flex-col" v-click>
+<div class="gold font-mono text-xs" style="min-height:2.4em">KEYS YOU HOLD</div>
+<div class="mt-2 flex-1">Encryption you control, not your provider.</div>
+<div class="mt-4 steel text-xs">BYOK/HYOK · KMS behind your own interface</div>
+</div>
+<div class="panel flex flex-col" v-click>
+<div class="gold font-mono text-xs" style="min-height:2.4em">IAC + OPEN FORMATS</div>
+<div class="mt-2 flex-1">Leaving becomes a variable change and an export.</div>
+<div class="mt-4 steel text-xs">Second region or provider · standard export formats</div>
+</div>
+<div class="panel flex flex-col" v-click>
+<div class="gold font-mono text-xs" style="min-height:2.4em">OPEN SOURCE PATTERNS</div>
+<div class="mt-2 flex-1">The platform layer, with no single vendor.</div>
+<div class="mt-4 steel text-xs">Cluster API · KubeVirt · mTLS + OPA/Kyverno</div>
+</div>
 </div>
 
-<div class="mt-4 foot">OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · KMS = Key Management Service · IaC = Infrastructure as Code · OPA = Open Policy Agent</div>
+<div class="mt-8 foot">OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · KMS = Key Management Service · IaC = Infrastructure as Code · OPA = Open Policy Agent</div>
 
 <!--
-JEROEN. Open with the umbrella line: "Every box here works because it's
-open: open source code, or an open standard you can take elsewhere."
-Then one line per click. Row 1 is what you build on, row 2 is how you move.
+JEROEN. Open with the umbrella line: "Open source is how you get out of
+vendor lock-in. Every box here works because it's open: open source code,
+or an open standard you can take elsewhere." Then one line per click.
 
-Boxes 5 and 6 keep the abstract's promise: cluster management, open
+Box 4 keeps the abstract's promise: cluster management, open
 virtualization, zero-trust security. CNCF project categories only, no
 vendor names.
 -->
@@ -552,14 +582,14 @@ class: text-center
 <Axe :size="60" style="transform:scaleX(-1)" />
 </div>
 
-<div class="mt-4 text-xl max-w-2xl mx-auto">Five real architecture choices.</div>
+<div class="mt-4 text-xl max-w-2xl mx-auto">Six real architecture choices.</div>
 <div class="mt-4 text-lg muted max-w-2xl mx-auto">One at a time. Make your call before the click.</div>
 
 <!--
 JEROEN. The axe marks a trap (chop it out), the longship marks a seaworthy
-choice. Make it a real pause: "Five real choices, one at a time. Before each
+choice. Make it a real pause: "Six real choices, one at a time. Before each
 one, decide: trap, or something you'd ship? Then I click." Keep it light,
-this is the fun beat. Two of the five are fine, so don't let the room
+this is the fun beat. Two of the six are fine, so don't let the room
 settle on "always trap" by item 3.
 -->
 
@@ -568,7 +598,27 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">V · pattern 1 of 5</div>
+<div class="kicker">V · pattern 1 of 6</div>
+
+<div class="text-2xl mt-16 max-w-3xl mx-auto serif">Your workloads run in the EU region of a US hyperscaler. Data never leaves Europe.</div>
+
+<div v-click class="mt-12">
+<div class="inline-flex items-center gap-3"><Axe :size="34" /><span class="red font-mono text-lg">LOCK-IN TRAP</span></div>
+<div class="mt-3 text-lg max-w-2xl mx-auto">An EU region is SEAL-1 at best. The parent company's law still reaches it: the region logo is not a firewall.</div>
+</div>
+
+<!--
+The trick opener: it sounds safe. "Hands up if you'd ship this." Pause,
+then click. Callback: "Remember slide 8, the CLOUD Act." It's strictly a
+sovereignty trap, not lock-in; don't split that hair on stage.
+-->
+
+---
+layout: default
+class: text-center
+---
+
+<div class="kicker">V · pattern 2 of 6</div>
 
 <div class="text-2xl mt-16 max-w-3xl mx-auto serif">Your checkout flow's business logic lives entirely inside serverless functions.</div>
 
@@ -587,7 +637,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">V · pattern 2 of 5</div>
+<div class="kicker">V · pattern 3 of 6</div>
 
 <div class="text-2xl mt-16 max-w-3xl mx-auto serif">You use a proprietary SDK feature on your hottest code path, wrapped behind your own interface.</div>
 
@@ -606,7 +656,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">V · pattern 3 of 5</div>
+<div class="kicker">V · pattern 4 of 6</div>
 
 <div class="text-2xl mt-16 max-w-3xl mx-auto serif">Your database leans on the provider's managed extensions and stored procedures.</div>
 
@@ -625,7 +675,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">V · pattern 4 of 5</div>
+<div class="kicker">V · pattern 5 of 6</div>
 
 <div class="text-2xl mt-16 max-w-3xl mx-auto serif">Telemetry runs on OpenTelemetry, with your own DNS and identity provider.</div>
 
@@ -639,7 +689,7 @@ layout: default
 class: text-center
 ---
 
-<div class="kicker">V · pattern 5 of 5</div>
+<div class="kicker">V · pattern 6 of 6</div>
 
 <div class="text-2xl mt-16 max-w-3xl mx-auto serif">"We don't have a tested exit plan yet. We'll write one if we ever need it."</div>
 
@@ -658,68 +708,29 @@ chapter: "VI · Sea trial"
 class: voyage-open
 ---
 
-<div class="kicker">VI · sea trial</div>
-
-# The 2×2. <span class="gold">Be honest.</span>
-
-<div class="matrix mt-4" style="height:300px">
-<div></div>
-<div class="axis">Operational impact</div>
-<div class="axis">Existential risk</div>
-<div class="row-h">Independence</div>
-<div class="cell" v-click>If you had to leave your provider, how fast could you move without rearchitecting?<span class="leg">→ portability</span></div>
-<div class="cell" v-click>Long term, what does it cost to never be able to leave? Money and risk.<span class="leg">→ portability, compounded</span></div>
-<div class="row-h">Others in control</div>
-<div class="cell" v-click>If access to some services were withdrawn, what stops working, and for how long?<span class="leg">→ control</span></div>
-<div class="cell" v-click>Who can inspect, maintain and change what runs your system, and does a foreign law reach them?<span class="leg">→ transparency + jurisdiction</span></div>
-</div>
-
-<div class="mt-4 text-lg gold">Keep your hand up if you can answer out loud, right now.</div>
-
-<!--
-JEROEN. Jeroen's 2x2 (22 Sep) with Andrés's show of hands (17 Sep). Each
-quadrant points back to the keel, so it reads as the payoff of S7 and not
-a new framework.
-
-1. Before the first click: "Hands up. Keep it up only if you can answer
-   this one out loud, right now, with a straight face."
-2. Click each quadrant, pause 3 to 4 seconds, scan the room. Don't comment
-   on the drop, keep going.
-3. After the fourth: "Look around. The hands still up have a sovereignty
-   posture. Everyone else has a belief."
-4. Big or formal room: "Count on your own fingers, don't show anyone."
-
-Don't call on anyone. Optional European line: "In Europe? Ask if you're
-ready for CADA."
--->
-
----
-layout: default
----
-
 <div class="kicker">VI · remember the ships</div>
 
 # Sovereignty lives in the crew
 
-<div class="grid-3 mt-6">
-<div class="panel">
-<div class="flex items-center gap-3"><Axe :size="40" /><div class="serif text-lg">Their own ships</div></div>
-<div class="mt-2 gold">Control + transparency</div>
-<div class="muted text-sm mt-1">You hold the keys and you can audit the stack.</div>
+<div class="grid-3 mt-8">
+<div class="panel" style="min-height:10rem;padding:1.1rem 1.3rem">
+<div class="flex flex-col items-start gap-3"><Axe :size="50" /><div class="serif text-xl whitespace-nowrap">Their own ships</div></div>
+<div class="mt-2 gold text-lg">Control + transparency</div>
+<div class="muted text-base mt-2">You hold the keys and you can audit the stack.</div>
 </div>
-<div class="panel">
-<div class="flex items-center gap-3"><Sail :size="40" /><div class="serif text-lg">Open seas</div></div>
-<div class="mt-2 gold">Jurisdiction + supply chain</div>
-<div class="muted text-sm mt-1">You trade with everyone and answer to no foreign master.</div>
+<div class="panel" style="min-height:10rem;padding:1.1rem 1.3rem">
+<div class="flex flex-col items-start gap-3"><Sail :size="50" /><div class="serif text-xl whitespace-nowrap">Open seas</div></div>
+<div class="mt-2 gold text-lg">Jurisdiction + supply chain</div>
+<div class="muted text-base mt-2">You trade with everyone and answer to no foreign master.</div>
 </div>
-<div class="panel">
-<div class="flex items-center gap-3"><Portage :size="40" /><div class="serif text-lg">Built to turn back</div></div>
-<div class="mt-2 gold">The off-ramp</div>
-<div class="muted text-sm mt-1">You can leave, and you've tested it.</div>
+<div class="panel" style="min-height:10rem;padding:1.1rem 1.3rem">
+<div class="flex flex-col items-start gap-3"><Portage :size="50" /><div class="serif text-xl whitespace-nowrap">Built to turn back</div></div>
+<div class="mt-2 gold text-lg">The off-ramp</div>
+<div class="muted text-base mt-2">You can leave, and you've tested it.</div>
 </div>
 </div>
 
-<div class="mt-8 text-lg">So make "cost to leave" a required field in every architecture review, right next to <code>RPO / RTO</code>.</div>
+<div class="mt-8 text-xl">So make "cost to leave" a required field in every architecture review, right next to <code>RPO / RTO</code>.</div>
 
 <!--
 JEROEN. The callback (22 Sep) that closes the loop planted in S4. Say it out
@@ -750,17 +761,17 @@ chapter: "VII · Home port"
 </div>
 <div class="steel flex items-center text-2xl">→</div>
 <div class="panel" style="flex:1">
-<div class="flex items-center justify-between"><div class="stat-num">02</div><Portage :size="40" /></div>
-<div class="gold text-xl mt-2">TEST it</div>
-<div class="steel font-mono text-xs mt-1">BUILT TO TURN BACK</div>
-<div class="muted mt-2 text-sm">Run plan B every quarter, like a DR drill.</div>
+<div class="flex items-center justify-between"><div class="stat-num">02</div><Sail :size="40" /></div>
+<div class="gold text-xl mt-2">CONTROL it</div>
+<div class="steel font-mono text-xs mt-1">OPEN SEAS</div>
+<div class="muted mt-2 text-sm">Know what's in the hold: an SBOM on every build.</div>
 </div>
 <div class="steel flex items-center text-2xl">→</div>
 <div class="panel" style="flex:1">
-<div class="flex items-center justify-between"><div class="stat-num">03</div><Sail :size="40" /></div>
+<div class="flex items-center justify-between"><div class="stat-num">03</div><Portage :size="40" /></div>
 <div class="gold text-xl mt-2">make it a HABIT</div>
-<div class="steel font-mono text-xs mt-1">OPEN SEAS</div>
-<div class="muted mt-2 text-sm">An SBOM on every build. Know your cargo.</div>
+<div class="steel font-mono text-xs mt-1">BUILT TO TURN BACK</div>
+<div class="muted mt-2 text-sm">Run plan B every quarter, like a DR drill.</div>
 </div>
 </div>
 
@@ -769,10 +780,10 @@ chapter: "VII · Home port"
 <!--
 JEROEN. Rule of three, a visual table of contents for the next three slides.
 Each action is one of the ships from the previous slide: say it out loud.
-"Their own ships: you build it. Built to turn back: you test it. Open seas:
-you make it a habit." Then land the quote, it's the message of the talk.
+"Their own ships: you build it. Open seas: you control what's in the hold.
+Built to turn back: you make the off-ramp test a habit." Then land the quote, it's the message of the talk.
 
-Icons match the ship legs (Axe, Portage, Sail), not a separate set.
+Icons match the ship legs (Axe, Sail, Portage), not a separate set.
 -->
 
 ---
@@ -801,49 +812,24 @@ The BYOK line is SOV-3, the SDK wrapper is SOV-6, if anyone asks.
 layout: default
 ---
 
-<div class="flex items-center gap-3"><Portage :size="30" /><div class="kicker">VII · action 2 · test · built to turn back</div></div>
+<div class="flex items-center gap-3"><Sail :size="30" /><div class="kicker">VII · action 2 · control · open seas</div></div>
 
-# Run an off-ramp test
+# Control your cargo
 
-<div class="muted">Quarterly and on the calendar, like any DR drill.</div>
+<div class="mt-4 text-xl">Know what's in the hold, then decide what gets on board.</div>
+<div class="mt-2 muted">One CI step, open source tools, open formats.</div>
 
-<div class="grid-2 mt-6 items-start">
-<div class="panel">
-<b class="steel">1.</b> Add a second region or provider to the IaC: leaving becomes a variable change.<br/><br/>
-<b class="steel">2.</b> Snapshot, export, import into it: another region, another provider or an on-prem VM.
-</div>
-<div class="term text-sm">
-# verify<br/>
-□ export in standard formats?<br/>
-□ do the keys follow?<br/>
-□ app boots on vanilla Postgres<br/>
-&nbsp;&nbsp;/ S3-compatible storage?
-</div>
-</div>
-
-<div class="mt-6 muted">Data Act Art. 25 makes switching rights contractual. Find the gaps now, well before contract renewal in 2027.</div>
-
----
-layout: default
----
-
-<div class="flex items-center gap-3"><Sail :size="30" /><div class="kicker">VII · action 3 · habit · open seas</div></div>
-
-# Know your cargo, on every build
-
-<div class="mt-5 muted">One CI step, then it runs forever. Open source tools, open formats.</div>
-
-<div class="term mt-5 text-xl" style="line-height:2">
+<div class="term mt-6 text-xl" style="line-height:1.9;max-width:fit-content">
 <span class="gold">$</span> SBOM for every image (SPDX or CycloneDX)<br/>
 <span class="gold">$</span> signed, with provenance (SLSA)<br/>
-<span class="gold">$</span> stored where you can query it
+<span class="gold">$</span> policy gate: unsigned or unknown? It doesn't ship.
 </div>
 
-<div class="mt-6 muted">CRA writes SBOMs into law. SOV-5, the heaviest objective, scores them. Trade with everyone, but know what's in the hold.</div>
+<div class="mt-6 muted">CRA writes SBOMs into law. SOV-5, the heaviest objective, scores them.</div>
 
 <!--
-Callback: "Open seas. You trade with everyone, so you'd better know what's
-in the hold."
+Callback: "Open seas. You trade with everyone, but you decide what comes
+aboard." The policy gate is the control part: OPA/Kyverno from slide 13.
 
 Accuracy: the CRA's vulnerability reporting started 11 Sep 2026; the full
 manufacturer obligations, SBOM included, apply from Dec 2027. Say "the law
@@ -853,6 +839,35 @@ Replaced the 3-line portability gate (cost to leave / who holds the keys /
 what's the off-ramp) on 16 Oct; slide 21 still carries "cost to leave" as a
 review field.
 -->
+
+---
+layout: default
+---
+
+<div class="flex items-center gap-3"><Portage :size="30" /><div class="kicker">VII · action 3 · habit · built to turn back</div></div>
+
+# Run an off-ramp test
+
+<div class="muted">Quarterly and on the calendar, like any DR drill.</div>
+
+<div class="flex items-stretch gap-3 mt-8">
+<div class="panel" style="flex:1">
+<div class="flex items-baseline gap-3"><div class="stat-num">01</div><div class="gold text-xl">Add</div></div>
+<div class="mt-3">A second region or provider in the IaC. Leaving becomes a variable change.</div>
+</div>
+<div class="steel flex items-center text-2xl">→</div>
+<div class="panel" style="flex:1">
+<div class="flex items-baseline gap-3"><div class="stat-num">02</div><div class="gold text-xl">Move</div></div>
+<div class="mt-3">Snapshot, export, import: another region, another provider or an on-prem VM.</div>
+</div>
+<div class="steel flex items-center text-2xl">→</div>
+<div class="panel" style="flex:1.25">
+<div class="flex items-baseline gap-3"><div class="stat-num">03</div><div class="gold text-xl">Verify</div></div>
+<div class="term text-sm mt-3 whitespace-nowrap" style="padding:0.6rem 0.8rem;line-height:1.9">□ export in open formats?<br/>□ do the keys follow?<br/>□ boots on Postgres + S3 API?</div>
+</div>
+</div>
+
+<div class="mt-8 text-xl text-center">Find the gaps on a quiet Tuesday, <span class="gold">not during an outage</span>.</div>
 
 ---
 layout: default
@@ -885,4 +900,47 @@ will be the boring default. Today, it's a team habit you can start on Monday.
 <!--
 JEROEN. The longship from the title slide comes home, to the longhouse. The voyage bar ends
 here too.
+-->
+
+---
+layout: default
+voyage: false
+---
+
+<div class="kicker">backup · sea trial</div>
+
+# The 2×2. <span class="gold">Be honest.</span>
+
+<div class="matrix mt-4" style="height:300px">
+<div></div>
+<div class="axis">Operational impact</div>
+<div class="axis">Existential risk</div>
+<div class="row-h">Independence</div>
+<div class="cell" v-click>If you had to leave your provider, how fast could you move without rearchitecting?<span class="leg">→ portability</span></div>
+<div class="cell" v-click>Long term, what does it cost to never be able to leave? Money and risk.<span class="leg">→ portability, compounded</span></div>
+<div class="row-h">Others in control</div>
+<div class="cell" v-click>If access to some services were withdrawn, what stops working, and for how long?<span class="leg">→ control</span></div>
+<div class="cell" v-click>Who can inspect, maintain and change what runs your system, and does a foreign law reach them?<span class="leg">→ transparency + jurisdiction</span></div>
+</div>
+
+<div class="mt-4 text-lg gold">Keep your hand up if you can answer out loud, right now.</div>
+
+<!--
+BACKUP SLIDE, after landfall. Moved out of the main run on 16 Oct; show it
+only if there is time or in Q&A.
+
+JEROEN. Jeroen's 2x2 (22 Sep) with Andrés's show of hands (17 Sep). Each
+quadrant points back to the keel, so it reads as the payoff of S7 and not
+a new framework.
+
+1. Before the first click: "Hands up. Keep it up only if you can answer
+   this one out loud, right now, with a straight face."
+2. Click each quadrant, pause 3 to 4 seconds, scan the room. Don't comment
+   on the drop, keep going.
+3. After the fourth: "Look around. The hands still up have a sovereignty
+   posture. Everyone else has a belief."
+4. Big or formal room: "Count on your own fingers, don't show anyone."
+
+Don't call on anyone. Optional European line: "In Europe? Ask if you're
+ready for CADA."
 -->
