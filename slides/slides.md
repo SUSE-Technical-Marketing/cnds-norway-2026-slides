@@ -853,18 +853,23 @@ class: text-center
 
 <div class="kicker">VII · landfall</div>
 
-<div class="flex items-end justify-center gap-6 mb-2" style="position:relative"><Longship :width="200" /></div>
+<div class="flex items-end justify-center gap-6 mb-2" style="position:relative"><Longship :width="120" /></div>
 
 # Your longship should be yours to sail.
 
-<div class="mt-5 max-w-2xl mx-auto muted">
+<div class="mt-3 max-w-3xl mx-auto muted">
 The EU just gave sovereignty a measurable definition and a budget. Ten years from now, off-ramp ready
 will be the boring default. Today, it's a team habit you can start on Monday.
 </div>
 
-<div class="mt-6 max-w-2xl mx-auto gold">Have an exit plan, an SBOM and an answer to "who holds the keys" ready before the RFP asks.</div>
+<div class="mt-3 max-w-3xl mx-auto gold">Have an exit plan, an SBOM and an answer to "who holds the keys" ready before the RFP asks.</div>
 
-<div class="mt-6 kicker">github.com/avaleror/cnds-norway-2026-slides</div>
+<div class="kicker mt-4">github.com/SUSE-Technical-Marketing/cnds-norway-2026-slides</div>
+
+<div class="flex items-center justify-center gap-16 mt-3">
+<div class="flex items-center gap-3 text-left"><img src="/qr/linkedin-andres.svg" alt="QR: Andrés Valero on LinkedIn" style="width:110px;height:110px;border-radius:6px" /><div class="whitespace-nowrap"><div class="text-sm">Andrés Valero</div><div class="steel font-mono text-xs">in/avaleror</div></div></div>
+<div class="flex items-center gap-3 text-left"><img src="/qr/linkedin-jeroen.svg" alt="QR: Jeroen van Erp on LinkedIn" style="width:110px;height:110px;border-radius:6px" /><div class="whitespace-nowrap"><div class="text-sm">Jeroen van Erp</div><div class="steel font-mono text-xs">in/jvanerp</div></div></div>
+</div>
 
 <!--
 JEROEN. The longship from the title slide comes home, to the longhouse. The voyage bar ends
