@@ -876,9 +876,10 @@ will be the boring default. Today, it's a team habit you can start on Monday.
 
 <div class="kicker mt-4">github.com/SUSE-Technical-Marketing/cnds-norway-2026-slides</div>
 
-<div class="flex items-center justify-center gap-16 mt-3">
-<div class="flex items-center gap-3 text-left"><img src="/qr/linkedin-andres.svg" alt="QR: Andrés Valero on LinkedIn" style="width:110px;height:110px;border-radius:6px" /><div class="whitespace-nowrap"><div class="text-sm">Andrés Valero</div><div class="steel font-mono text-xs">in/avaleror</div></div></div>
+<div class="flex items-center justify-center gap-10 mt-3">
 <div class="flex items-center gap-3 text-left"><img src="/qr/linkedin-jeroen.svg" alt="QR: Jeroen van Erp on LinkedIn" style="width:110px;height:110px;border-radius:6px" /><div class="whitespace-nowrap"><div class="text-sm">Jeroen van Erp</div><div class="steel font-mono text-xs">in/jvanerp</div></div></div>
+<div class="flex items-center gap-3 text-left"><img src="/qr/slides.svg" alt="QR: these slides online" style="width:110px;height:110px;border-radius:6px;outline:3px solid #E2A63D;outline-offset:2px" /><div class="whitespace-nowrap"><div class="text-sm gold">These slides</div><div class="steel font-mono text-xs">open on your phone</div></div></div>
+<div class="flex items-center gap-3 text-left"><img src="/qr/linkedin-andres.svg" alt="QR: Andrés Valero on LinkedIn" style="width:110px;height:110px;border-radius:6px" /><div class="whitespace-nowrap"><div class="text-sm">Andrés Valero</div><div class="steel font-mono text-xs">in/avaleror</div></div></div>
 </div>
 
 <!--
