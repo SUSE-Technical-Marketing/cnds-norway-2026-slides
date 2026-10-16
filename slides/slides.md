@@ -22,13 +22,14 @@ Content rules still come from HANDOFF.md and outline.md in the vault folder.
 
 STORY LINE: the talk is one voyage with seven chapters. The three ship legs
 are planted in I, named against the keel in II, and cashed in out loud in VI.
-  I    The myth          S3-S5    Jeroen
-  II   The keel          S6       Jeroen
-  III  Foreign waters    S7       Jeroen
-  IV   The charts        S8-S11   Andrés (split option a, still to confirm)
-  V    Shipbuilding      S12-S19  Jeroen
-  VI   Sea trial         S20-S21  Jeroen
-  VII  Home port         S22-S26  Jeroen
+  I    The myth          S3-S6
+  II   The keel          S7
+  III  Foreign waters    S8
+  IV   The charts        S9-S12
+  V    Shipbuilding      S13-S19
+  VI   Sea trial         S20-S21
+  VII  Home port         S22-S26
+Speaker split not decided yet; the names in the notes are placeholders.
 Ship legs used everywhere: own ships = control + transparency; open seas, no
 foreign master = jurisdiction + supply chain; built to turn back = the off-ramp.
 
@@ -111,7 +112,7 @@ $ ls<br/>beard<br/>axe<br/>longship<br/><span class="muted"># that's all we reme
 <div>
 Bearded men. Axes. Burning ships.<br/>
 Conquering, raiding, sailing the oceans and taking what other people <span class="gold">built</span>.
-<div class="mt-3 red text-xs font-mono">FUN FACT: THE HORNS COME FROM AN 1876 OPERA COSTUME</div>
+<div class="mt-3 red text-xs font-mono">QUICK CHECK: WHO PICTURED HORNS?</div>
 </div>
 </div>
 </div>
@@ -119,10 +120,14 @@ Conquering, raiding, sailing the oceans and taking what other people <span class
 <div class="mt-8 text-xl gold">Now look through the other lens.</div>
 
 <!--
-JEROEN. Pause after "Now look through the other lens." Let it breathe.
+JEROEN. Ask the quick-check question out loud and wait for hands.
 
-Optional laugh line: "And the horns? Those come from costume designs for
-Wagner's Ring cycle, 1876. No Viking ever wore them into a fight."
+"Keep them up if you think Vikings actually wore them." Beat. "None did.
+The horns come from costume designs for Wagner's Ring cycle, 1876. The
+picture in your head was made up much later. Keep that in mind for the
+rest of this talk."
+
+Then pause after "Now look through the other lens." Let it breathe.
 -->
 
 ---
@@ -212,10 +217,9 @@ layout: default
 
 <div class="kicker">I · from the fjord to the stack</div>
 
-<div class="grid-2 mt-6 items-center">
+<div class="grid-2 mt-16 items-center">
 <div>
-<div class="text-lg muted">Today's cloud asks for the same mindset. AWS, Azure and GCP are great ports, and this talk won't pretend otherwise.</div>
-<div class="mt-8 text-5xl gold serif" style="line-height:1.15;font-weight:600">The enemy is dependency without contingency.</div>
+<div class="text-5xl gold serif" style="line-height:1.15;font-weight:600">The enemy is dependency without contingency.</div>
 </div>
 <div class="panel">
 <div class="steel font-mono text-xs">THE TEST · NO GOVERNMENT MANDATE NEEDED</div>
@@ -225,12 +229,16 @@ layout: default
 </div>
 </div>
 
-<div class="mt-8 muted text-sm">Global and commercial: Norway, Singapore or Ohio, no regulator required.</div>
-
 <!--
 JEROEN. Merge of both versions: Andrés's big thesis line on the left,
 Jeroen's commercial test (22 Sep) on the right. The test lands before any EU
 material on purpose, so the room hears it as a global engineering question.
+
+Say before the big line: "Today's cloud asks for the same mindset. AWS,
+Azure and GCP are great ports, and this talk won't pretend otherwise."
+
+Say after the test: "This is global and commercial. Norway, Singapore or
+Ohio, no regulator required."
 -->
 
 ---
@@ -275,24 +283,22 @@ class: voyage-open
 
 <h1 style="font-size:2.1rem;max-width:80%">The CLOUD Act: a remote-access API you can't close</h1>
 
-<div class="muted mt-2 max-w-3xl">
-It applies to any US-jurisdiction entity, wherever the data sits. US authorities can compel disclosure of
-data the company "controls," including data in <code>eu-west-1</code>. Sail in someone else's waters and
-you sail under their law.
-</div>
+<div class="mt-4 text-xl muted">Sail in someone else's waters and you sail under their law.</div>
 
 <div class="mt-6 text-2xl serif">The region logo is <span class="gold">not a firewall</span>.</div>
 
-<div class="quote-block mt-6">"No, I cannot guarantee it."</div>
+<div class="quote-block mt-8">"No, I cannot guarantee it."</div>
 <div class="muted text-xs mt-2">Anton Carniaux, Microsoft France director of public &amp; legal affairs, under oath · French Senate inquiry commission, 10 June 2025</div>
 
-<div class="mt-6 text-lg">The fix: <span class="gold">control the keys, know your jurisdiction chain, keep an off-ramp.</span></div>
-
-<div class="mt-3 foot">GDPR and the EU–US Data Privacy Framework don't block it (DPF upheld at the General Court, Sep 2025, now on appeal).</div>
+<div class="mt-8 foot">GDPR and the EU–US Data Privacy Framework don't block it (DPF upheld at the General Court, Sep 2025, now on appeal).</div>
 
 <!--
 JEROEN. The emotional core of the talk. Let the five-word quote sit for a
 second before reading the source line.
+
+Explain the mechanism before the quote: "It applies to any US-jurisdiction
+entity, wherever the data sits. US authorities can compel disclosure of data
+the company controls, including data in eu-west-1."
 
 Handoff to Andrés (split option a): "That's the storm. So how do you
 navigate it? Andrés has the charts."
@@ -306,7 +312,7 @@ class: voyage-open
 
 <div class="kicker">IV · follow the trade</div>
 
-# $23.1B by 2027
+# Sovereignty has a budget now
 
 <div class="flex items-stretch justify-center gap-3 mt-8 text-center" style="max-width:1300px;margin-left:auto;margin-right:auto">
 <div class="panel" style="flex:1">
@@ -350,7 +356,7 @@ layout: default
 
 <div class="kicker">IV · the charts</div>
 
-# Four rules, one heading
+# From nice-to-have to required
 
 <div class="grid-4 mt-6 text-sm">
 <div class="panel">
@@ -375,7 +381,7 @@ layout: default
 </div>
 </div>
 
-<div class="mt-8 text-lg">Four rules, one heading: sovereignty is something you get scored on now.</div>
+<div class="mt-8 text-lg">Two of these are law. Two decide who wins public contracts. Either way, <span class="gold">"nice to have" is over</span>.</div>
 
 <div class="mt-6 foot">SEAL = Sovereignty Effective Assurance Levels · CADA = Cloud and AI Development Act · EUCS = European Cybersecurity Certification Scheme for Cloud Services · CRA = Cyber Resilience Act</div>
 
@@ -384,7 +390,7 @@ ANDRÉS. About 70 seconds. Lead with the rule's name, dates are secondary.
 The one exception is CRA: "six weeks ago" is the hook, so say it.
 
 - Data Act: the one that touches your contracts. Your provider can't drag an exit out forever.
-- Cloud Sovereignty Framework: the EU built a scoring system and put €180M behind it. Four providers won, scored on the ladder you'll see next.
+- Cloud Sovereignty Framework: the EU built a scoring system and put €180M behind it. Four providers won, scored on the objectives and the ladder coming up.
 - Tech Sovereignty Package: say this one slowly. "CADA is a second scale with different numbers from SEAL. Its top tiers need an EUCS certificate that doesn't exist yet."
 - CRA: "This one isn't coming. It started six weeks ago, and it's why SBOMs stopped being optional."
 
@@ -393,45 +399,13 @@ Europe try this with Gaia-X? Yes. It hit the same sovereignty-washing
 problem we'll see in this tender."
 
 DORA and NIS2 stay off the slide. One spoken line if time allows: "Regulators
-now ask: if your provider fails or gets compelled, what's your plan?"
--->
+now ask: if your provider fails or gets compelled, what's your plan? DORA
+Art. 28 already requires audit rights and an exit plan for financial
+entities."
 
----
-layout: default
----
-
-<div class="kicker">IV · the depth scale</div>
-
-# SEAL: borrow the vocabulary
-
-<div class="mt-6">
-<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:8%;background:#D0573F"></div></div><div><b class="gold">SEAL-0</b> no sovereignty: us-east-1 because it was cheaper. The default.</div></div>
-<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:24%;background:#E07B3C"></div></div><div><b class="gold">SEAL-1</b> jurisdictional: EU region, GDPR, parent still US</div></div>
-<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:40%;background:#E2A63D"></div></div><div><b class="gold">SEAL-2</b> data: BYOK in an EU HSM, audit rights, exit clauses</div></div>
-<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:56%;background:#4FA3A0"></div></div><div><b class="gold">SEAL-3</b> resilience: EU entity, EU operators, EU certification</div></div>
-<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:72%;background:#5B8CC9"></div></div><div><b class="gold">SEAL-4</b> full: EU-only supply chain in the critical path. Rare.</div></div>
-</div>
-
-<div class="quote-block mt-6">SEAL-1 is GDPR compliance with a Brussels accent.</div>
-
-<div class="mt-5 muted">Ratings are per objective, per procurement. There's no such thing as "a SEAL-3 product."</div>
-
-<!--
-ANDRÉS. About 90 seconds.
-
-Open: "Sailors measure depth before they trust the water. The EU gave us a
-depth scale, and if you've used a CMMI or DevOps maturity model, it'll feel
-familiar."
-
-One beat of color per level, don't read the lines:
-- SEAL 0: "The default nobody picked on purpose."
-- SEAL 1: land "Brussels accent" as the laugh line, move on fast.
-- SEAL 2: "This is where it costs engineering time. BYOK means someone owns key rotation now."
-- SEAL 3: "For most regulated workloads, this is the realistic ceiling."
-- SEAL 4: "Rare, and only worth it if you're told to be there."
-
-Slow down for the last line and pause after it. That's the line that stops
-someone asking procurement for "a SEAL-3 vendor."
+Closing line, accuracy: Data Act and CRA are binding law. The Cloud
+Sovereignty Framework is procurement scoring and CADA is still a proposal,
+so don't say "all four are mandatory" out loud.
 -->
 
 ---
@@ -442,7 +416,7 @@ layout: default
 
 # The 8 objectives, in engineer-speak
 
-<div class="muted mt-1 text-sm">Each objective gets its own SEAL rating. The weights blend them into one score.</div>
+<div class="muted mt-1 text-sm">Each one gets its own rating from 0 to 4. The weights blend them into one score.</div>
 
 <table class="table-tight mt-3">
 <thead>
@@ -463,10 +437,10 @@ layout: default
 <div class="mt-4 muted">The heaviest weight is supply chain. The engineer's translation: <span class="gold">what's actually in your stack?</span></div>
 
 <!--
-ANDRÉS. About 60 seconds. This is the droppable slide if we're behind:
-fold the SOV-5 line into the SEAL slide and skip it.
+ANDRÉS. About 60 seconds. If we're behind, skim it in about 20 seconds:
+say only the SOV-5 line. Don't skip it, the SEAL slide refers back to it.
 
-"The SEAL rating isn't one number, it's a blend of eight of these." Don't
+"Before the scale, what actually gets scored: eight objectives." Don't
 read all eight, the dimmed rows are there for completeness. Talk about the
 three bright ones:
 - SOV-4: "A perfect stack with nobody who can run it goes nowhere. That's the silent failure point."
@@ -475,8 +449,48 @@ three bright ones:
 
 [OPTIONAL, verbal only] SOV-5: name SLSA as the real standard behind
 provenance. SOV-6: the CNCF conformance program for AI workloads, if it fits.
+-->
 
-Handback to Jeroen: "So that's what gets measured. Jeroen's going to show
+---
+layout: default
+---
+
+<div class="kicker">IV · the depth scale</div>
+
+# SEAL: borrow the vocabulary
+
+<div class="muted mt-1 text-sm">The 0–4 scale every one of those 8 objectives is rated on.</div>
+
+<div class="mt-6">
+<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:8%;background:#D0573F"></div></div><div><b class="gold">SEAL-0</b> no sovereignty: us-east-1 because it was cheaper. The default.</div></div>
+<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:24%;background:#E07B3C"></div></div><div><b class="gold">SEAL-1</b> jurisdictional: EU region, GDPR, parent still US</div></div>
+<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:40%;background:#E2A63D"></div></div><div><b class="gold">SEAL-2</b> data: BYOK in an EU HSM, audit rights, exit clauses</div></div>
+<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:56%;background:#4FA3A0"></div></div><div><b class="gold">SEAL-3</b> resilience: EU entity, EU operators, EU certification</div></div>
+<div class="seal-row"><div class="seal-track"><div class="seal-bar" style="width:72%;background:#5B8CC9"></div></div><div><b class="gold">SEAL-4</b> full: EU-only supply chain in the critical path. Rare.</div></div>
+</div>
+
+<div class="quote-block mt-6">SEAL-1 is GDPR compliance with a Brussels accent.</div>
+
+<div class="mt-5 muted">Ratings are per procurement. There's no such thing as "a SEAL-3 product."</div>
+
+<!--
+ANDRÉS. About 90 seconds.
+
+Open: "Sailors measure depth before they trust the water. The EU gave us a
+depth scale, and if you've used a CMMI or DevOps maturity model, it'll feel
+familiar."
+
+One beat of color per level, don't read the lines:
+- SEAL 0: "The default nobody picked on purpose."
+- SEAL 1: land "Brussels accent" as the laugh line, move on fast.
+- SEAL 2: "This is where it costs engineering time. BYOK means someone owns key rotation now."
+- SEAL 3: "For most regulated workloads, this is the realistic ceiling."
+- SEAL 4: "Rare, and only worth it if you're told to be there."
+
+Slow down for the last line and pause after it. That's the line that stops
+someone asking procurement for "a SEAL-3 vendor."
+
+Handback to Jeroen: "So that's how it gets measured. Jeroen's going to show
 you how to build a ship that scores well."
 -->
 
@@ -490,21 +504,27 @@ class: voyage-open
 
 # What "off-ramp ready" looks like
 
-<div class="grid-2 mt-5 text-sm">
-<div class="panel"><b class="steel">Portable primitives</b><br/>S3-compatible object storage, vanilla Postgres, OCI images, Kubernetes with standard CNI/CSI</div>
-<div class="panel"><b class="steel">Keys under your control</b><br/>Envelope encryption, BYOK/HYOK, a KMS abstraction in the platform layer</div>
-<div class="panel"><b class="steel">IaC as the off-ramp</b><br/>A second provider or region in the same IaC is a tested exit</div>
-<div class="panel"><b class="steel">Egress</b><br/>Standard export formats, telemetry pipelines that survive a provider change</div>
+<div class="mt-2 text-lg gold">Open source + open standards: the hull every off-ramp is built on.</div>
+
+<div class="grid-3 mt-5 text-base">
+<div class="panel" v-click><b class="steel">Portable primitives</b><br/>S3 API · Postgres · OCI · Kubernetes with CNI/CSI</div>
+<div class="panel" v-click><b class="steel">Keys you hold</b><br/>Envelope encryption, BYOK/HYOK, KMS behind an interface</div>
+<div class="panel" v-click><b class="steel">IaC is the exit</b><br/>Second region or provider in the same code: a tested off-ramp</div>
+<div class="panel" v-click><b class="steel">Standard egress</b><br/>Open export formats, telemetry that survives a provider change</div>
+<div class="panel" v-click><b class="steel">Cluster lifecycle</b><br/>Cluster API-style: create, upgrade, move clusters the same way anywhere</div>
+<div class="panel" v-click><b class="steel">Open virt + policy</b><br/>KubeVirt-style VMs, mTLS + OPA/Kyverno</div>
 </div>
 
-<div class="panel mt-3 text-sm"><b class="gold">Named patterns, all open source:</b> Cluster API-style lifecycle management · KubeVirt-style VMs with live migration · service-mesh mTLS plus OPA/Kyverno policy</div>
-
-<div class="mt-4 foot">OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · KMS = Key Management Service · IaC = Infrastructure as Code · mTLS = mutual TLS · OPA = Open Policy Agent</div>
+<div class="mt-4 foot">OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · KMS = Key Management Service · IaC = Infrastructure as Code · OPA = Open Policy Agent</div>
 
 <!--
-JEROEN. The named patterns row keeps the abstract's promise: cluster
-management, open virtualization, zero-trust security. CNCF project
-categories only, no vendor names.
+JEROEN. Open with the umbrella line: "Every box here works because it's
+open: open source code, or an open standard you can take elsewhere."
+Then one line per click. Row 1 is what you build on, row 2 is how you move.
+
+Boxes 5 and 6 keep the abstract's promise: cluster management, open
+virtualization, zero-trust security. CNCF project categories only, no
+vendor names.
 -->
 
 ---
@@ -624,48 +644,6 @@ Land this one heavier. It's the attitude behind every other trap.
 
 ---
 layout: default
----
-
-<div class="kicker">V · a four-year refit</div>
-
-# One workload, up the ladder
-
-<div class="grid-4 mt-4 text-sm">
-<div class="panel" style="padding:0.8rem 1rem">
-<div class="gold">SEAL-0 · Year 1</div>us-east-1 <span class="muted">· cheaper</span>
-<div class="mt-2 steel font-mono" style="font-size:0.65rem">IN THE CODE</div>
-<div class="muted">Lambda + RDS, AWS SDK hardcoded in handlers. No exit in mind.</div>
-</div>
-<div class="panel" style="padding:0.8rem 1rem">
-<div class="gold">SEAL-1 · Year 2</div>EU region <span class="muted">· parent still US</span>
-<div class="mt-2 steel font-mono" style="font-size:0.65rem">IN THE CODE</div>
-<div class="muted">One Terraform variable: region. Zero app code touched.</div>
-</div>
-<div class="panel" style="padding:0.8rem 1rem">
-<div class="gold">SEAL-2 · Year 3</div>BYOK in an EU HSM <span class="muted">· audit rights, 60-day exit</span>
-<div class="mt-2 steel font-mono" style="font-size:0.65rem">IN THE CODE</div>
-<div class="muted">KMS behind an interface, envelope encryption. Key rotation now owned.</div>
-</div>
-<div class="panel" style="padding:0.8rem 1rem">
-<div class="gold">SEAL-3 · Year 4</div>EU provider <span class="muted">· EU legal entity</span>
-<div class="mt-2 steel font-mono" style="font-size:0.65rem">IN THE CODE</div>
-<div class="muted">The big refactor: Lambda to containers on K8s, RDS to vanilla Postgres.</div>
-</div>
-</div>
-
-<div class="mt-4 steel text-sm">The SEAL-2 clauses aren't hypothetical: DORA Art. 28 already requires audit rights and an exit plan for financial entities.</div>
-
-<div class="mt-3 text-lg gold">≈ €500K over 4 years ≈ 6 basis points of annual volume.</div>
-<div class="mt-1 muted">Affordable if you start now. Wait for a regulator's deadline and it turns into a rushed project.</div>
-
-<!--
-JEROEN. Say the "in the code" line for each step, it's what this room cares
-about. SEAL-1 costs nothing in code, SEAL-2 and 3 are where engineering time
-goes. The DORA line (22 Sep) shows the fintech story is already law.
--->
-
----
-layout: default
 chapter: "VI · Sea trial"
 class: voyage-open
 ---
@@ -690,7 +668,7 @@ class: voyage-open
 
 <!--
 JEROEN. Jeroen's 2x2 (22 Sep) with Andrés's show of hands (17 Sep). Each
-quadrant points back to the keel, so it reads as the payoff of S6 and not
+quadrant points back to the keel, so it reads as the payoff of S7 and not
 a new framework.
 
 1. Before the first click: "Hands up. Keep it up only if you can answer
@@ -757,51 +735,63 @@ chapter: "VII · Home port"
 <div class="panel" style="flex:1">
 <div class="flex items-center justify-between"><div class="stat-num">01</div><Axe :size="40" /></div>
 <div class="gold text-xl mt-2">BUILD it</div>
-<div class="muted mt-2 text-sm">One PR, about a day. Ship one off-ramp.</div>
+<div class="steel font-mono text-xs mt-1">THEIR OWN SHIPS</div>
+<div class="muted mt-2 text-sm">Hold the keys. One PR, about a day.</div>
 </div>
 <div class="steel flex items-center text-2xl">→</div>
 <div class="panel" style="flex:1">
-<div class="flex items-center justify-between"><div class="stat-num">02</div><Longship :width="60" /></div>
+<div class="flex items-center justify-between"><div class="stat-num">02</div><Portage :size="40" /></div>
 <div class="gold text-xl mt-2">TEST it</div>
-<div class="muted mt-2 text-sm">Quarterly. Run it like a DR drill.</div>
+<div class="steel font-mono text-xs mt-1">BUILT TO TURN BACK</div>
+<div class="muted mt-2 text-sm">Run plan B every quarter, like a DR drill.</div>
 </div>
 <div class="steel flex items-center text-2xl">→</div>
 <div class="panel" style="flex:1">
-<div class="flex items-center justify-between"><div class="stat-num">03</div><Shield :size="40" a="#D0573F" b="#E2A63D" /></div>
+<div class="flex items-center justify-between"><div class="stat-num">03</div><Sail :size="40" /></div>
 <div class="gold text-xl mt-2">make it a HABIT</div>
-<div class="muted mt-2 text-sm">Three lines in every PR or ADR.</div>
+<div class="steel font-mono text-xs mt-1">OPEN SEAS</div>
+<div class="muted mt-2 text-sm">An SBOM on every build. Know your cargo.</div>
 </div>
 </div>
 
+<div class="quote-block mt-8 mx-auto" style="max-width:fit-content">You don't have to leave. You have to be able to leave.</div>
+
 <!--
 JEROEN. Rule of three, a visual table of contents for the next three slides.
-Own icon set, not the ship legs: the axe builds, the longship sails, the shield holds.
+Each action is one of the ships from the previous slide: say it out loud.
+"Their own ships: you build it. Built to turn back: you test it. Open seas:
+you make it a habit." Then land the quote, it's the message of the talk.
+
+Icons match the ship legs (Axe, Portage, Sail), not a separate set.
 -->
 
 ---
 layout: default
 ---
 
-<div class="flex items-center gap-3"><Axe :size="30" /><div class="kicker">VII · action 1 · build</div></div>
+<div class="flex items-center gap-3"><Axe :size="30" /><div class="kicker">VII · action 1 · build · their own ships</div></div>
 
-# Ship one off-ramp
+# Hold your own keys
 
 <div class="muted">One PR, about a day. Pick your most lock-in-exposed workload.</div>
 
 <div class="mt-6 grid gap-3">
-<div class="panel">Second region in the IaC: leaving becomes a variable change</div>
 <div class="panel">Customer-managed keys (BYOK) on your most sensitive store</div>
 <div class="panel">One proprietary SDK call wrapped behind an interface you own</div>
 </div>
 
-<div class="mt-5 muted">Deliverable: a merged PR. No new tooling, no budget.</div>
-<div class="quote-block mt-5">You don't have to leave today. You just have to be able to leave.</div>
+<div class="mt-6 muted">Deliverable: a merged PR. No new tooling, no budget.</div>
+
+<!--
+Callback: "Their own ships. Whoever holds the keys holds the ship."
+The BYOK line is SOV-3, the SDK wrapper is SOV-6, if anyone asks.
+-->
 
 ---
 layout: default
 ---
 
-<div class="flex items-center gap-3"><Longship :width="44" /><div class="kicker">VII · action 2 · test</div></div>
+<div class="flex items-center gap-3"><Portage :size="30" /><div class="kicker">VII · action 2 · test · built to turn back</div></div>
 
 # Run an off-ramp test
 
@@ -809,7 +799,8 @@ layout: default
 
 <div class="grid-2 mt-6 items-start">
 <div class="panel">
-Snapshot, export, import into a second environment: another region, another provider or an on-prem VM.
+<b class="steel">1.</b> Add a second region or provider to the IaC: leaving becomes a variable change.<br/><br/>
+<b class="steel">2.</b> Snapshot, export, import into it: another region, another provider or an on-prem VM.
 </div>
 <div class="term text-sm">
 # verify<br/>
@@ -826,19 +817,32 @@ Snapshot, export, import into a second environment: another region, another prov
 layout: default
 ---
 
-<div class="flex items-center gap-3"><Shield :size="30" a="#D0573F" b="#E2A63D" /><div class="kicker">VII · action 3 · habit</div></div>
+<div class="flex items-center gap-3"><Sail :size="30" /><div class="kicker">VII · action 3 · habit · open seas</div></div>
 
-# A portability gate in your reviews
+# Know your cargo, on every build
 
-<div class="mt-5 muted">Every new managed service, SDK or proprietary feature answers three lines in the PR or ADR:</div>
+<div class="mt-5 muted">One CI step, then it runs forever. Open source tools, open formats.</div>
 
 <div class="term mt-5 text-xl" style="line-height:2">
-<span class="gold">$</span> cost to leave?<br/>
-<span class="gold">$</span> who holds the keys?<br/>
-<span class="gold">$</span> what's the off-ramp?
+<span class="gold">$</span> SBOM for every image (SPDX or CycloneDX)<br/>
+<span class="gold">$</span> signed, with provenance (SLSA)<br/>
+<span class="gold">$</span> stored where you can query it
 </div>
 
-<div class="mt-6 muted">A team norm. No new tool needed, one line in the PR description is enough. That's the habit that turns sovereignty from policy into code.</div>
+<div class="mt-6 muted">CRA writes SBOMs into law. SOV-5, the heaviest objective, scores them. Trade with everyone, but know what's in the hold.</div>
+
+<!--
+Callback: "Open seas. You trade with everyone, so you'd better know what's
+in the hold."
+
+Accuracy: the CRA's vulnerability reporting started 11 Sep 2026; the full
+manufacturer obligations, SBOM included, apply from Dec 2027. Say "the law
+already requires it" only for products in CRA scope.
+
+Replaced the 3-line portability gate (cost to leave / who holds the keys /
+what's the off-ramp) on 16 Oct; slide 21 still carries "cost to leave" as a
+review field.
+-->
 
 ---
 layout: default
