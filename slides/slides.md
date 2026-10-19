@@ -36,8 +36,10 @@ Ship legs used everywhere: own ships = control + transparency; open seas, no
 foreign master = jurisdiction + supply chain; built to turn back = the off-ramp.
 
 Theme: style.css (Viking motifs, no runes or co-opted symbols) and
-global-bottom.vue (the voyage bar). Rough timing: about 25 minutes of content
-in a 30-minute slot. Needs a timed run-through before Bergen.
+global-top.vue (the voyage bar). Rough timing (estimate, not yet timed): about
+21-23 minutes for S1-S26 in a 30-minute slot, leaving about 7 minutes for Q&A
+or the backup 2x2. The 6-pattern quiz is the biggest block, about 3 minutes.
+Needs a timed run-through before Bergen.
 -->
 
 <svg class="aurora" viewBox="0 0 980 552" preserveAspectRatio="none" aria-hidden="true">
@@ -105,12 +107,12 @@ class: voyage-open
 
 # Picture what you saw as a kid
 
-<div class="grid-2 mt-8">
-<div class="term">
+<div class="grid-2 mt-10">
+<div class="term text-xl" style="line-height:1.8">
 $ ls<br/>beard<br/>axe<br/>longship<br/><span class="muted"># that's all we remember</span>
 </div>
-<div class="panel flex items-center gap-5">
-<Viking variant="myth" :size="105" class="flex-none" />
+<div class="panel flex items-center gap-5 text-lg">
+<Viking variant="myth" :size="130" class="flex-none" />
 <div>
 Bearded men. Axes. Burning ships.<br/>
 Conquering, raiding, sailing the oceans and taking what other people <span class="gold">built</span>.
@@ -119,7 +121,7 @@ Conquering, raiding, sailing the oceans and taking what other people <span class
 </div>
 </div>
 
-<div class="mt-8 text-xl gold">Now look through the other lens.</div>
+<div class="mt-12 text-3xl serif gold">Now look through the other lens.</div>
 
 <!--
 JEROEN. Ask the quick-check question out loud and wait for hands.
@@ -291,12 +293,12 @@ class: voyage-open
 
 <div class="mt-4 text-xl muted">Sail in someone else's waters and you sail under their law.</div>
 
-<div class="mt-6 text-2xl serif">The region logo is <span class="gold">not a firewall</span>.</div>
+<div class="mt-8 text-3xl serif">The region logo is <span class="gold">not a firewall</span>.</div>
 
-<div class="quote-block mt-8">"No, I cannot guarantee it."</div>
-<div class="muted text-xs mt-2">Anton Carniaux, Microsoft France director of public &amp; legal affairs, under oath · French Senate inquiry commission, 10 June 2025</div>
+<div class="quote-block mt-12" style="font-size:2.2rem">"No, I cannot guarantee it."</div>
+<div class="muted text-sm mt-3">Anton Carniaux, Microsoft France director of public &amp; legal affairs, under oath · French Senate inquiry commission, 10 June 2025</div>
 
-<div class="mt-8 foot">GDPR and the EU–US Data Privacy Framework don't block it (DPF upheld at the General Court, Sep 2025, now on appeal).</div>
+<div class="mt-10 foot">GDPR and the EU–US Data Privacy Framework don't block it (DPF upheld at the General Court, Sep 2025, now on appeal).</div>
 
 <!--
 JEROEN. The emotional core of the talk. Let the five-word quote sit for a
@@ -796,12 +798,20 @@ layout: default
 
 <div class="muted">One PR, about a day. Pick your most lock-in-exposed workload.</div>
 
-<div class="mt-6 grid gap-3">
-<div class="panel">Customer-managed keys (BYOK) on your most sensitive store</div>
-<div class="panel">One proprietary SDK call wrapped behind an interface you own</div>
+<div class="grid-2 mt-8">
+<div class="panel flex flex-col">
+<div class="flex items-baseline gap-3"><div class="stat-num">01</div><div class="gold text-xl">Hold the keys</div></div>
+<div class="mt-3">Customer-managed keys (BYOK) on your most sensitive store.</div>
+<div class="term text-sm mt-auto" style="padding:0.6rem 0.8rem;line-height:1.8;margin-top:1rem">encryption:<br/>&nbsp;&nbsp;key: <span class="gold">customer-managed</span><br/>&nbsp;&nbsp;revoke: you</div>
+</div>
+<div class="panel flex flex-col">
+<div class="flex items-baseline gap-3"><div class="stat-num">02</div><div class="gold text-xl">Wrap the SDK</div></div>
+<div class="mt-3">One proprietary SDK call behind an interface you own.</div>
+<div class="term text-sm mt-auto" style="padding:0.6rem 0.8rem;line-height:1.8;margin-top:1rem">type <span class="gold">BlobStore</span> interface {<br/>&nbsp;&nbsp;Put(key string, r io.Reader) error<br/>}</div>
+</div>
 </div>
 
-<div class="mt-6 muted">Deliverable: a merged PR. No new tooling, no budget.</div>
+<div class="mt-8 text-xl text-center">Deliverable: <span class="gold">one merged PR</span>. No new tooling, no budget.</div>
 
 <!--
 Callback: "Their own ships. Whoever holds the keys holds the ship."
@@ -819,13 +829,13 @@ layout: default
 <div class="mt-4 text-xl">Know what's in the hold, then decide what gets on board.</div>
 <div class="mt-2 muted">One CI step, open source tools, open formats.</div>
 
-<div class="term mt-6 text-xl" style="line-height:1.9;max-width:fit-content">
+<div class="term mt-8 text-2xl" style="line-height:2;max-width:fit-content">
 <span class="gold">$</span> SBOM for every image (SPDX or CycloneDX)<br/>
 <span class="gold">$</span> signed, with provenance (SLSA)<br/>
 <span class="gold">$</span> policy gate: unsigned or unknown? It doesn't ship.
 </div>
 
-<div class="mt-6 muted">CRA writes SBOMs into law. SOV-5, the heaviest objective, scores them.</div>
+<div class="mt-10 text-xl">CRA writes SBOMs into law. <span class="gold">SOV-5, the heaviest objective, scores them.</span></div>
 
 <!--
 Callback: "Open seas. You trade with everyone, but you decide what comes
