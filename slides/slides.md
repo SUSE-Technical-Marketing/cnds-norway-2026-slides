@@ -77,12 +77,12 @@ voyage: false
 <div class="flex items-start justify-center gap-20 mt-10">
 <Axe :size="70" class="self-center opacity-90" />
 <div class="text-center">
-<Shield class="mx-auto" :size="140" label="JE" a="#D0573F" b="#F3F0E8" />
+<Shield class="mx-auto" :size="240" photo="/jeroen.jpg" a="#D0573F" b="#F3F0E8" />
 <div class="mt-4 text-xl serif">Jeroen van Erp</div>
 <div class="mt-1 steel text-sm">Principal Technology Advocate, SUSE</div>
 </div>
 <div class="text-center">
-<Shield class="mx-auto" :size="140" label="AV" a="#4FA3A0" b="#E2A63D" />
+<Shield class="mx-auto" :size="240" label="AV" a="#4FA3A0" b="#E2A63D" />
 <div class="mt-4 text-xl serif">Andrés Valero</div>
 <div class="mt-1 steel text-sm">Principal Technology Advocate, SUSE</div>
 </div>
@@ -90,9 +90,9 @@ voyage: false
 </div>
 
 <!--
-Initials on painted shields until headshots arrive. To swap in a photo, replace the
-<Shield> with <img src="./jeroen.jpg" style="width:140px;height:140px;
-border-radius:50%;object-fit:cover;border:1.6px solid #E2A63D"/>.
+Initials on painted shields until headshots arrive. To add a photo in the center,
+put jeroen.jpg in slides/public/ and add photo="/jeroen.jpg" to his <Shield>.
+Photo takes precedence over label; omit both for a metal shield boss.
 Same title on both on purpose (Andrés's call). Check with Jeroen that it is
 his real title.
 -->

@@ -44,6 +44,18 @@ bun run export   # PDF export
 Keyboard: arrows/space to navigate, `f` for fullscreen, `o` for slide
 overview, `d` toggles dark mode (deck is designed dark-first).
 
+### Shield centers
+
+The shield supports three center styles, in priority order:
+
+- Photo: `<Shield photo="/jeroen.jpg" />` crops the image to a circle inside
+  the shield. Put local photos in `slides/public/` to keep the deck offline.
+- Initials: `<Shield label="JE" />` uses the existing gold-on-dark badge.
+- Knob (shield boss): `<Shield />` shows the metal center when neither is set.
+
+If both `photo` and `label` are provided, the photo takes precedence. The
+`size`, `a`, and `b` props work with all three styles.
+
 ## Design system
 
 Ported from Jeroen's original `deck.html` (now in `raw-content/`; see
