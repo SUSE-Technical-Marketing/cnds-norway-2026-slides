@@ -28,7 +28,7 @@ are planted in I, named against the keel in II, and cashed in out loud in VI.
   III  Foreign waters    S8
   IV   The charts        S9-S12
   V    Shipbuilding      S13-S20
-  VI   Sea trial         S21
+  VI   Remember the ships S21
   VII  Home port         S22-S26
   Backup: the 2x2 "Be honest" (S27, after landfall)
 Speaker split not decided yet; the names in the notes are placeholders.
@@ -62,6 +62,8 @@ Needs a timed run-through before Bergen.
 
 <div class="mt-6 muted">Jeroen van Erp · Andrés Valero · SUSE</div>
 
+<img src="/cnd/cnd-norway-logo.png" alt="Cloud Native Days Norway" class="absolute top-10 left-12" style="height:64px" />
+
 <Longship :width="290" class="absolute bottom-12 right-12" />
 
 ---
@@ -82,7 +84,7 @@ voyage: false
 <div class="mt-1 steel text-sm">Principal Technology Advocate, SUSE</div>
 </div>
 <div class="text-center">
-<Shield class="mx-auto" :size="240" label="AV" a="#4FA3A0" b="#E2A63D" />
+<Shield class="mx-auto" :size="240" photo="/andres.jpg" a="#4FA3A0" b="#E2A63D" />
 <div class="mt-4 text-xl serif">Andrés Valero</div>
 <div class="mt-1 steel text-sm">Principal Technology Advocate, SUSE</div>
 </div>
@@ -90,9 +92,9 @@ voyage: false
 </div>
 
 <!--
-Initials on painted shields until headshots arrive. To add a photo in the center,
-put jeroen.jpg in slides/public/ and add photo="/jeroen.jpg" to his <Shield>.
-Photo takes precedence over label; omit both for a metal shield boss.
+Both headshots sit in the shield boss (photo= on <Shield>, files in
+slides/public/). Photo takes precedence over label; omit both for a metal
+shield boss.
 Same title on both on purpose (Andrés's call). Check with Jeroen that it is
 his real title.
 -->
@@ -272,7 +274,7 @@ class: voyage-open
 
 <!--
 JEROEN. This is the one lens for the whole talk. Every later framework
-points back here (the SOV table, the sea trial 2x2). Read the small tags
+points back here (the SOV table, the backup 2x2). Read the small tags
 out loud once: "this is where the ships come back."
 
 Transparency gets its own picture: Viking ships were clinker-built, planks
@@ -491,14 +493,14 @@ layout: default
 <div class="seal-row"><div class="seal-gauge"><i class="seg on" style="background:#5B8CC9;border-color:#5B8CC9"></i><i class="seg on" style="background:#5B8CC9;border-color:#5B8CC9"></i><i class="seg on" style="background:#5B8CC9;border-color:#5B8CC9"></i><i class="seg on" style="background:#5B8CC9;border-color:#5B8CC9"></i></div><div><b class="gold">SEAL-4</b> full: EU-only supply chain in the critical path. Rare.</div></div>
 </div>
 
-<div class="quote-block mt-6">SEAL-1 is GDPR compliance with a Brussels accent.</div>
+<div class="quote-block mt-10">SEAL-1 is GDPR compliance with a Brussels accent.</div>
 
-<div class="mt-5 muted">Ratings are per procurement. There's no such thing as "a SEAL-3 product."</div>
+<div class="mt-6 muted text-lg">Ratings are per procurement. There's no such thing as "a SEAL-3 product."</div>
 
 <style>
 .seal-gauge { display: flex; gap: 5px; flex: none; width: 26%; }
-.seal-gauge .seg { flex: 1; height: 16px; border: 1px solid var(--fk-line); background: var(--fk-panel); border-radius: 2px; }
-.seal-row { margin: 0.7rem 0; font-size: 1.1rem; }
+.seal-gauge .seg { flex: 1; height: 20px; border: 1px solid var(--fk-line); background: var(--fk-panel); border-radius: 2px; }
+.seal-row { margin: 0.95rem 0; font-size: 1.3rem; }
 </style>
 
 <!--
@@ -557,7 +559,7 @@ class: voyage-open
 </div>
 </div>
 
-<div class="mt-8 foot">OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · KMS = Key Management Service · IaC = Infrastructure as Code · OPA = Open Policy Agent</div>
+<div class="mt-5 foot">OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · KMS = Key Management Service · IaC = Infrastructure as Code · OPA = Open Policy Agent</div>
 
 <!--
 JEROEN. Open with the umbrella line: "Open source is how you get out of
@@ -686,6 +688,12 @@ class: text-center
 <div class="mt-3 text-lg max-w-2xl mx-auto">No single vendor holds your observability or your identity hostage.</div>
 </div>
 
+<!--
+The quiet layers people forget: telemetry, DNS, identity. If your provider
+owns all three, you can move the workload and still be blind and locked out.
+OpenTelemetry means the data goes to whatever backend you choose.
+-->
+
 ---
 layout: default
 class: text-center
@@ -706,7 +714,7 @@ Land this one heavier. It's the attitude behind every other trap.
 
 ---
 layout: default
-chapter: "VI · Sea trial"
+chapter: "VI · Remember the ships"
 class: voyage-open
 ---
 
@@ -879,6 +887,15 @@ layout: default
 
 <div class="mt-8 text-xl text-center">Find the gaps on a quiet Tuesday, <span class="gold">not during an outage</span>.</div>
 
+<!--
+Callback: "Built to turn back. The off-ramp you've never driven is a
+hope, not a plan." Same habit as a DR drill: small, scheduled, boring.
+
+Walk the three steps fast. Start with one non-critical service. The
+checklist is the point: every "no" is a gap you found on your own terms.
+Slide 13 is where the open formats and keys come from.
+-->
+
 ---
 layout: default
 class: text-center
@@ -889,6 +906,8 @@ class: text-center
 <div class="kicker">VII · landfall</div>
 
 <div class="flex items-end justify-center gap-6 mb-2" style="position:relative"><Longship :width="120" /></div>
+
+<img src="/cnd/cnd-norway-logo.png" alt="Cloud Native Days Norway" class="absolute top-6 left-8" style="height:56px" />
 
 # Your longship should be yours to sail.
 
@@ -917,7 +936,7 @@ layout: default
 voyage: false
 ---
 
-<div class="kicker">backup · sea trial</div>
+<div class="kicker">backup · be honest</div>
 
 # The 2×2. <span class="gold">Be honest.</span>
 
