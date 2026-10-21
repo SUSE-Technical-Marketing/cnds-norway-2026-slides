@@ -16,31 +16,25 @@ fonts:
 ---
 
 <!--
-MAIN DECK, built 2026-10-06. Merges the two versions that had split apart:
-- Jeroen's deck.html of 22 Sep (kept in raw-content/deck.html)
-- Andrés's Slidev pass of 17 Sep (archived in archive/2026-09-17-andres-slidev/)
-Content rules still come from HANDOFF.md and outline.md in the vault folder.
+Friheten i Koden: Digital Sovereignty for the Nordic Age
+Cloud Native Days Norway, Bergen, 26-27 Oct 2026. Jeroen van Erp and Andrés Valero.
 
 STORY LINE: the talk is one voyage with seven chapters. The three ship legs
 are planted in I, named against the keel in II, and cashed in out loud in VI.
-  I    The myth          S3-S6
-  II   The keel          S7
-  III  Foreign waters    S8
-  IV   The charts        S9-S12
-  V    Shipbuilding      S13-S20
-  VI   Remember the ships S21
-  VII  Home port         S22-S26
-  Feedback: QR from the speaker portal (S27, after landfall)
-  The 2x2 "Be honest" was removed 21 Oct (archive/removed-slides/).
-Speaker split not decided yet; the names in the notes are placeholders.
+  I    The myth            S3-S6
+  II   The keel            S7
+  III  Foreign waters      S8
+  IV   The charts          S9-S12
+  V    Shipbuilding        S13-S20
+  VI   Remember the ships  S21
+  VII  Home port           S22-S26
+  Feedback                 S27
 Ship legs used everywhere: own ships = control + transparency; open seas, no
 foreign master = jurisdiction + supply chain; built to turn back = the off-ramp.
 
 Theme: style.css (Viking motifs, no runes or co-opted symbols) and
-global-top.vue (the voyage bar). Rough timing (estimate, not yet timed): about
-21-23 minutes for S1-S26 in a 30-minute slot, leaving about 7 minutes for Q&A
-with the feedback slide (S27) up. The 6-pattern quiz is the biggest block, about 3 minutes.
-Needs a timed run-through before Bergen.
+global-top.vue (the voyage bar). Timing: about 22 minutes of content in a
+30-minute slot, with Q&A over the feedback slide.
 -->
 
 <svg class="aurora" viewBox="0 0 980 552" preserveAspectRatio="none" aria-hidden="true">
@@ -93,11 +87,7 @@ voyage: false
 </div>
 
 <!--
-Both headshots sit in the shield boss (photo= on <Shield>, files in
-slides/public/). Photo takes precedence over label; omit both for a metal
-shield boss.
-Same title on both on purpose (Andrés's call). Check with Jeroen that it is
-his real title.
+Quick intro, one line each: who we are and why two voices.
 -->
 
 ---
@@ -127,7 +117,7 @@ Conquering, raiding, sailing the oceans and taking what other people <span class
 <div class="mt-12 text-3xl serif gold">Now look through the other lens.</div>
 
 <!--
-JEROEN. Ask the quick-check question out loud and wait for hands.
+Ask the quick-check question out loud and wait for hands.
 
 "Keep them up if you think Vikings actually wore them." Beat. "None did.
 The horns come from costume designs for Wagner's Ring cycle, 1876. The
@@ -169,7 +159,7 @@ layout: default
 </div>
 
 <!--
-JEROEN. Plant the three legs and keep them simple: own ships, open seas,
+Plant the three legs and keep them simple: own ships, open seas,
 built to turn back. Don't explain what they map to yet. The icons (axe,
 sail, ship on rollers) come back every time a leg returns later in the talk. The keel slide names
 it, and the "remember the ships" slide (S21) cashes it in.
@@ -205,7 +195,7 @@ layout: default
 
 
 <!--
-JEROEN. Two words people mix up: Ownership = who owns the ship, Control =
+Two words people mix up: Ownership = who owns the ship, Control =
 who sails it. Keep it short, about 30 seconds.
 
 Land it on the longship: nobody calls you free because your name is on the
@@ -241,9 +231,9 @@ layout: default
 <div class="mt-8 text-xl gold text-center">Answer "we don't know" to either one, and what you bought is a dependency.</div>
 
 <!--
-JEROEN. Merge of both versions: Andrés's big thesis line on the left,
-Jeroen's commercial test (22 Sep) on the right. The test lands before any EU
-material on purpose, so the room hears it as a global engineering question.
+The big thesis line on the left, the commercial test on the right. The test
+lands before any EU material on purpose, so the room hears it as a global
+engineering question.
 
 Say before the big line: "Today's cloud asks for the same mindset. AWS,
 Azure and GCP are great ports, and this talk won't pretend otherwise."
@@ -274,7 +264,7 @@ class: voyage-open
 <div class="mt-8 muted">All four live in your architecture. You can measure them, and you can change them one PR at a time.</div>
 
 <!--
-JEROEN. This is the one lens for the whole talk. Every later framework
+This is the one lens for the whole talk. Every later framework
 points back here (the SOV table). Read the small tags
 out loud once: "this is where the ships come back."
 
@@ -299,20 +289,19 @@ class: voyage-open
 <div class="mt-8 text-3xl serif">The region logo is <span class="gold">not a firewall</span>.</div>
 
 <div class="quote-block mt-12" style="font-size:2.2rem">"No, I cannot guarantee it."</div>
-<div class="muted text-sm mt-3">Anton Carniaux, Microsoft France director of public &amp; legal affairs, under oath · French Senate inquiry commission, 10 June 2025</div>
+<div class="muted text-sm mt-3">Anton Carniaux, Microsoft France director of public &amp; legal affairs, under oath · French Senate inquiry commission, June 2025</div>
 
 <div class="mt-10 foot">GDPR and the EU–US Data Privacy Framework don't block it (DPF upheld at the General Court, Sep 2025, now on appeal).</div>
 
 <!--
-JEROEN. The emotional core of the talk. Let the five-word quote sit for a
+The emotional core of the talk. Let the five-word quote sit for a
 second before reading the source line.
 
 Explain the mechanism before the quote: "It applies to any US-jurisdiction
 entity, wherever the data sits. US authorities can compel disclosure of data
 the company controls, including data in eu-west-1."
 
-Handoff to Andrés (split option a): "That's the storm. So how do you
-navigate it? Andrés has the charts."
+Bridge: "That's the storm. So how do you navigate it? Time for the charts."
 -->
 
 ---
@@ -349,7 +338,7 @@ class: voyage-open
 <div class="foot text-center" style="position:absolute;left:0;right:0;bottom:3.4rem">Source: Gartner, "Gartner Says Worldwide Sovereign Cloud IaaS Spending Will Total $80 Billion in 2026", press release, 9 Feb 2026 · gartner.com/en/newsroom</div>
 
 <!--
-ANDRÉS. About 20 to 30 seconds. A bridge slide, keep it tight.
+About 20 to 30 seconds. A bridge slide, keep it tight.
 
 Open: "The Vikings followed the trade routes. So let's follow the money."
 Walk the three numbers as one beat, then land the closing line plainly.
@@ -357,13 +346,8 @@ Walk the three numbers as one beat, then land the closing line plainly.
 Move on with: "So what's actually driving that number? Three charts got
 drawn in the last year, plus one that went live six weeks ago."
 
-Fact check 2026-10-06: these are the European figures (Computerworld: "European
-spending on sovereign cloud IaaS to nearly double in 2026"). The 17 Sep
-Slidev version said "worldwide", which was wrong: Gartner puts worldwide at
-about $80B for 2026.
-
-Verified 2026-10-16 against Gartner's Table 1 (Source: Gartner, February
-2026), Europe row in $M: 6,868 (2025) / 12,587 (2026) / 23,118 (2027).
+These are the European figures, not worldwide (worldwide is about $80B for
+2026). Gartner Table 1 (February 2026), Europe row in $M: 6,868 (2025) / 12,587 (2026) / 23,118 (2027).
 Rounded on the slide to $6.9B / $12.6B / $23.1B. +83% in 2026; Europe
 overtakes North America ($21.1B) in 2027. Worldwide: $80.4B in 2026.
 Full URL: https://www.gartner.com/en/newsroom/press-releases/2026-02-09-gartner-says-worldwide-sovereign-cloud-iaas-spending-will-total-us-dollars-80-billion-in-2026
@@ -406,7 +390,7 @@ layout: default
 <div class="mt-6 foot">SEAL = Sovereignty Effective Assurance Levels · CADA = Cloud and AI Development Act · EUCS = European Cybersecurity Certification Scheme for Cloud Services · CRA = Cyber Resilience Act</div>
 
 <!--
-ANDRÉS. About 70 seconds. Lead with the rule's name, dates are secondary.
+About 70 seconds. Lead with the rule's name, dates are secondary.
 The one exception is CRA: "six weeks ago" is the hook, so say it.
 
 - Data Act: the one that touches your contracts. Your provider can't drag an exit out forever.
@@ -460,12 +444,12 @@ table.table-tight td:first-child { white-space: nowrap; }
 </style>
 
 <!--
-Say out loud (moved off the slide 21 Oct): "Each one gets its own rating
+Say out loud: "Each one gets its own rating
 from 0 to 4. The weights blend them into one score." And to close: "The
 heaviest weight is supply chain. The engineer's translation: what's
 actually in your stack?"
 
-ANDRÉS. About 60 seconds. If we're behind, skim it in about 20 seconds:
+About 60 seconds. If we're behind, skim it in about 20 seconds:
 say only the SOV-5 line. Don't skip it, the SEAL slide refers back to it.
 
 "Before the scale, what actually gets scored: eight objectives." Don't
@@ -506,7 +490,7 @@ layout: default
 </style>
 
 <!--
-ANDRÉS. About 90 seconds.
+About 90 seconds.
 
 Open: "Sailors measure depth before they trust the water. The EU gave us a
 depth scale, and if you've used a CMMI or DevOps maturity model, it'll feel
@@ -519,15 +503,15 @@ One beat of color per level, don't read the lines:
 - SEAL 3: "For most regulated workloads, this is the realistic ceiling."
 - SEAL 4: "Rare, and only worth it if you're told to be there."
 
-Opening line (moved off the slide 21 Oct): "The 0 to 4 scale every one of
+Opening line: "The 0 to 4 scale every one of
 those 8 objectives is rated on."
 
 Closing line, now spoken only: "Ratings are per procurement. There's no
 such thing as a SEAL-3 product." Slow down and pause after it. That's the
 line that stops someone asking procurement for "a SEAL-3 vendor."
 
-Handback to Jeroen: "So that's how it gets measured. Jeroen's going to show
-you how to build a ship that scores well."
+Bridge: "So that's how it gets measured. Now let's build a ship that scores
+well."
 -->
 
 ---
@@ -568,13 +552,12 @@ class: voyage-open
 <div class="mt-5 foot">OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · KMS = Key Management Service · IaC = Infrastructure as Code · OPA = Open Policy Agent</div>
 
 <!--
-JEROEN. Open with the umbrella line: "Open source is how you get out of
+Open with the umbrella line: "Open source is how you get out of
 vendor lock-in. Every box here works because it's open: open source code,
 or an open standard you can take elsewhere." Then one line per click.
 
 Box 4 keeps the abstract's promise: cluster management, open
-virtualization, zero-trust security. CNCF project categories only, no
-vendor names.
+virtualization, zero-trust security.
 -->
 
 ---
@@ -596,7 +579,7 @@ class: text-center
 <div class="mt-4 text-lg muted max-w-2xl mx-auto">One at a time. Make your call before the click.</div>
 
 <!--
-JEROEN. The axe marks a trap (chop it out), the longship marks a seaworthy
+The axe marks a trap (chop it out), the longship marks a seaworthy
 choice. Make it a real pause: "Six real choices, one at a time. Before each
 one, decide: trap, or something you'd ship? Then I click." Keep it light,
 this is the fun beat. Two of the six are fine, so don't let the room
@@ -749,11 +732,8 @@ class: voyage-open
 <div class="mt-8 text-xl">So make "cost to leave" a required field in every architecture review, right next to <code>RPO / RTO</code>.</div>
 
 <!--
-JEROEN. The callback (22 Sep) that closes the loop planted in S4. Say it out
-loud: "Remember the ships? This is them." Then the one culture line.
-
-Andrés's 17 Sep cut was right about the old bullets: they repeated the
-actions. So only the callback and the RPO/RTO line stay.
+The callback that closes the loop planted in S4. Say it out loud:
+"Remember the ships? This is them." Then the one culture line.
 -->
 
 ---
@@ -791,12 +771,10 @@ chapter: "VII · Home port"
 <div class="quote-block mt-8 mx-auto" style="max-width:fit-content">You don't have to leave. You have to be able to leave.</div>
 
 <!--
-JEROEN. Rule of three, a visual table of contents for the next three slides.
+Rule of three, a visual table of contents for the next three slides.
 Each action is one of the ships from the previous slide: say it out loud.
 "Their own ships: you build it. Open seas: you control what's in the hold.
 Built to turn back: you make the off-ramp test a habit." Then land the quote, it's the message of the talk.
-
-Icons match the ship legs (Axe, Sail, Portage), not a separate set.
 -->
 
 ---
@@ -826,7 +804,7 @@ layout: default
 
 <!--
 Callback: "Their own ships. Whoever holds the keys holds the ship."
-Say: "Pick your most lock-in-exposed workload." (moved off the slide 21 Oct)
+Say: "Pick your most lock-in-exposed workload."
 The BYOK line is SOV-3, the SDK wrapper is SOV-6, if anyone asks.
 -->
 
@@ -855,10 +833,6 @@ aboard." The policy gate is the control part: OPA/Kyverno from slide 13.
 Accuracy: the CRA's vulnerability reporting started 11 Sep 2026; the full
 manufacturer obligations, SBOM included, apply from Dec 2027. Say "the law
 already requires it" only for products in CRA scope.
-
-Replaced the 3-line portability gate (cost to leave / who holds the keys /
-what's the off-ramp) on 16 Oct; slide 21 still carries "cost to leave" as a
-review field.
 -->
 
 ---
@@ -925,7 +899,7 @@ class: text-center
 </div>
 
 <!--
-JEROEN. The longship from the title slide comes home, to the longhouse. The voyage bar ends
+The longship from the title slide comes home, to the longhouse. The voyage bar ends
 here too.
 -->
 
@@ -946,6 +920,6 @@ voyage: false
 <div class="mt-6 text-xl">Scan to rate the session. <span class="gold">Takes 30 seconds.</span></div>
 
 <!--
-Leave this up during Q&A. Feedback QR from the Cloud Native Days speaker
-portal (added by Jeroen 21 Oct).
+Leave this up during Q&A. The QR comes from the Cloud Native Days speaker
+portal.
 -->
