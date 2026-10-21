@@ -31,7 +31,7 @@ are planted in I, named against the keel in II, and cashed in out loud in VI.
   VI   Remember the ships S21
   VII  Home port         S22-S26
   Feedback: QR from the speaker portal (S27, after landfall)
-  Backup: the 2x2 "Be honest" (S28, after feedback)
+  The 2x2 "Be honest" was removed 21 Oct (archive/removed-slides/).
 Speaker split not decided yet; the names in the notes are placeholders.
 Ship legs used everywhere: own ships = control + transparency; open seas, no
 foreign master = jurisdiction + supply chain; built to turn back = the off-ramp.
@@ -39,7 +39,7 @@ foreign master = jurisdiction + supply chain; built to turn back = the off-ramp.
 Theme: style.css (Viking motifs, no runes or co-opted symbols) and
 global-top.vue (the voyage bar). Rough timing (estimate, not yet timed): about
 21-23 minutes for S1-S26 in a 30-minute slot, leaving about 7 minutes for Q&A
-or the backup 2x2. The 6-pattern quiz is the biggest block, about 3 minutes.
+with the feedback slide (S27) up. The 6-pattern quiz is the biggest block, about 3 minutes.
 Needs a timed run-through before Bergen.
 -->
 
@@ -78,18 +78,18 @@ voyage: false
 # Two voices, one ship
 
 <div class="flex items-start justify-center gap-20 mt-10">
-<Axe :size="70" class="self-center opacity-90" />
+<Axe :size="70" class="self-center opacity-90 flex-none" />
 <div class="text-center">
-<Shield class="mx-auto" :size="240" photo="/jeroen.jpg" a="#D0573F" b="#F3F0E8" />
+<Shield class="mx-auto" :size="280" photo="/jeroen.jpg" a="#D0573F" b="#F3F0E8" />
 <div class="mt-4 text-xl serif">Jeroen van Erp</div>
 <div class="mt-1 steel text-sm">Principal Technology Advocate, SUSE</div>
 </div>
 <div class="text-center">
-<Shield class="mx-auto" :size="240" photo="/andres.jpg" a="#4FA3A0" b="#E2A63D" />
+<Shield class="mx-auto" :size="280" photo="/andres.jpg" a="#4FA3A0" b="#E2A63D" />
 <div class="mt-4 text-xl serif">Andrés Valero</div>
 <div class="mt-1 steel text-sm">Principal Technology Advocate, SUSE</div>
 </div>
-<Axe :size="70" class="self-center opacity-90" style="transform:scaleX(-1)" />
+<Axe :size="70" class="self-center opacity-90 flex-none" style="transform:scaleX(-1)" />
 </div>
 
 <!--
@@ -275,7 +275,7 @@ class: voyage-open
 
 <!--
 JEROEN. This is the one lens for the whole talk. Every later framework
-points back here (the SOV table, the backup 2x2). Read the small tags
+points back here (the SOV table). Read the small tags
 out loud once: "this is where the ships come back."
 
 Transparency gets its own picture: Viking ships were clinker-built, planks
@@ -908,25 +908,20 @@ class: text-center
 
 <div class="kicker">VII · landfall</div>
 
-<div class="flex items-end justify-center gap-6 mb-2" style="position:relative"><Longship :width="120" /></div>
+<div class="flex items-end justify-center gap-6" style="position:relative"><Longship :width="96" /></div>
 
 <img src="/cnd/cnd-norway-logo.png" alt="Cloud Native Days Norway" class="absolute top-6 left-8" style="height:56px" />
 
-# Your longship should be yours to sail.
+<h1 style="font-size:2.9rem">Your longship should be yours to sail.</h1>
 
-<div class="mt-3 max-w-3xl mx-auto muted">
-The EU just gave sovereignty a measurable definition and a budget. Ten years from now, off-ramp ready
-will be the boring default. Today, it's a team habit you can start on Monday.
-</div>
+<div class="mt-4 mx-auto gold text-xl whitespace-nowrap">Exit plan. SBOM. Your own keys. Have them before someone makes them mandatory.</div>
 
-<div class="mt-3 max-w-3xl mx-auto gold">Have an exit plan, an SBOM and an answer to "who holds the keys" ready before the RFP asks.</div>
+<div class="kicker mt-5">github.com/SUSE-Technical-Marketing/cnds-norway-2026-slides</div>
 
-<div class="kicker mt-4">github.com/SUSE-Technical-Marketing/cnds-norway-2026-slides</div>
-
-<div class="grid grid-cols-3 gap-6 mt-4 mx-auto" style="max-width:640px">
-<div class="flex flex-col items-center"><img src="/qr/linkedin-jeroen.svg" alt="QR: Jeroen van Erp on LinkedIn" style="width:110px;height:110px;border-radius:6px" /><div class="text-sm mt-2">Jeroen van Erp</div><div class="steel font-mono text-xs">in/jvanerp</div></div>
-<div class="flex flex-col items-center"><img src="/qr/slides.svg" alt="QR: these slides online" style="width:110px;height:110px;border-radius:6px;outline:3px solid #E2A63D;outline-offset:2px" /><div class="text-sm gold mt-2">These slides</div><div class="steel font-mono text-xs">open on your phone</div></div>
-<div class="flex flex-col items-center"><img src="/qr/linkedin-andres.svg" alt="QR: Andrés Valero on LinkedIn" style="width:110px;height:110px;border-radius:6px" /><div class="text-sm mt-2">Andrés Valero</div><div class="steel font-mono text-xs">in/avaleror</div></div>
+<div class="grid grid-cols-3 gap-8 mt-4 mx-auto justify-items-center" style="max-width:720px">
+<div class="flex flex-col items-center"><img src="/qr/linkedin-jeroen.svg" alt="QR: Jeroen van Erp on LinkedIn" style="width:135px;height:135px;border-radius:6px" /><div class="text-sm mt-2">Jeroen van Erp</div><div class="steel font-mono text-xs">in/jvanerp</div></div>
+<div class="flex flex-col items-center"><img src="/qr/slides.svg" alt="QR: these slides online" style="width:135px;height:135px;border-radius:6px;outline:3px solid #E2A63D;outline-offset:2px" /><div class="text-sm gold mt-2">These slides</div><div class="steel font-mono text-xs">open on your phone</div></div>
+<div class="flex flex-col items-center"><img src="/qr/linkedin-andres.svg" alt="QR: Andrés Valero on LinkedIn" style="width:135px;height:135px;border-radius:6px" /><div class="text-sm mt-2">Andrés Valero</div><div class="steel font-mono text-xs">in/avaleror</div></div>
 </div>
 
 <!--
@@ -953,47 +948,4 @@ voyage: false
 <!--
 Leave this up during Q&A. Feedback QR from the Cloud Native Days speaker
 portal (added by Jeroen 21 Oct).
--->
-
----
-layout: default
-voyage: false
----
-
-<div class="kicker">backup · be honest</div>
-
-# The 2×2. <span class="gold">Be honest.</span>
-
-<div class="matrix mt-4" style="height:300px">
-<div></div>
-<div class="axis">Operational impact</div>
-<div class="axis">Existential risk</div>
-<div class="row-h">Independence</div>
-<div class="cell" v-click>If you had to leave your provider, how fast could you move without rearchitecting?<span class="leg">→ portability</span></div>
-<div class="cell" v-click>Long term, what does it cost to never be able to leave? Money and risk.<span class="leg">→ portability, compounded</span></div>
-<div class="row-h">Others in control</div>
-<div class="cell" v-click>If access to some services were withdrawn, what stops working, and for how long?<span class="leg">→ control</span></div>
-<div class="cell" v-click>Who can inspect, maintain and change what runs your system, and does a foreign law reach them?<span class="leg">→ transparency + jurisdiction</span></div>
-</div>
-
-<div class="mt-4 text-lg gold">Keep your hand up if you can answer out loud, right now.</div>
-
-<!--
-BACKUP SLIDE, after landfall. Moved out of the main run on 16 Oct; show it
-only if there is time or in Q&A.
-
-JEROEN. Jeroen's 2x2 (22 Sep) with Andrés's show of hands (17 Sep). Each
-quadrant points back to the keel, so it reads as the payoff of S7 and not
-a new framework.
-
-1. Before the first click: "Hands up. Keep it up only if you can answer
-   this one out loud, right now, with a straight face."
-2. Click each quadrant, pause 3 to 4 seconds, scan the room. Don't comment
-   on the drop, keep going.
-3. After the fourth: "Look around. The hands still up have a sovereignty
-   posture. Everyone else has a belief."
-4. Big or formal room: "Count on your own fingers, don't show anyone."
-
-Don't call on anyone. Optional European line: "In Europe? Ask if you're
-ready for CADA."
 -->

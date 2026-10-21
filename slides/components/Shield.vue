@@ -27,11 +27,11 @@ const photoSrc = (p: string) => (p.startsWith('/') ? base + p : p)
     <template v-if="photo">
       <defs>
         <clipPath :id="photoClipId">
-          <circle cx="32" cy="32" r="15" />
+          <circle cx="32" cy="32" r="17" />
         </clipPath>
       </defs>
-      <image :href="photoSrc(photo)" x="17" y="17" width="30" height="30" preserveAspectRatio="xMidYMid slice" :clip-path="`url(#${photoClipId})`" />
-      <circle cx="32" cy="32" r="15" fill="none" stroke="#E2A63D" stroke-width="1.5" />
+      <image :href="photoSrc(photo)" x="15" y="15" width="34" height="34" preserveAspectRatio="xMidYMid slice" :clip-path="`url(#${photoClipId})`" />
+      <circle cx="32" cy="32" r="17" fill="none" stroke="#E2A63D" stroke-width="1.5" />
     </template>
     <template v-else-if="label">
       <circle cx="32" cy="32" r="15" fill="#0C121B" stroke="#E2A63D" stroke-width="1.5" />
