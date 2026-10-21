@@ -9,6 +9,7 @@ import { computed, unref } from 'vue'
 import { injectLocal } from '@vueuse/core'
 import { useNav } from '@slidev/client'
 import { injectionSlidevContext } from '@slidev/client/constants.ts'
+import Longship from './components/Longship.vue'
 
 // In PDF/PNG export each page gets its own nav context, so prefer the
 // injected one and fall back to the global nav in the live show.
@@ -35,9 +36,13 @@ const current = computed(() => {
 })
 
 const hidden = computed(() => v(nav.currentFrontmatter)?.voyage === false)
+const chapterOpener = computed(() =>
+  String(v(nav.currentFrontmatter)?.class ?? '').split(/\s+/).includes('voyage-open'),
+)
 </script>
 
 <template>
+  <Longship v-if="chapterOpener" class="voyage-opener-ship" :width="132" />
   <div v-if="!hidden" class="voyage">
     <div class="voyage-chapter">{{ current }}</div>
     <div class="voyage-track">

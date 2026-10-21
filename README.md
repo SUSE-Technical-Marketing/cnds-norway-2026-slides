@@ -21,6 +21,8 @@ Obsidian vault, not here:
 - `slides/components/` holds the Viking illustrations, usable in any slide:
   `<Viking variant="real|myth" />`, `<Axe />`, `<Shield a="#color" b="#color" label="JE" />`
   and `<Longship />`. All hand-drawn SVG, so the deck stays fully offline.
+  Chapter openers (`class: voyage-open`) reuse `<Longship />` as a faint
+  top-right decoration, rendered by `global-top.vue`.
 - `raw-content/deck.html` is Jeroen's single-file HTML deck of 22 Sep 2026,
   kept for reference.
 - `archive/2026-09-17-andres-slidev/` is Andrés's earlier Slidev pass of
