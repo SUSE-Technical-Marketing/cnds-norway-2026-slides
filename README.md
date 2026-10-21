@@ -1,10 +1,20 @@
+<p align="center">
+  <a href="https://suse-technical-marketing.github.io/cnds-norway-2026-slides/">
+    <img src=".github/assets/title-slide.png" alt="Friheten i Koden: Digital Sovereignty for the Nordic Age. Title slide with the Cloud Native Days Norway logo and a Viking longship" width="100%">
+  </a>
+</p>
+
 # Friheten i Koden: Digital Sovereignty for the Nordic Age
 
 Slides and resources for the talk by **Jeroen van Erp** and **Andrés Valero**
 (SUSE) at [Cloud Native Days Norway 2026](https://cloudnativedays.no/),
 Bergen, 26–27 October 2026.
 
-### ▶ [View the slides](https://suse-technical-marketing.github.io/cnds-norway-2026-slides/)
+<p align="center">
+  <img src="slides/public/cnd/cnd-norway-icon.png" alt="Cloud Native Days Norway" height="72">
+</p>
+
+<h3 align="center">▶ <a href="https://suse-technical-marketing.github.io/cnds-norway-2026-slides/">View the slides</a></h3>
 
 Runs in any browser, on your phone too. Use the arrow keys or swipe to move
 between slides.
@@ -135,5 +145,5 @@ Every push to `main` publishes the deck to GitHub Pages through
   [CC BY 4.0](LICENSE-CONTENT). Reuse it freely, with attribution.
 - Code (Vue components, styles, build configuration) is licensed under
   [MIT](LICENSE).
-- The Cloud Native Days Norway logo and the speaker photos are not covered by
-  these licenses.
+- The Cloud Native Days Norway logo is used with the organisers' permission
+  and is not covered by these licenses. Neither are the speaker photos.
