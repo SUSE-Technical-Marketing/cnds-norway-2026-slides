@@ -11,6 +11,10 @@ withDefaults(defineProps<{ size?: number; a?: string; b?: string; label?: string
 })
 
 const photoClipId = `shield-photo-${useId()}`
+
+// Public files need the deploy base (GitHub Pages serves under a sub-path).
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+const photoSrc = (p: string) => (p.startsWith('/') ? base + p : p)
 </script>
 
 <template>
@@ -26,7 +30,7 @@ const photoClipId = `shield-photo-${useId()}`
           <circle cx="32" cy="32" r="15" />
         </clipPath>
       </defs>
-      <image :href="photo" x="17" y="17" width="30" height="30" preserveAspectRatio="xMidYMid slice" :clip-path="`url(#${photoClipId})`" />
+      <image :href="photoSrc(photo)" x="17" y="17" width="30" height="30" preserveAspectRatio="xMidYMid slice" :clip-path="`url(#${photoClipId})`" />
       <circle cx="32" cy="32" r="15" fill="none" stroke="#E2A63D" stroke-width="1.5" />
     </template>
     <template v-else-if="label">
