@@ -335,7 +335,7 @@ class: voyage-open
 
 <div class="mt-10 text-xl max-w-3xl mx-auto text-center">IT and engineering teams are the ones who turn it into something real.</div>
 
-<div class="foot text-center" style="position:absolute;left:0;right:0;bottom:3.4rem">Source: Gartner, "Gartner Says Worldwide Sovereign Cloud IaaS Spending Will Total $80 Billion in 2026", press release, 9 Feb 2026 · gartner.com/en/newsroom</div>
+<div class="foot text-center" style="position:absolute;left:0;right:0;bottom:3.4rem">Source: Gartner, "Gartner Says Worldwide Sovereign Cloud IaaS Spending Will Total $80 Billion in 2026", press release, 9 Feb 2026, Table 1 (Europe) · gartner.com/en/newsroom</div>
 
 <!--
 About 20 to 30 seconds. A bridge slide, keep it tight.
@@ -385,7 +385,7 @@ layout: default
 </div>
 </div>
 
-<div class="mt-8 text-lg">Two of these are law. Two decide who wins public contracts. Either way, <span class="gold">it's enforced now</span>.</div>
+<div class="mt-8 text-lg">Two are law. One decides who wins public contracts. One is <span class="gold">on its way</span>.</div>
 
 <div class="mt-6 foot">SEAL = Sovereignty Effective Assurance Levels · CADA = Cloud and AI Development Act · EUCS = European Cybersecurity Certification Scheme for Cloud Services · CRA = Cyber Resilience Act</div>
 
@@ -444,20 +444,19 @@ table.table-tight td:first-child { white-space: nowrap; }
 </style>
 
 <!--
-Say out loud: "Each one gets its own rating
-from 0 to 4. The weights blend them into one score." And to close: "The
-heaviest weight is supply chain. The engineer's translation: what's
-actually in your stack?"
-
 About 60 seconds. If we're behind, skim it in about 20 seconds:
 say only the SOV-5 line. Don't skip it, the SEAL slide refers back to it.
 
-"Before the scale, what actually gets scored: eight objectives." Don't
-read all eight, the dimmed rows are there for completeness. Talk about the
-three bright ones:
+Open: "Before the scale, what actually gets scored: eight objectives. Each
+one gets its own rating from 0 to 4. The weights blend them into one score."
+Don't read all eight, the dimmed rows are there for completeness. Talk about
+the three bright ones:
 - SOV-4: "A perfect stack with nobody who can run it goes nowhere. That's the silent failure point."
 - SOV-5: the heaviest, 20%. "Hardest to fake," and CRA made it a legal deadline.
 - SOV-6: open APIs and open source, the part this room builds every day.
+
+Close: "The heaviest weight is supply chain. The engineer's translation:
+what's actually in your stack?"
 
 [OPTIONAL, verbal only] SOV-5: name SLSA as the real standard behind
 provenance. SOV-6: the CNCF conformance program for AI workloads, if it fits.
@@ -493,8 +492,8 @@ layout: default
 About 90 seconds.
 
 Open: "Sailors measure depth before they trust the water. The EU gave us a
-depth scale, and if you've used a CMMI or DevOps maturity model, it'll feel
-familiar."
+depth scale: the 0 to 4 scale every one of those 8 objectives is rated on.
+If you've used a CMMI or DevOps maturity model, it'll feel familiar."
 
 One beat of color per level, don't read the lines:
 - SEAL 0: "The default nobody picked on purpose."
@@ -502,9 +501,6 @@ One beat of color per level, don't read the lines:
 - SEAL 2: "This is where it costs engineering time. BYOK means someone owns key rotation now."
 - SEAL 3: "For most regulated workloads, this is the realistic ceiling."
 - SEAL 4: "Rare, and only worth it if you're told to be there."
-
-Opening line: "The 0 to 4 scale every one of
-those 8 objectives is rated on."
 
 Closing line, now spoken only: "Ratings are per procurement. There's no
 such thing as a SEAL-3 product." Slow down and pause after it. That's the
@@ -828,7 +824,9 @@ layout: default
 
 <!--
 Callback: "Open seas. You trade with everyone, but you decide what comes
-aboard." The policy gate is the control part: OPA/Kyverno from slide 13.
+aboard." Bridge the word on purpose: "Control here means control over
+what comes aboard: the supply chain." The policy gate is the control part:
+OPA/Kyverno from slide 13.
 
 Accuracy: the CRA's vulnerability reporting started 11 Sep 2026; the full
 manufacturer obligations, SBOM included, apply from Dec 2027. Say "the law
