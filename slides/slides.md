@@ -380,7 +380,7 @@ layout: default
 </div>
 <div class="panel hot flex flex-col" v-click>
 <div class="gold font-mono text-xs" style="min-height:2.4em">CYBER RESILIENCE ACT</div>
-<div class="mt-2 flex-1">Vulnerability reporting within 24h/72h. Also the legal source of the SBOM line coming up.</div>
+<div class="mt-2 flex-1">Report exploited vulnerabilities within 24h/72h. SBOMs become mandatory by Dec 2027.</div>
 <div class="mt-4 gold text-xs">11 Sep 2026 · six weeks ago</div>
 </div>
 </div>
