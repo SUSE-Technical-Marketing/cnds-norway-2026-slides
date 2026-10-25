@@ -226,3 +226,38 @@ tr.dim td { color: var(--fk-muted); opacity: 0.65; }
 @media print {
   .slidev-layout { background: var(--fk-bg) !important; }
 }
+
+/* Slide 3 -> 4: slow the viking morph (view-transition-name: viking) */
+::view-transition-group(viking),
+::view-transition-old(viking),
+::view-transition-new(viking),
+::view-transition-group(root),
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 1.5s;
+}
+
+/* Slide 4: show the helmet caption only after the viking morph (1.5s) has finished */
+.helmet-text {
+  animation: helmet-text-in 0.5s ease 1.5s both;
+}
+@keyframes helmet-text-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slide 4: helmet starts big, then moves down on the first click.
+   Keyframe animations (not transitions) so the first click also animates on first load. */
+.helmet-row { transform-origin: left top; }
+.helmet-row.is-big { transform: translateY(-190px) scale(1.4); }
+.helmet-row.is-moved { animation: helmet-row-down 0.7s ease both; }
+.helmet-viking.is-big { transform: scale(2.4); margin: 60px 90px 60px 70px; }
+.helmet-viking.is-moved { animation: helmet-viking-down 0.7s ease both; }
+@keyframes helmet-row-down {
+  from { transform: translateY(-190px) scale(1.4); }
+  to { transform: none; }
+}
+@keyframes helmet-viking-down {
+  from { transform: scale(2.4); margin: 60px 90px 60px 70px; }
+  to { transform: none; margin: 0; }
+}

@@ -94,6 +94,7 @@ Quick intro, one line each: who we are and why two voices.
 layout: default
 chapter: "I · The myth"
 class: voyage-open
+transition: view-transition
 ---
 
 <div class="kicker">I · the myth</div>
@@ -105,7 +106,7 @@ class: voyage-open
 $ ls<br/>beard<br/>axe<br/>longship<br/><span class="muted"># that's all we remember</span>
 </div>
 <div class="panel flex items-center gap-5 text-lg">
-<Viking variant="myth" :size="130" class="flex-none" />
+<Viking variant="myth" :size="130" class="flex-none" style="view-transition-name:viking" />
 <div>
 Bearded men. Axes. Burning ships.<br/>
 Conquering, raiding, sailing the oceans and taking what other people <span class="gold">built</span>.
@@ -136,7 +137,7 @@ layout: default
 # Now picture the other image
 
 <div class="grid-3 mt-6">
-<div class="panel" v-click>
+<div class="panel" v-click style="transition:opacity .4s ease .6s">
 <div class="flex items-center gap-3"><Axe :size="44" /><div class="serif text-lg">Their own ships</div></div>
 <div class="muted mt-1 text-sm">The knowledge and the tools to build them: oak, rope, sails, iron nails. Made where they lived.</div>
 </div>
@@ -150,9 +151,9 @@ layout: default
 </div>
 </div>
 
-<div class="flex items-center gap-5 mt-6">
-<Viking variant="real" :size="70" class="flex-none" />
-<div>
+<div class="flex items-center gap-5 mt-6 helmet-row" :class="$clicks === 0 ? 'is-big' : 'is-moved'">
+<div class="flex-none helmet-viking" :class="$clicks === 0 ? 'is-big' : 'is-moved'"><Viking variant="real" :size="70" style="view-transition-name:viking" /></div>
+<div style="width:350px" class="flex-none" :class="{ 'helmet-text': $clicks === 0 }">
 <div class="quote-block">The film shows their ships. The history shows people who could build them.</div>
 <div class="mt-2 teal text-xs font-mono">THE REAL HELMET: ROUND, WITH AN EYE GUARD · GJERMUNDBU, NORWAY, 10TH CENTURY</div>
 </div>
