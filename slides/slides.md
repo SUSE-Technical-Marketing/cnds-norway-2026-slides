@@ -366,22 +366,22 @@ layout: default
 <div class="panel flex flex-col" v-click>
 <div class="gold font-mono text-xs" style="min-height:2.4em">DATA ACT · ART. 25</div>
 <div class="mt-2 flex-1">Switching providers is a contractual right now. A provider can't just say no.</div>
-<div class="mt-4 steel text-xs">In force Sep 2025</div>
+<div class="mt-4 steel text-xs">Effective Sep 2025</div>
 </div>
 <div class="panel flex flex-col" v-click>
 <div class="gold font-mono text-xs" style="min-height:2.4em">CLOUD SOVEREIGNTY FRAMEWORK</div>
 <div class="mt-2 flex-1">The EU's own scoring system, SEAL 0–4. A €180M tender was awarded on it to four providers.</div>
-<div class="mt-4 steel text-xs">Oct 2025 · awarded Apr 2026</div>
+<div class="mt-4 steel text-xs">Published Oct 2025</div>
 </div>
 <div class="panel flex flex-col" v-click>
 <div class="gold font-mono text-xs" style="min-height:2.4em">TECH SOVEREIGNTY PACKAGE</div>
 <div class="mt-2 flex-1">Brings <span class="gold">CADA</span>: a second sovereignty scale, numbered differently from SEAL. Unblocks EUCS.</div>
-<div class="mt-4 steel text-xs">Jun 2026</div>
+<div class="mt-4 steel text-xs">Proposed Jun 2026</div>
 </div>
 <div class="panel hot flex flex-col" v-click>
 <div class="gold font-mono text-xs" style="min-height:2.4em">CYBER RESILIENCE ACT</div>
 <div class="mt-2 flex-1">Report exploited vulnerabilities within 24h/72h. SBOMs become mandatory by Dec 2027.</div>
-<div class="mt-4 gold text-xs">11 Sep 2026 · six weeks ago</div>
+<div class="mt-4 gold text-xs">Effective Sep 2026</div>
 </div>
 </div>
 
