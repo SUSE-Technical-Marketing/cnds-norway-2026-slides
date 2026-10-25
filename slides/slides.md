@@ -782,7 +782,7 @@ layout: default
 
 # Build it
 
-<div class="muted">Hold your own keys. One PR, about a day.</div>
+<div class="muted">Hold your own keys.</div>
 
 <div class="grid-2 mt-8">
 <div class="panel flex flex-col" v-click>
