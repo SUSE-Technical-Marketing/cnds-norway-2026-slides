@@ -79,7 +79,7 @@ const chapterOpener = computed(() =>
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 28px; /* lifted clear of the venue projector's cropped bottom edge */
   height: 34px;
   display: flex;
   align-items: center;

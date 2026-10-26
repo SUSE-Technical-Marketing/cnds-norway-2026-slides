@@ -37,7 +37,7 @@ html {
   background: var(--fk-bg) !important;
   color: var(--fk-ink) !important;
   font-family: var(--fk-sans);
-  padding-bottom: 3.4rem !important; /* room for the voyage bar */
+  padding-bottom: 5.2rem !important; /* room for the lifted voyage bar */
 }
 
 .slidev-layout h1,
