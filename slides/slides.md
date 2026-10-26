@@ -421,7 +421,7 @@ layout: default
 
 # The 8 objectives, in engineer-speak
 
-<div class="mt-8">
+<div class="mt-3">
 <table class="table-tight">
 <thead>
 <tr><th>Objective</th><th>Weight</th><th>Engineer-speak</th></tr>
