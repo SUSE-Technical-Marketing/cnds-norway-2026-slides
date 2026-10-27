@@ -557,8 +557,6 @@ class: voyage-open
 </div>
 </div>
 
-<div class="mt-5 foot">OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · IaC = Infrastructure as Code</div>
-
 <!--
 Open with the question: "How do you prevent vendor lock-in?" Then the
 answer: "Every box here works because it's open: open source code, or an
