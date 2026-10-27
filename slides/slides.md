@@ -781,7 +781,7 @@ chapter: "VII · Home port"
 </div>
 </div>
 
-<div class="quote-block mt-8 mx-auto" style="max-width:fit-content">You don't have to leave. You have to be able to leave.</div>
+<div class="quote-block mt-8 mx-auto" v-click="4" style="max-width:fit-content">You don't have to leave. You have to be able to leave.</div>
 
 <!--
 Rule of three, a visual table of contents for the next three slides.
