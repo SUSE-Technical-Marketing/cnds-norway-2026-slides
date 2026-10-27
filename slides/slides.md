@@ -885,7 +885,7 @@ layout: default
 <div class="steel flex items-center text-2xl" v-click="3">→</div>
 <div class="panel" v-click="3" style="flex:1.25">
 <div class="flex items-baseline gap-3"><div class="stat-num">03</div><div class="gold text-xl">Verify</div></div>
-<div class="term text-sm mt-3 whitespace-nowrap" style="padding:0.6rem 0.8rem;line-height:1.9">□ export in open formats?<br/>□ do the keys follow?<br/>□ boots on Postgres + S3 API?</div>
+<div class="term text-sm mt-3 whitespace-nowrap" style="padding:0.6rem 0.8rem;line-height:1.9">□ export in open formats?<br/>□ do the keys follow?<br/>□ runs on open standards?</div>
 </div>
 </div>
 
@@ -897,7 +897,9 @@ hope, not a plan." Same habit as a DR drill: small, scheduled, boring.
 
 Walk the three steps fast. Start with one non-critical service. The
 checklist is the point: every "no" is a gap you found on your own terms.
-Slide 13 is where the open formats and keys come from.
+Slide 13 is where the open formats, keys and open standards come from.
+If asked what "open standards" means here: an open-source database, an
+S3-compatible object API, OCI images, plain Kubernetes.
 -->
 
 ---

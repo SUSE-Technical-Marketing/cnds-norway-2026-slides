@@ -58,7 +58,7 @@ Your longship should be yours to sail.
    add a second region or provider in your IaC, move a workload, and verify:
    - Can you export in open formats?
    - Do the keys follow?
-   - Does it boot on Postgres and an S3-compatible API?
+   - Does it run on open standards?
 
 Find the gaps on a quiet Tuesday, not during an outage.
 
