@@ -265,6 +265,10 @@ class: voyage-open
 <div class="mt-8 muted">All four live in your architecture. You can measure them, and you can change them one PR at a time.</div>
 
 <!--
+About 60 seconds. One click per timber, one line each, then the tag:
+Jurisdiction, open seas. Control, their own ships. Portability, built to
+turn back. Transparency, planks in sight.
+
 This is the one lens for the whole talk. Every later framework
 points back here (the SOV table). Read the small tags
 out loud once: "this is where the ships come back."
@@ -344,8 +348,8 @@ About 20 to 30 seconds. A bridge slide, keep it tight.
 Open: "The Vikings followed the trade routes. So let's follow the money."
 Walk the three numbers as one beat, then land the closing line plainly.
 
-Move on with: "So what's actually driving that number? Three charts got
-drawn in the last year, plus one that went live six weeks ago."
+Move on with: "So what's actually driving that number? Four rules. One of
+them went live this autumn."
 
 These are the European figures, not worldwide (worldwide is about $80B for
 2026). Gartner Table 1 (February 2026), Europe row in $M: 6,868 (2025) / 12,587 (2026) / 23,118 (2027).
@@ -448,8 +452,8 @@ table.table-tight td:first-child { white-space: nowrap; }
 About 60 seconds. If we're behind, skim it in about 20 seconds:
 say only the SOV-5 line. Don't skip it, the SEAL slide refers back to it.
 
-Open: "Before the scale, what actually gets scored: eight objectives. Each
-one gets its own rating from 0 to 4. The weights blend them into one score."
+Open: "Before the scale, what actually gets scored: eight objectives,
+weighted into one score."
 Don't read all eight, the dimmed rows are there for completeness. Talk about
 the three bright ones:
 - SOV-4: "A perfect stack with nobody who can run it goes nowhere. That's the silent failure point."
@@ -509,6 +513,10 @@ line that stops someone asking procurement for "a SEAL-3 vendor."
 
 Bridge: "So that's how it gets measured. Now let's build a ship that scores
 well."
+
+Q&A, if asked "is SEAL mandatory?": "No. It's the Commission's own buying
+criteria, used in its €180M tender. It matters because it shows what the EU
+rewards, and other public buyers may copy it."
 -->
 
 ---
@@ -729,8 +737,17 @@ class: voyage-open
 <div class="mt-8 text-xl">So make "cost to leave" a required field in every architecture review, right next to <code>RPO / RTO</code>.</div>
 
 <!--
-The callback that closes the loop planted in S4. Say it out loud:
-"Remember the ships? This is them." Then the one culture line.
+About 45 seconds. The callback that closes the loop planted in S4.
+Open: "Remember the ships? This is them." One click per ship, read the gold
+line only:
+- Their own ships: control and transparency. "Transparency rides with
+  control: you can't hold what you can't see."
+- Open seas: jurisdiction and supply chain.
+- Built to turn back: the off-ramp.
+
+Title callback to SOV-4: "And none of it sails without a crew that can run it."
+Land the culture line slowly: "Cost to leave, a required field, right next
+to RPO and RTO."
 -->
 
 ---
@@ -801,7 +818,8 @@ layout: default
 
 <!--
 Callback: "Their own ships. Whoever holds the keys holds the ship."
-Say: "Pick your most lock-in-exposed workload."
+Say: "Keys go on your most sensitive store. The wrapper goes around the SDK
+call you'd least like to rewrite."
 The BYOK line is SOV-3, the SDK wrapper is SOV-6, if anyone asks.
 -->
 
@@ -898,8 +916,10 @@ class: text-center
 </div>
 
 <!--
-The longship from the title slide comes home, to the longhouse. The voyage bar ends
-here too.
+The longship from the title slide comes home. Read the headline, pause,
+then the gold line: "Exit plan. SBOM. Your own keys. Have them before
+someone makes them mandatory." Point at the middle QR: "The slides and
+every source are in the repo." Click to the feedback slide for Q&A.
 -->
 
 ---
