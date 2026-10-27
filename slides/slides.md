@@ -246,7 +246,7 @@ class: voyage-open
 <div class="muted mt-2">Every longship starts with a keel. This one has four timbers, and the boardroom doesn't lay them. Pull requests do.</div>
 
 <div class="grid-4 mt-8 keel">
-<div class="panel" v-click><div class="gold font-mono text-sm">JURISDICTION</div>Whose law can reach this workload? Follow the parent entity, not the region logo.<span class="leg leg-icon"><Sail :size="24" /> open seas</span></div>
+<div class="panel" v-click><div class="gold font-mono text-sm">JURISDICTION</div>Whose law reaches your workload and the infra it runs on? Follow the parent entity, not the region logo.<span class="leg leg-icon"><Sail :size="24" /> open seas</span></div>
 <div class="panel" v-click><div class="gold font-mono text-sm">CONTROL</div>Who holds the keys, the identity, the data?<span class="leg leg-icon"><Axe :size="20" /> their own ships</span></div>
 <div class="panel" v-click><div class="gold font-mono text-sm">PORTABILITY</div>How hard is it to leave? No off-ramp? That's <span class="gold">vendor lock-in.</span><span class="leg leg-icon"><Portage :size="24" /> built to turn back</span></div>
 <div class="panel" v-click><div class="gold font-mono text-sm">TRANSPARENCY</div>Can you audit the stack? Open source, docs, SBOMs.<span class="leg leg-icon"><Planks :width="34" /> planks in sight</span></div>

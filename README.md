@@ -41,7 +41,7 @@ Your longship should be yours to sail.
 
 | Timber | The question to ask |
 |---|---|
-| Jurisdiction | Whose law can reach this workload? Follow the parent entity, not the region logo. |
+| Jurisdiction | Whose law reaches your workload and the infra it runs on? Follow the parent entity, not the region logo. |
 | Control | Who holds the keys, the identity, the data? |
 | Portability | How hard is it to leave? What's the off-ramp? |
 | Transparency | Can you audit the stack? Open source, docs, SBOMs. |
