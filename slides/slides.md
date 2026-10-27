@@ -258,7 +258,7 @@ class: voyage-open
 <div class="grid-4 mt-8 keel">
 <div class="panel" v-click><div class="gold font-mono text-sm">JURISDICTION</div>Whose law can reach this workload? Follow the parent entity, not the region logo.<span class="leg leg-icon"><Sail :size="24" /> open seas</span></div>
 <div class="panel" v-click><div class="gold font-mono text-sm">CONTROL</div>Who holds the keys, the identity, the data?<span class="leg leg-icon"><Axe :size="20" /> their own ships</span></div>
-<div class="panel" v-click><div class="gold font-mono text-sm">PORTABILITY</div>How hard is it to leave? The off-ramp.<span class="leg leg-icon"><Portage :size="24" /> built to turn back</span></div>
+<div class="panel" v-click><div class="gold font-mono text-sm">PORTABILITY</div>How hard is it to leave? No off-ramp? That's <span class="gold">vendor lock-in.</span><span class="leg leg-icon"><Portage :size="24" /> built to turn back</span></div>
 <div class="panel" v-click><div class="gold font-mono text-sm">TRANSPARENCY</div>Can you audit the stack? Open source, docs, SBOMs.<span class="leg leg-icon"><Planks :width="34" /> planks in sight</span></div>
 </div>
 
@@ -523,8 +523,9 @@ Closing line, now spoken only: "Ratings are per procurement. There's no
 such thing as a SEAL-3 product." Slow down and pause after it. That's the
 line that stops someone asking procurement for "a SEAL-3 vendor."
 
-Bridge: "So that's how it gets measured. Now let's build a ship that scores
-well."
+Bridge: "Every level above SEAL-1 comes down to one question: could you
+leave if you had to? Having no answer to that is vendor lock-in. So let's
+look at what being ready to leave looks like."
 
 Q&A, if asked "is SEAL mandatory?": "No. It's the Commission's own buying
 criteria, used in its €180M tender. It matters because it shows what the EU
@@ -541,42 +542,37 @@ class: voyage-open
 
 # What "off-ramp ready" looks like
 
-<div class="mt-3 text-2xl gold serif">Open source is how you get out of vendor lock-in.</div>
+<div class="mt-3 text-2xl gold serif">How do you prevent vendor lock-in?</div>
 
 <div class="grid-4 mt-8 text-base">
 <div class="panel flex flex-col" v-click>
 <div class="gold font-mono text-xs" style="min-height:2.4em">PORTABLE PRIMITIVES</div>
-<div class="mt-2 flex-1">Build on open standards any provider can run.</div>
+<div class="mt-2 flex-1">Open standards and open source any provider can run.</div>
 <div class="mt-4 steel text-xs">S3 API · Postgres · OCI · K8s with CNI/CSI</div>
 </div>
 <div class="panel flex flex-col" v-click>
-<div class="gold font-mono text-xs" style="min-height:2.4em">KEYS YOU HOLD</div>
-<div class="mt-2 flex-1">Encryption you control, not your provider.</div>
-<div class="mt-4 steel text-xs">BYOK/HYOK · KMS behind your own interface</div>
+<div class="gold font-mono text-xs" style="min-height:2.4em">IDENTITY + KEYS</div>
+<div class="mt-2 flex-1">Open identity and your own encryption.</div>
+<div class="mt-4 steel text-xs">Keycloak · OpenBao · BYOK/HYOK</div>
 </div>
 <div class="panel flex flex-col" v-click>
 <div class="gold font-mono text-xs" style="min-height:2.4em">IAC + OPEN FORMATS</div>
-<div class="mt-2 flex-1">Leaving becomes a variable change and an export.</div>
-<div class="mt-4 steel text-xs">Second region or provider · standard export formats</div>
+<div class="mt-2 flex-1">Leaving is a variable change and an export.</div>
+<div class="mt-4 steel text-xs">OpenTofu · Crossplane · Velero</div>
 </div>
 <div class="panel flex flex-col" v-click>
-<div class="gold font-mono text-xs" style="min-height:2.4em">OPEN SOURCE PATTERNS</div>
-<div class="mt-2 flex-1">The platform layer: your vendor is a choice, not a cage.</div>
-<div class="mt-4 steel text-xs">Cluster API · KubeVirt · mTLS + OPA/Kyverno</div>
+<div class="gold font-mono text-xs" style="min-height:2.4em">ENTERPRISE OPEN SOURCE</div>
+<div class="mt-2 flex-1">Enterprise-ready open source platform layer: your vendor is a choice, not a cage.</div>
+<div class="mt-4 steel text-xs">Cluster API · KubeVirt · RKE2</div>
 </div>
 </div>
 
-<div class="mt-5 foot">OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · KMS = Key Management Service · IaC = Infrastructure as Code · OPA = Open Policy Agent</div>
+<div class="mt-5 foot">OCI = Open Container Initiative · CNI/CSI = Container Network/Storage Interface · BYOK/HYOK = Bring/Hold Your Own Key · IaC = Infrastructure as Code</div>
 
 <!--
-Open with the umbrella line: "Open source is how you get out of
-vendor lock-in. Every box here works because it's open: open source code,
-or an open standard you can take elsewhere." Then one line per click.
-
-Box 4 keeps the abstract's promise: cluster management, open
-virtualization, zero-trust security. Say: "One vendor is fine. What matters
-is that the code is open, so you can change who supports it without
-rewriting anything."
+Open with the question: "How do you prevent vendor lock-in?" Then the
+answer: "Every box here works because it's open: open source code, or an
+open standard you can take elsewhere." One line per click.
 -->
 
 ---
