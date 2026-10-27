@@ -320,33 +320,36 @@ class: voyage-open
 # Sovereignty has a budget now
 
 <div class="flex items-stretch justify-center gap-3 mt-14 text-center" style="max-width:1300px;margin-left:auto;margin-right:auto">
-<div class="panel flex flex-col justify-center" style="flex:1;min-height:9.5rem">
+<div class="panel flex flex-col justify-center" v-click="1" style="flex:1;min-height:9.5rem">
 <div class="gold text-6xl serif">$6.9B</div>
 <div class="steel font-mono text-sm mt-2">2025</div>
 </div>
-<div class="steel flex flex-col items-center justify-center px-1"><div class="font-mono text-sm">+83%</div><div class="text-2xl">→</div></div>
-<div class="panel flex flex-col justify-center" style="flex:1;min-height:9.5rem">
+<div class="steel flex flex-col items-center justify-center px-1" v-click="2"><div class="font-mono text-sm">+83%</div><div class="text-2xl">→</div></div>
+<div class="panel flex flex-col justify-center" v-click="2" style="flex:1;min-height:9.5rem">
 <div class="gold text-6xl serif">$12.6B</div>
 <div class="steel font-mono text-sm mt-2">2026</div>
 </div>
-<div class="steel flex flex-col items-center justify-center px-1"><div class="font-mono text-sm">+84%</div><div class="text-2xl">→</div></div>
-<div class="panel flex flex-col justify-center" style="flex:1;min-height:9.5rem">
+<div class="steel flex flex-col items-center justify-center px-1" v-click="3"><div class="font-mono text-sm">+84%</div><div class="text-2xl">→</div></div>
+<div class="panel flex flex-col justify-center" v-click="3" style="flex:1;min-height:9.5rem">
 <div class="gold text-6xl serif">$23.1B</div>
 <div class="steel font-mono text-sm mt-2">2027</div>
 </div>
 </div>
 
-<div class="mt-5 muted text-base text-center">Sovereign cloud IaaS spend in Europe. This is where budgets are moving.</div>
+<div class="mt-5 muted text-base text-center" v-click="4">Sovereign cloud IaaS spend in Europe. This is where budgets are moving.</div>
 
-<div class="mt-10 text-xl max-w-3xl mx-auto text-center">IT and engineering teams are the ones who turn it into something real.</div>
+<div class="mt-10 text-xl max-w-3xl mx-auto text-center" v-click="5">IT and engineering teams are the ones who turn it into something real.</div>
 
-<div class="foot text-center" style="position:absolute;left:0;right:0;bottom:5.8rem">Source: Gartner, "Gartner Says Worldwide Sovereign Cloud IaaS Spending Will Total $80 Billion in 2026", press release, 9 Feb 2026, Table 1 (Europe) · gartner.com/en/newsroom</div>
+<div class="foot text-center" v-click="5" style="position:absolute;left:0;right:0;bottom:5.8rem">Source: Gartner, "Gartner Says Worldwide Sovereign Cloud IaaS Spending Will Total $80 Billion in 2026", press release, 9 Feb 2026, Table 1 (Europe) · gartner.com/en/newsroom</div>
 
 <!--
 About 20 to 30 seconds. A bridge slide, keep it tight.
 
 Open: "The Vikings followed the trade routes. So let's follow the money."
-Walk the three numbers as one beat, then land the closing line plainly.
+Five clicks, top to bottom: one per year box (the growth arrow comes in
+with the box it points to), then the Europe line, then the closing line
+with the Gartner source. Keep the box clicks quick, one beat each, then
+land the closing line plainly.
 
 Move on with: "So what's actually driving that number? Four rules. One of
 them went live this autumn."
