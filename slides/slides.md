@@ -285,14 +285,14 @@ class: voyage-open
 
 <h1 style="font-size:2.1rem;max-width:80%">The CLOUD Act: a remote-access API you can't close</h1>
 
-<div class="mt-4 text-xl muted">Sail in someone else's waters and you sail under their law.</div>
+<div class="mt-4 text-xl muted" v-click="1">Sail in someone else's waters and you sail under their law.</div>
 
-<div class="mt-8 text-3xl serif">The region logo is <span class="gold">not a firewall</span>.</div>
+<div class="mt-8 text-3xl serif" v-click="1">The region logo is <span class="gold">not a firewall</span>.</div>
 
-<div class="quote-block mt-12" style="font-size:2.2rem">"No, I cannot guarantee it."</div>
-<div class="muted text-sm mt-3">Anton Carniaux, Microsoft France director of public &amp; legal affairs, under oath · French Senate inquiry commission, June 2025</div>
+<div class="quote-block mt-12 cannot-quote" :class="$clicks === 0 ? 'is-big' : 'is-moved'" style="font-size:2.2rem">"No, I cannot guarantee it."</div>
+<div class="muted text-sm mt-3" v-click="1">Anton Carniaux, Microsoft France director of public &amp; legal affairs, under oath · French Senate inquiry commission, June 2025</div>
 
-<div class="mt-10 foot">GDPR and the EU–US Data Privacy Framework don't block it (DPF upheld at the General Court, Sep 2025, now on appeal).</div>
+<div class="mt-10 foot" v-click="1">GDPR and the EU–US Data Privacy Framework don't block it (DPF upheld at the General Court, Sep 2025, now on appeal).</div>
 
 <!--
 The emotional core of the talk. Let the five-word quote sit for a

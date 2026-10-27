@@ -261,3 +261,12 @@ tr.dim td { color: var(--fk-muted); opacity: 0.65; }
   from { transform: scale(2.4); margin: 60px 90px 60px 70px; }
   to { transform: none; margin: 0; }
 }
+
+/* Slide 8: the quote starts big and centred on its own, then moves to its place on the first click */
+.cannot-quote { transform-origin: left top; }
+.cannot-quote.is-big { transform: translate(95px, -72px) scale(1.6); }
+.cannot-quote.is-moved { animation: cannot-quote-down 1.2s ease both; }
+@keyframes cannot-quote-down {
+  from { transform: translate(95px, -72px) scale(1.6); }
+  to { transform: none; }
+}
