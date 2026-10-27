@@ -488,7 +488,7 @@ layout: default
 <div>
 <div class="seal-row"><div class="seal-gauge"><i class="seg"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i></div><div><b class="gold">SEAL-0</b> no sovereignty: us-east-1 because it was cheaper. The default.</div></div>
 <div class="seal-row"><div class="seal-gauge"><i class="seg on" style="background:#E07B3C;border-color:#E07B3C"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i></div><div><b class="gold">SEAL-1</b> jurisdictional: EU region, GDPR, parent still US</div></div>
-<div class="seal-row"><div class="seal-gauge"><i class="seg on" style="background:#E2A63D;border-color:#E2A63D"></i><i class="seg on" style="background:#E2A63D;border-color:#E2A63D"></i><i class="seg"></i><i class="seg"></i></div><div><b class="gold">SEAL-2</b> data: BYOK in an EU HSM, audit rights, exit clauses</div></div>
+<div class="seal-row"><div class="seal-gauge"><i class="seg on" style="background:#E2A63D;border-color:#E2A63D"></i><i class="seg on" style="background:#E2A63D;border-color:#E2A63D"></i><i class="seg"></i><i class="seg"></i></div><div><b class="gold">SEAL-2</b> data: BYOK, keys stay in the EU, audit rights, exit clauses</div></div>
 <div class="seal-row"><div class="seal-gauge"><i class="seg on" style="background:#4FA3A0;border-color:#4FA3A0"></i><i class="seg on" style="background:#4FA3A0;border-color:#4FA3A0"></i><i class="seg on" style="background:#4FA3A0;border-color:#4FA3A0"></i><i class="seg"></i></div><div><b class="gold">SEAL-3</b> resilience: EU entity, EU operators, EU certification</div></div>
 <div class="seal-row"><div class="seal-gauge"><i class="seg on" style="background:#5B8CC9;border-color:#5B8CC9"></i><i class="seg on" style="background:#5B8CC9;border-color:#5B8CC9"></i><i class="seg on" style="background:#5B8CC9;border-color:#5B8CC9"></i><i class="seg on" style="background:#5B8CC9;border-color:#5B8CC9"></i></div><div><b class="gold">SEAL-4</b> full: EU-only supply chain in the critical path. Rare.</div></div>
 </div>
@@ -513,6 +513,9 @@ One beat of color per level, don't read the lines:
 - SEAL 0: "The default nobody picked on purpose."
 - SEAL 1: land "Brussels accent" as the laugh line, move on fast.
 - SEAL 2: "This is where it costs engineering time. BYOK means someone owns key rotation now."
+  If asked where the keys live: in a hardware security module (HSM) in the
+  EU. A foreign subpoena then gets ciphertext. Stronger still is HYOK: the
+  key stays outside the provider and it calls out for each use.
 - SEAL 3: "For most regulated workloads, this is the realistic ceiling."
 - SEAL 4: "Rare, and only worth it if you're told to be there."
 
@@ -558,7 +561,7 @@ class: voyage-open
 </div>
 <div class="panel flex flex-col" v-click>
 <div class="gold font-mono text-xs" style="min-height:2.4em">OPEN SOURCE PATTERNS</div>
-<div class="mt-2 flex-1">The platform layer, with no single vendor.</div>
+<div class="mt-2 flex-1">The platform layer: your vendor is a choice, not a cage.</div>
 <div class="mt-4 steel text-xs">Cluster API · KubeVirt · mTLS + OPA/Kyverno</div>
 </div>
 </div>
@@ -571,7 +574,9 @@ vendor lock-in. Every box here works because it's open: open source code,
 or an open standard you can take elsewhere." Then one line per click.
 
 Box 4 keeps the abstract's promise: cluster management, open
-virtualization, zero-trust security.
+virtualization, zero-trust security. Say: "One vendor is fine. What matters
+is that the code is open, so you can change who supports it without
+rewriting anything."
 -->
 
 ---
