@@ -37,17 +37,7 @@ global-top.vue (the voyage bar). Timing: about 22 minutes of content in a
 30-minute slot, with Q&A over the feedback slide.
 -->
 
-<svg class="aurora" viewBox="0 0 980 552" preserveAspectRatio="none" aria-hidden="true">
-<defs>
-<filter id="aur1" x="-20%" y="-50%" width="140%" height="200%">
-<feGaussianBlur stdDeviation="16"/>
-</filter>
-</defs>
-<g filter="url(#aur1)" fill="none" stroke-linecap="round"><path d="M-40 130 Q220 30 440 110 T1020 50" stroke="#3FD7A0" stroke-width="46" opacity=".55"/>
-<path d="M-40 185 Q260 80 520 160 T1030 100" stroke="#5B8CC9" stroke-width="34" opacity=".5"/>
-<path d="M180 80 Q420 10 720 80" stroke="#B07CD8" stroke-width="18" opacity=".35"/>
-</g>
-</svg>
+<Aurora />
 
 <div class="kicker">Cloud Native Days Norway · 26–27 Oct 2026</div>
 
@@ -907,7 +897,7 @@ layout: default
 class: text-center
 ---
 
-<svg class="aurora" viewBox="0 0 980 552" preserveAspectRatio="none" aria-hidden="true"><defs><filter id="aur2" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="16"/></filter></defs><g filter="url(#aur2)" fill="none" stroke-linecap="round"><path d="M-40 130 Q220 30 440 110 T1020 50" stroke="#3FD7A0" stroke-width="46" opacity=".55"/><path d="M-40 185 Q260 80 520 160 T1030 100" stroke="#5B8CC9" stroke-width="34" opacity=".5"/><path d="M180 80 Q420 10 720 80" stroke="#B07CD8" stroke-width="18" opacity=".35"/></g></svg>
+<Aurora />
 
 <div class="kicker">VII · landfall</div>
 
