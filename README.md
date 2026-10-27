@@ -48,7 +48,7 @@ Your longship should be yours to sail.
 
 **Three things you can do on Monday morning:**
 
-1. **Build it.** Hold your own keys. Put customer-managed keys (BYOK) on your
+1. **Control it.** Hold your own keys. Put customer-managed keys (BYOK) on your
    most sensitive store, and wrap one proprietary SDK call behind an
    interface you own. One PR, about a day.
 2. **Inspect it.** Know what's in the hold. Generate an SBOM for every image

@@ -763,7 +763,7 @@ chapter: "VII · Home port"
 <div class="flex items-stretch justify-center gap-4 mt-10 text-left" style="max-width:1400px;margin-left:auto;margin-right:auto">
 <div class="panel" v-click="1" style="flex:1">
 <div class="flex items-center justify-between"><div class="stat-num">01</div><Axe :size="40" /></div>
-<div class="gold text-xl mt-2">BUILD it</div>
+<div class="gold text-xl mt-2">CONTROL it</div>
 <div class="steel font-mono text-xs mt-1">THEIR OWN SHIPS</div>
 </div>
 <div class="steel flex items-center text-2xl" v-click="2">→</div>
@@ -785,7 +785,7 @@ chapter: "VII · Home port"
 <!--
 Rule of three, a visual table of contents for the next three slides.
 Each action is one of the ships from the previous slide: say it out loud.
-"Their own ships: you build it. Open seas: you inspect what comes aboard.
+"Their own ships: you control it. Open seas: you inspect what comes aboard.
 Built to turn back: you make the off-ramp test a habit." Then land the quote, it's the message of the talk.
 -->
 
@@ -793,9 +793,9 @@ Built to turn back: you make the off-ramp test a habit." Then land the quote, it
 layout: default
 ---
 
-<div class="flex items-center gap-3"><Axe :size="30" /><div class="kicker">VII · action 1 · build · their own ships</div></div>
+<div class="flex items-center gap-3"><Axe :size="30" /><div class="kicker">VII · action 1 · control · their own ships</div></div>
 
-# Build it
+# Control it
 
 <div class="muted">Hold your own keys.</div>
 
