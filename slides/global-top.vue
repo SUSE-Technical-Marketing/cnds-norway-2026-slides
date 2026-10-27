@@ -17,6 +17,9 @@ const ctx = injectLocal(injectionSlidevContext, null as any)
 const nav: any = ctx?.nav ?? useNav()
 const v = (x: any) => unref(x)
 
+// The crew's longship logo lives in public/ (respects the Pages base path)
+const logoUrl = import.meta.env.BASE_URL.replace(/\/$/, '') + '/cnd/logo.svg'
+
 const chapters = computed(() =>
   v(nav.slides)
     .filter((r: any) => r.meta?.slide?.frontmatter?.chapter)
@@ -59,18 +62,10 @@ const chapterOpener = computed(() =>
       >
         <span>{{ c.label.split('·')[0].trim() }}</span>
       </div>
-      <svg class="voyage-ship" :style="{ left: shipPos + '%' }" viewBox="0 0 44 22" aria-hidden="true">
+      <!-- The crew's longship logo, cropped to the boat; rocks around its waterline -->
+      <svg class="voyage-ship" :style="{ left: shipPos + '%' }" viewBox="70 95 530 480" aria-hidden="true">
         <g class="rock">
-        <path d="M3 13 Q12 19 22 19 Q33 19 41 11" />
-        <path d="M3 13 Q1 9 3 6" />
-        <path d="M41 11 Q43 7 41 4" />
-        <path d="M22 19 V2" />
-        <path class="sail" d="M15 3 H29 L28 12 Q22 13.5 16 12 Z" />
-        <path class="stripe" d="M19 3 V12.6 M25 3 V12.6" />
-        <circle class="sh a" cx="13" cy="15.5" r="1.8" />
-        <circle class="sh b" cx="19" cy="16.6" r="1.8" />
-        <circle class="sh a" cx="25" cy="16.6" r="1.8" />
-        <circle class="sh b" cx="31" cy="15.5" r="1.8" />
+          <image :href="logoUrl" x="0" y="0" width="669" height="747" />
         </g>
       </svg>
     </div>
@@ -170,32 +165,21 @@ const chapterOpener = computed(() =>
 
 .voyage-ship {
   position: absolute;
-  bottom: 3px;
-  width: 38px;
-  height: 19px;
+  bottom: 1px;
+  width: 36px;
+  height: 32px;
   transform: translateX(-50%);
   transition: left 0.6s ease;
-  fill: none;
-  stroke: #C08A4E;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 /* Slow rocking on the swell: pivots around the hull's waterline, with a small bob. */
 .voyage-ship .rock {
   transform-box: view-box;
-  transform-origin: 22px 19px;
+  transform-origin: 330px 560px;
   animation: ship-rock 5s ease-in-out infinite;
 }
 @keyframes ship-rock {
-  0%, 100% { transform: translateY(0.4px) rotate(-3.5deg); }
-  50% { transform: translateY(-0.6px) rotate(3.5deg); }
+  0%, 100% { transform: translateY(2px) rotate(-3.5deg); }
+  50% { transform: translateY(-3px) rotate(3.5deg); }
 }
-
-.voyage-ship .sail { fill: #F3F0E8; stroke: none; }
-.voyage-ship .stripe { stroke: #D0573F; stroke-width: 2.4; }
-.voyage-ship .sh { stroke: none; }
-.voyage-ship .sh.a { fill: #D0573F; }
-.voyage-ship .sh.b { fill: #E2A63D; }
 </style>
