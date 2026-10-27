@@ -877,7 +877,7 @@ layout: default
 </div>
 </div>
 
-<div class="mt-8 text-xl text-center">Find the gaps on a quiet Tuesday, <span class="gold">not during an outage</span>.</div>
+<div class="mt-8 text-xl text-center" v-click="4">Find the gaps on a quiet Tuesday, <span class="gold">not during an outage</span>.</div>
 
 <!--
 Callback: "Built to turn back. The off-ramp you've never driven is a
