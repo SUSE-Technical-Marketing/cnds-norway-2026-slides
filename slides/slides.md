@@ -403,6 +403,12 @@ The one exception is CRA: "six weeks ago" is the hook, so say it.
 
 - Data Act: the one that touches your contracts. Your provider can't drag an exit out forever.
 - Cloud Sovereignty Framework: the EU built a scoring system and put €180M behind it. Four providers won, scored on the objectives and the ladder coming up.
+  Winners, if asked (awarded 17 Apr 2026, up to €180M over six years, SEAL-2
+  was the entry bar): Post Telecom (Luxembourg, with OVHcloud and Clever
+  Cloud), STACKIT (Germany) and Scaleway (France) at SEAL-3; Proximus
+  (Belgium, with S3NS, Thales-controlled, built with Google Cloud) at SEAL-2. CISPE
+  called the Proximus/S3NS award "sovereignty washing" because S3NS runs on
+  Google Cloud technology. Facts only, no opinion on any provider.
 - Tech Sovereignty Package: say this one slowly. "CADA is a second scale with different numbers from SEAL. Its top tiers need an EUCS certificate that doesn't exist yet."
 - CRA: "This one isn't coming. It started six weeks ago, and it's why SBOMs stopped being optional."
 
