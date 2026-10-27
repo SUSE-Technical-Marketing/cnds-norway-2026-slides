@@ -330,7 +330,7 @@ class: voyage-open
 
 <div class="mt-10 text-xl max-w-3xl mx-auto text-center" v-click="5">IT and engineering teams are the ones who turn it into something real.</div>
 
-<div class="foot text-center" style="position:absolute;left:0;right:0;bottom:5.8rem">Source: Gartner, "Gartner Says Worldwide Sovereign Cloud IaaS Spending Will Total $80 Billion in 2026", press release, 9 Feb 2026, Table 1 (Europe) · gartner.com/en/newsroom</div>
+<div class="foot text-center" style="position:absolute;left:0;right:0;bottom:5.8rem">Source: Gartner · <a href="https://www.gartner.com/en/newsroom/press-releases/2026-02-09-gartner-says-worldwide-sovereign-cloud-iaas-spending-will-total-us-dollars-80-billion-in-2026" target="_blank">gartner.com/en/newsroom</a>, 9 Feb 2026</div>
 
 <!--
 About 20 to 30 seconds. A bridge slide, keep it tight.
