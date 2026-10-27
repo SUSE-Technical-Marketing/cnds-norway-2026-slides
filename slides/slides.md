@@ -732,7 +732,7 @@ class: voyage-open
 </div>
 </div>
 
-<div class="mt-8 text-xl">So make "cost to leave" a required field in every architecture review, right next to <code>RPO / RTO</code>.</div>
+<div class="mt-8 text-xl" v-click>So make "cost to leave" a required field in every architecture review, right next to <code>RPO / RTO</code>.</div>
 
 <!--
 About 45 seconds. The callback that closes the loop planted in S4.
