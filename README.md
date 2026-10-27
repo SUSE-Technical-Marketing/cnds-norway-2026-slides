@@ -51,7 +51,7 @@ Your longship should be yours to sail.
 1. **Build it.** Hold your own keys. Put customer-managed keys (BYOK) on your
    most sensitive store, and wrap one proprietary SDK call behind an
    interface you own. One PR, about a day.
-2. **Control it.** Know what's in the hold. Generate an SBOM for every image
+2. **Inspect it.** Know what's in the hold. Generate an SBOM for every image
    (SPDX or CycloneDX), sign it with provenance (SLSA), and add a policy
    gate: unsigned or unknown doesn't ship.
 3. **Make it a habit.** Run an off-ramp test every quarter, like a DR drill:

@@ -781,7 +781,7 @@ chapter: "VII · Home port"
 <div class="steel flex items-center text-2xl" v-click="2">→</div>
 <div class="panel" v-click="2" style="flex:1">
 <div class="flex items-center justify-between"><div class="stat-num">02</div><Sail :size="40" /></div>
-<div class="gold text-xl mt-2">CONTROL it</div>
+<div class="gold text-xl mt-2">INSPECT it</div>
 <div class="steel font-mono text-xs mt-1">OPEN SEAS</div>
 </div>
 <div class="steel flex items-center text-2xl" v-click="3">→</div>
@@ -797,7 +797,7 @@ chapter: "VII · Home port"
 <!--
 Rule of three, a visual table of contents for the next three slides.
 Each action is one of the ships from the previous slide: say it out loud.
-"Their own ships: you build it. Open seas: you control what's in the hold.
+"Their own ships: you build it. Open seas: you inspect what comes aboard.
 Built to turn back: you make the off-ramp test a habit." Then land the quote, it's the message of the talk.
 -->
 
@@ -837,9 +837,9 @@ The BYOK line is SOV-3, the SDK wrapper is SOV-6, if anyone asks.
 layout: default
 ---
 
-<div class="flex items-center gap-3"><Sail :size="30" /><div class="kicker">VII · action 2 · control · open seas</div></div>
+<div class="flex items-center gap-3"><Sail :size="30" /><div class="kicker">VII · action 2 · inspect · open seas</div></div>
 
-# Control it
+# Inspect it
 
 <div class="mt-2 text-xl">Know what's in the hold, then decide what gets on board.</div>
 
@@ -852,10 +852,10 @@ layout: default
 <div class="mt-6 text-xl">CRA writes SBOMs into law. <span class="gold">SOV-5, the heaviest objective, scores them.</span></div>
 
 <!--
-Callback: "Open seas. You trade with everyone, but you decide what comes
-aboard." Bridge the word on purpose: "Control here means control over
-what comes aboard: the supply chain." The policy gate is the control part:
-OPA/Kyverno from slide 13.
+Callback: "Open seas. You trade with everyone, but you inspect what comes
+aboard." Planks in sight from the keel: you can only inspect what you can
+see, and the SBOM is how you see it. The policy gate is where inspection
+turns into a decision: OPA/Kyverno from slide 13.
 
 Accuracy: the CRA's vulnerability reporting started 11 Sep 2026; the full
 manufacturer obligations, SBOM included, apply from Dec 2027. Say "the law
