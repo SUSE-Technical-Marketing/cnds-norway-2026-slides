@@ -237,6 +237,7 @@ Ohio, no regulator required."
 layout: default
 chapter: "II · The keel"
 class: voyage-open
+opener: keel
 ---
 
 <div class="kicker">II · the keel</div>

@@ -10,6 +10,7 @@ import { injectLocal } from '@vueuse/core'
 import { useNav } from '@slidev/client'
 import { injectionSlidevContext } from '@slidev/client/constants.ts'
 import Longship from './components/Longship.vue'
+import KeelFrame from './components/KeelFrame.vue'
 
 // In PDF/PNG export each page gets its own nav context, so prefer the
 // injected one and fall back to the global nav in the live show.
@@ -42,10 +43,13 @@ const hidden = computed(() => v(nav.currentFrontmatter)?.voyage === false)
 const chapterOpener = computed(() =>
   String(v(nav.currentFrontmatter)?.class ?? '').split(/\s+/).includes('voyage-open'),
 )
+// `opener: keel` swaps the corner longship for its bare frame (keel slide)
+const keelOpener = computed(() => v(nav.currentFrontmatter)?.opener === 'keel')
 </script>
 
 <template>
-  <Longship v-if="chapterOpener" class="voyage-opener-ship" :width="132" />
+  <KeelFrame v-if="chapterOpener && keelOpener" class="voyage-opener-ship" :width="132" />
+  <Longship v-else-if="chapterOpener" class="voyage-opener-ship" :width="132" />
   <div v-if="!hidden" class="voyage">
     <div class="voyage-chapter">{{ current }}</div>
     <div class="voyage-track">
