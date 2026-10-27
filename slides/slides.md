@@ -330,15 +330,15 @@ class: voyage-open
 
 <div class="mt-10 text-xl max-w-3xl mx-auto text-center" v-click="5">IT and engineering teams are the ones who turn it into something real.</div>
 
-<div class="foot text-center" v-click="5" style="position:absolute;left:0;right:0;bottom:5.8rem">Source: Gartner, "Gartner Says Worldwide Sovereign Cloud IaaS Spending Will Total $80 Billion in 2026", press release, 9 Feb 2026, Table 1 (Europe) · gartner.com/en/newsroom</div>
+<div class="foot text-center" style="position:absolute;left:0;right:0;bottom:5.8rem">Source: Gartner, "Gartner Says Worldwide Sovereign Cloud IaaS Spending Will Total $80 Billion in 2026", press release, 9 Feb 2026, Table 1 (Europe) · gartner.com/en/newsroom</div>
 
 <!--
 About 20 to 30 seconds. A bridge slide, keep it tight.
 
 Open: "The Vikings followed the trade routes. So let's follow the money."
 Five clicks, top to bottom: one per year box (the growth arrow comes in
-with the box it points to), then the Europe line, then the closing line
-with the Gartner source. Keep the box clicks quick, one beat each, then
+with the box it points to), then the Europe line, then the closing line.
+The Gartner source stays on screen the whole time. Keep the box clicks quick, one beat each, then
 land the closing line plainly.
 
 Move on with: "So what's actually driving that number? Four rules. One of
