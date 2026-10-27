@@ -192,7 +192,7 @@ layout: default
 </div>
 </div>
 
-<div class="mt-8 text-2xl serif">Ownership alone is not <span class="gold">sovereignty</span>. Control makes it real.</div>
+<div class="mt-8 text-3xl serif" v-click>Ownership alone is not <span class="gold">sovereignty</span>. Control makes it real.</div>
 
 
 <!--

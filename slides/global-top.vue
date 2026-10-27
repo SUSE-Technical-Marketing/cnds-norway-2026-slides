@@ -47,7 +47,8 @@ const chapterOpener = computed(() =>
     <div class="voyage-chapter">{{ current }}</div>
     <div class="voyage-track">
       <svg class="voyage-sea" viewBox="0 0 400 10" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0 6 q10 -5 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" />
+        <path class="wave a" d="M0 6 q10 -5 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" />
+        <path class="wave b" d="M0 6 q10 -5 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" />
       </svg>
       <div
         v-for="c in chapters"
@@ -59,6 +60,7 @@ const chapterOpener = computed(() =>
         <span>{{ c.label.split('·')[0].trim() }}</span>
       </div>
       <svg class="voyage-ship" :style="{ left: shipPos + '%' }" viewBox="0 0 44 22" aria-hidden="true">
+        <g class="rock">
         <path d="M3 13 Q12 19 22 19 Q33 19 41 11" />
         <path d="M3 13 Q1 9 3 6" />
         <path d="M41 11 Q43 7 41 4" />
@@ -69,6 +71,7 @@ const chapterOpener = computed(() =>
         <circle class="sh b" cx="19" cy="16.6" r="1.8" />
         <circle class="sh a" cx="25" cy="16.6" r="1.8" />
         <circle class="sh b" cx="31" cy="15.5" r="1.8" />
+        </g>
       </svg>
     </div>
   </div>
@@ -104,6 +107,23 @@ const chapterOpener = computed(() =>
   position: relative;
   flex: 1;
   height: 22px;
+}
+
+/* Gentle water motion: two wave layers drift in opposite directions. One
+   period is 40 viewBox units, so sliding by exactly 40 loops seamlessly. */
+.wave.a { animation: wave-drift 6s linear infinite; }
+.wave.b {
+  stroke-opacity: 0.45;
+  transform: translateY(1.5px);
+  animation: wave-drift-rev 9s linear infinite;
+}
+@keyframes wave-drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-40px); }
+}
+@keyframes wave-drift-rev {
+  from { transform: translate(-40px, 1.5px); }
+  to { transform: translate(0, 1.5px); }
 }
 
 .voyage-sea {
@@ -160,6 +180,17 @@ const chapterOpener = computed(() =>
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+/* Slow rocking on the swell: pivots around the hull's waterline, with a small bob. */
+.voyage-ship .rock {
+  transform-box: view-box;
+  transform-origin: 22px 19px;
+  animation: ship-rock 5s ease-in-out infinite;
+}
+@keyframes ship-rock {
+  0%, 100% { transform: translateY(0.4px) rotate(-3.5deg); }
+  50% { transform: translateY(-0.6px) rotate(3.5deg); }
 }
 
 .voyage-ship .sail { fill: #F3F0E8; stroke: none; }
