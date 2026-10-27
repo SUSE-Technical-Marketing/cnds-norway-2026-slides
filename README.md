@@ -56,7 +56,7 @@ Your longship should be yours to sail.
    gate: unsigned or unknown doesn't ship.
 3. **Make it a habit.** Run an off-ramp test every quarter, like a DR drill:
    add a second region or provider in your IaC, move a workload, and verify:
-   - Can you export in open formats?
+   - Is it built on open source?
    - Do the keys follow?
    - Does it run on open standards?
 
